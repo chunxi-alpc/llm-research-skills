@@ -1,0 +1,105 @@
+[
+  {
+    "name": "research-literature-search",
+    "title": "文献检索",
+    "source_ids": [
+      "R002",
+      "R003",
+      "R004",
+      "R005",
+      "R008"
+    ],
+    "description": "给出主题、年份和会议，返回带来源的论文清单。"
+  },
+  {
+    "name": "research-paper-reading",
+    "title": "论文阅读与多论文对比",
+    "source_ids": [
+      "R001",
+      "R006",
+      "R007",
+      "R009",
+      "R041"
+    ],
+    "description": "给出论文与问题，返回方法梳理、原文依据和对比表。"
+  },
+  {
+    "name": "academic-language-polish",
+    "title": "学术语言润色",
+    "source_ids": [
+      "R013",
+      "R014"
+    ],
+    "description": "给出段落和文风要求，返回修订稿。"
+  },
+  {
+    "name": "method-logic-check",
+    "title": "方法逻辑与术语一致性检查",
+    "source_ids": [
+      "R010",
+      "R014"
+    ],
+    "description": "给出 Method 和已有定义，返回问题定位与统一建议。"
+  },
+  {
+    "name": "research-idea-discussion",
+    "title": "研究思路讨论",
+    "source_ids": [
+      "R026",
+      "R027",
+      "R046"
+    ],
+    "description": "给出研究问题与资源条件，返回关键假设和验证建议。"
+  },
+  {
+    "name": "paper-peer-review",
+    "title": "论文模拟审稿",
+    "source_ids": [
+      "R027",
+      "R028",
+      "R029",
+      "R030",
+      "R031"
+    ],
+    "description": "给出论文和审稿要求，返回有依据的修改意见。"
+  },
+  {
+    "name": "academic-proofreading",
+    "title": "拼写与语法纠错",
+    "source_ids": [
+      "R032",
+      "R033",
+      "R051"
+    ],
+    "description": "只修正错误，正确表达保持原样。"
+  },
+  {
+    "name": "academic-translation",
+    "title": "中英文学术翻译",
+    "source_ids": [
+      "R035",
+      "R036"
+    ],
+    "description": "保留含义、逻辑、数值和固定术语。"
+  },
+  {
+    "name": "coding-task-brief",
+    "title": "编程任务需求整理",
+    "source_ids": [
+      "R016",
+      "R020",
+      "R025"
+    ],
+    "description": "整理成可直接提交给编码 Agent 的任务说明。"
+  },
+  {
+    "name": "paper-figure-brief",
+    "title": "论文模型图说明与绘图提示词",
+    "source_ids": [
+      "R038",
+      "R040",
+      "R050"
+    ],
+    "description": "输出模型结构、VISUAL SCHEMA 与绘图提示词。"
+  }
+]

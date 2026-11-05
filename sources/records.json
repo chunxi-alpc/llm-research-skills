@@ -1,0 +1,817 @@
+[
+  {
+    "id": "R001",
+    "csv_record": 2,
+    "title": "NotebookLM：多论文比较",
+    "group": "literature",
+    "how_to": "上传或选择待比较论文，再提出跨论文对比与研究问题。",
+    "supplemental_links": [],
+    "original": {
+      "category": "辅助搜索文献",
+      "entry": "https://notebooklm.google.com/",
+      "purpose": "根据给定论文，检索相似论文",
+      "usage": "输入下列提示词：“Compare these 5 papers and identify research gaps”，并选择或上传所需要检索的论文",
+      "experience": "多论文联合分析，多文档 reasoning 很强，很适合写 related work，形成自己领域的文档库"
+    }
+  },
+  {
+    "id": "R002",
+    "csv_record": 3,
+    "title": "Gemini / ChatGPT：按条件找论文",
+    "group": "literature",
+    "how_to": "给出研究领域、方向、年份与会议条件，再核对返回论文的正式入口。",
+    "supplemental_links": [],
+    "original": {
+      "category": "辅助搜索文献",
+      "entry": "Gemini(https://gemini.google.com/)、GPT(https://chatgpt.com/)网页版",
+      "purpose": "通用大模型，可以检索到最新的论文",
+      "usage": "输入提示词，“帮我查找xxx领域xxx方向，在xxx年份发表在xxx会议的论文”",
+      "experience": "结合GPT、Gemini的强大知识库，基本可以按要求找到目标论文，如果没有已发表的相关论文，甚至会在预印本数据库（e.g., arxiv）找相关论文"
+    }
+  },
+  {
+    "id": "R003",
+    "csv_record": 4,
+    "title": "RefCheck.ai：BibTeX 引文检查",
+    "group": "literature",
+    "how_to": "按项目说明上传或粘贴 BibTeX，查看不匹配字段和推荐匹配结果。",
+    "supplemental_links": [],
+    "original": {
+      "category": "辅助搜索文献",
+      "entry": "https://github.com/HuaHenry/RefCheck_ai",
+      "purpose": "参考文献真实性检测，防止被DR",
+      "usage": "按照网站要求步骤操作即可",
+      "experience": "RefCheck.ai用于验证 BibTeX 引用格式，并识别可疑或不一致的引用。可上传 .bib 文件（或直接粘贴 BibTeX 内容），在浏览器中实时查看验证流程，并获得一份结构化报告——该报告会突出显示不匹配的字段（例如标题/作者/年份），并推荐来自可信学术索引的最佳匹配结果。"
+    }
+  },
+  {
+    "id": "R004",
+    "csv_record": 5,
+    "title": "Wispaper：关键词文献检索",
+    "group": "literature",
+    "how_to": "输入关键词，再按相关度、年份和出处筛选；区分预印本与正式版本。",
+    "supplemental_links": [],
+    "original": {
+      "category": "辅助搜索文献",
+      "entry": "https://www.wispaper.ai/",
+      "purpose": "搜索关键词文献",
+      "usage": "按照网站要求步骤操作即可，可自定义相关度和文献年份、出处",
+      "experience": "提供文献精准来源，并且自动生成Ai摘要（部分文献可能为早期Arxiv预印版，引用需要甄别出处）"
+    }
+  },
+  {
+    "id": "R005",
+    "csv_record": 6,
+    "title": "AMiner：学术检索与研究趋势",
+    "group": "literature",
+    "how_to": "先在网站检索主题；需要 Agent 接入时，再按官方提供的技能或接口配置。",
+    "supplemental_links": [],
+    "original": {
+      "category": "辅助搜索文献",
+      "entry": "https://www.aminer.cn/",
+      "purpose": "AI精准检索文献",
+      "usage": "可以在网站直接检索，也可以使用对应的skills接入Agent使用",
+      "experience": "AMiner 作为 AI 赋能的科技情报挖掘平台，可高效追踪领域热点、了解领域内大牛、分析研究趋势"
+    }
+  },
+  {
+    "id": "R006",
+    "csv_record": 7,
+    "title": "腾讯 ima：论文知识库",
+    "group": "reading",
+    "how_to": "安装客户端，建立知识库并上传已下载论文，再围绕文献提问。",
+    "supplemental_links": [],
+    "original": {
+      "category": "辅助阅读论文",
+      "entry": "IMAhttps://ima.qq.com/",
+      "purpose": "建立个人知识库，整理已经阅读的文献",
+      "usage": "搜索腾讯ima,下载客户端后点击知识库，在知识库中选择新建知识库，并上传已经下载的论文文献",
+      "experience": "多论文多文档联合分析，可以选择不同模型，可以配合related work写作以及论文综述写作"
+    }
+  },
+  {
+    "id": "R007",
+    "csv_record": 8,
+    "title": "智谱清言：论文精读",
+    "group": "reading",
+    "how_to": "使用论文阅读入口上传文件，要求提取问题、方法流程与局限。",
+    "supplemental_links": [],
+    "original": {
+      "category": "辅助阅读论文",
+      "entry": "智谱清言https://chatglm.cn",
+      "purpose": "阅读给定论文，协助整理大纲，提取关键词，分析论文的优点局限性",
+      "usage": "搜索智谱清言，点击阅读论文，上传论文的PDF或word文件，即可整理出对应论文大纲。也可以输入prompt ,诸如“概括文献的优缺点”“总结后续研究拓展方向”等。",
+      "experience": "擅长总结文献解决的问题，总体架构从输入到输出的流程总结。并且界面友好，做到边阅读边分析，适合精读论文。"
+    }
+  },
+  {
+    "id": "R008",
+    "csv_record": 9,
+    "title": "WorkBuddy：检索并整理论文",
+    "group": "reading",
+    "how_to": "按原表经验选择 academic research 和 agent browser，给出论文条件、保存位置和大纲要求。",
+    "supplemental_links": [],
+    "original": {
+      "category": "辅助阅读论文",
+      "entry": "workbuddyhttps://www.codebuddy.cn/",
+      "purpose": "是腾讯出品的claw工具，可以让其搜索相关文献并进行整理",
+      "usage": "在workbuddy中的skill中选择academic research和agent browser，然后在交互页面中输入你的要求，例如“我需要一个XXX领域的paper，最好使用了XXXX技术，发表时间在xxxx年的A会上，请你帮我检索一下，并将符合的paper下载到XXXX，并整理一个总的大纲给我”",
+      "experience": "可以快速找文献，以目前使用经历来看，找到的文献都是真实准确的，其中还有很多其他skill可供使用，但是做PPT之类的功能比较差"
+    }
+  },
+  {
+    "id": "R009",
+    "csv_record": 10,
+    "title": "DeepSeek / Kimi：论文总结与讨论",
+    "group": "reading",
+    "how_to": "提供论文及具体问题，要求回答附上原文依据；多篇材料可做方法对比。",
+    "supplemental_links": [],
+    "original": {
+      "category": "辅助阅读论文",
+      "entry": "deepseek（https://chat.deepseek.com/）、kimi（https://www.kimi.com/）等大模型",
+      "purpose": "总结提炼论文思路、方法，可以与其讨论确定论文方法和相关细节",
+      "usage": "上传论文文件，将具体需求告诉大模型，可以要求其提供原文中的具体依据（提升模型总结的准确性）",
+      "experience": "可多次免费上传文档，不限制单日上传文档数，适合快速提炼文章内容、辅助筛选文章，也可以对比少量文章之间的方法"
+    }
+  },
+  {
+    "id": "R010",
+    "csv_record": 11,
+    "title": "Method 逻辑与术语统一提示词",
+    "group": "writing",
+    "how_to": "同时提供方法段落与已确定的定义，要求检查逻辑衔接并统一符号。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "https://chatgpt.com/",
+      "purpose": "整理和润色论文方法（method）部分的写作，并检查相关术语在使用前是否已经定义。",
+      "usage": "先输入待整理的论文，并输入下列提示词：“名词定义和解释：请把这个小节的符号和定义都按照我们（上面讨论好的/Section...）形式化表示更换，注意要保持名词定义的一致性。再次检查逻辑gap，用常用的表达常用词，尽量不要提出新的名词，提出了就要解释清楚”",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R011",
+    "csv_record": 12,
+    "title": "Ai-prompt：写作与绘图提示词库",
+    "group": "writing",
+    "how_to": "打开仓库，按当前章节或绘图需求选择提示词并替换输入材料。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "https://github.com/Zhongxuanx/Ai-prompt",
+      "purpose": "写作 Prompt 集合,论文写作相关的 Skills",
+      "usage": "按照自己的论文需求修改仓库提供的prompt，给LLM；skill可以直接给agent使用，此外还有绘图的prompt",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R012",
+    "csv_record": 13,
+    "title": "PaperDebugger：Overleaf 写作助手",
+    "group": "writing",
+    "how_to": "通过原表的浏览器扩展入口安装，按项目说明配置后在 Overleaf 使用。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "https://github.com/PaperDebugger/PaperDebugger",
+      "purpose": "PaperDebugger 学术写作助手",
+      "usage": "从Chorm应用市场下载：https://chromewebstore.google.com/detail/paperdebugger/dfkedikhakpapbfcnbpmfhpklndgiaog\n\n在overleaf中直接使用",
+      "experience": "它可以用于改进论文，提供建议，可以集成进Overleaf。该工具模拟了完整的学术工作流程：Research → Critique → Revision"
+    }
+  },
+  {
+    "id": "R013",
+    "csv_record": 14,
+    "title": "学术段落润色提示词",
+    "group": "writing",
+    "how_to": "把待修改段落接在英文提示词之后，要求改善拼写、语法和可读性。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "各种大模型",
+      "purpose": "直接提示大模型检查拼写、语法，并改写表达",
+      "usage": "先输入待整理的论文，并输入下列提示词：“Below is a paragraph from an academic paper. Rephrase the writing to meet the academic style,improve the spelling, grammar, clarity, concision and overall readability. Paragraph:\"",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R014",
+    "csv_record": 15,
+    "title": "清晰表达与固定术语提示词",
+    "group": "writing",
+    "how_to": "把这段写作要求作为论文改写的风格说明，并提供需要修改的正文。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "各种大模型",
+      "purpose": "改写表达，使得写作能够让人看懂，避免晦涩难懂。",
+      "usage": "先输入待整理的论文，并输入下列提示词：“Write like a careful NLP student who wants peers and advisors to understand the paper.\nKeep the logic explicit and smooth. Make the bridge between sentences visible instead of assuming the reader will fill it in.\nUse common expressions, common words, and simple sentence structures by default. Only use uncommon terms or longer sentences when they are needed for technical precision.\nKeep Abstract, Conclusion, and result discussion informative. Every sentence should contribute evidence, explanation, or a bounded claim.\nKeep one canonical term for one concept. Method names, modules, datasets, metrics, and scores should not be renamed across the summary unless the scope change is real and made explicit.\nEvery self-defined term must be followed immediately by a plain explanation. If a term cannot be explained cleanly, do not use it.\nAvoid long or showy sentences. Every sentence should carry real information.\"",
+      "experience": "改善大模型普遍存在长难句写作的弊端"
+    }
+  },
+  {
+    "id": "R015",
+    "csv_record": 16,
+    "title": "Awesome AI Research Writing",
+    "group": "writing",
+    "how_to": "按翻译、润色、图表或审稿等任务选择原仓库模板，再补齐论文材料。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "https://github.com/Leey21/awesome-ai-research-writing",
+      "purpose": "论文写作润色 Prompt 参考模板库",
+      "usage": "按照需求参考 Prompt 大模型交互使用",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R016",
+    "csv_record": 17,
+    "title": "Trae：基于项目的辅助编程",
+    "group": "coding",
+    "how_to": "提供相关代码、输入输出和目标功能，在项目上下文中让 Agent 实现或调试。",
+    "supplemental_links": [],
+    "original": {
+      "category": "辅助写代码",
+      "entry": "Traehttps://www.trae.cn/",
+      "purpose": "免费的代码开发平台，可借助大模型本地运行跑通代码，实现简易功能。",
+      "usage": "首先上传项目中需要改写或者参考的代码文件，指定好代码的输入输出，描述清楚希望代码实现的功能，随后选择模型（效果最好的为GLM，KIMI2.6，但是可能要排队），得到结果。",
+      "experience": "辅助运行代码能力很强，可根据项目文件夹中其他文件排除潜在BUG，并协助跑通整体代码。"
+    }
+  },
+  {
+    "id": "R017",
+    "csv_record": 18,
+    "title": "Claude Code：编码与调试",
+    "group": "coding",
+    "how_to": "按官方说明安装或启用 IDE 集成，在项目中给出明确的修改任务。",
+    "supplemental_links": [],
+    "original": {
+      "category": "辅助写代码",
+      "entry": "claude codehttps://claude.com/product/claude-code",
+      "purpose": "vscode有插件，用ccswitch可以连接自定义api使用agent帮忙跑代码或者debug",
+      "usage": "打开插件聊天页面直接和agent交互就可以 ",
+      "experience": "最好打开修改前需要同意的权限，agent每次修改的时候要看看他干的对不对，有时候修改的结果可能会出现差错还是需要多看着点"
+    }
+  },
+  {
+    "id": "R018",
+    "csv_record": 19,
+    "title": "GitHub Copilot：IDE 编程助手",
+    "group": "coding",
+    "how_to": "在所用 IDE 安装对应集成，选择适合任务的聊天或 Agent 功能。",
+    "supplemental_links": [
+      "https://github.com/features/copilot"
+    ],
+    "original": {
+      "category": "辅助写代码",
+      "entry": "copliot",
+      "purpose": "在vscode，PyCharm中均有插件，认证github学生会员每月可多享受很多额度",
+      "usage": "在IDE中的插件中直接搜索即可安装，然后打开聊天页面可交互，选择agent模式可以直接让它改代码",
+      "experience": "修改代码的能力较强，但是很费token，即使是学生会员额度也有限，所以最好是工程量较大的修改交给他进行初步修改，后续自己微调"
+    }
+  },
+  {
+    "id": "R019",
+    "csv_record": 20,
+    "title": "通义灵码：代码生成与解释",
+    "group": "coding",
+    "how_to": "按官方入口安装 IDE 插件，结合当前代码说明要实现或检查的逻辑。",
+    "supplemental_links": [
+      "https://lingma.aliyun.com/"
+    ],
+    "original": {
+      "category": "辅助写代码",
+      "entry": "通义灵码",
+      "purpose": "在IDE中均有插件，可以搜索安装，免费使用",
+      "usage": "在IDE中均有插件，可以搜索安装，免费使用；直接基于代码文件对话交互",
+      "experience": "基础代码和常见算法实现没太大问题，对于一些不太常见的算法可能实现的不是很对，需要人工仔细确认一下"
+    }
+  },
+  {
+    "id": "R020",
+    "csv_record": 21,
+    "title": "OpenAI Codex：需求拆解后实现",
+    "group": "coding",
+    "how_to": "先明确输入输出与完成标准，再在项目中分任务交给 Codex 实现。",
+    "supplemental_links": [
+      "https://developers.openai.com/codex/"
+    ],
+    "original": {
+      "category": "辅助写代码",
+      "entry": "OpenAI CodeX",
+      "purpose": "代码撰写和项目分析",
+      "usage": "可在IDE中安装插件，也可直接安装官方软件",
+      "experience": "功能强大，但在设计提示词时注意任务拆解，可以先将实现的需求交给大模型梳理，生成提示词，再交给CodeX分点实现"
+    }
+  },
+  {
+    "id": "R021",
+    "csv_record": 22,
+    "title": "Cursor：在 IDE 中修改代码",
+    "group": "coding",
+    "how_to": "打开已有项目，提供任务与相关文件，在修改视图中查看结果。",
+    "supplemental_links": [
+      "https://cursor.com/"
+    ],
+    "original": {
+      "category": "辅助写代码",
+      "entry": "cursor",
+      "purpose": "AI coding的IDE，可以使用各家的ai模型。",
+      "usage": "和vscode copilot，antigravity类似，vscode ide里面加入了ai coding功能，并且可以使用各家模型。",
+      "experience": "相较于cli工具，在ide中ai coding，可以看到ai具体修改了哪些内容，有利于维护代码。性价比不如codex和Claude code，订阅费贵，且不耐用。"
+    }
+  },
+  {
+    "id": "R022",
+    "csv_record": 23,
+    "title": "Karpathy Skills：编程原则",
+    "group": "coding",
+    "how_to": "按补充的原项目入口选择技能或项目规则形式；保留其四项编程原则。",
+    "supplemental_links": [
+      "https://github.com/multica-ai/andrej-karpathy-skills"
+    ],
+    "original": {
+      "category": "辅助写代码",
+      "entry": "andrej-karpathy-skills",
+      "purpose": "把 Karpathy 风格的 AI 编程原则整理成一个skills",
+      "usage": "可以做成一个skills给agent访问，也可以直接粘贴作为agent的context",
+      "experience": "包含：\nThink Before Coding\nSimplicity First\nSurgical Changes\nGoal-Driven Execution\n四个原则，很好的切中了AI coding的痛点。另外，配合codex新出的goal功能，效果还不错。"
+    }
+  },
+  {
+    "id": "R023",
+    "csv_record": 24,
+    "title": "Superpowers：开发流程技能套件",
+    "group": "coding",
+    "how_to": "下载完整套件，按原项目中对应 Agent 的说明安装并提交开发任务。",
+    "supplemental_links": [
+      "https://github.com/obra/superpowers"
+    ],
+    "original": {
+      "category": "辅助写代码",
+      "entry": "superpowers",
+      "purpose": "约束LLM能力的框架skills，防止无目的性地发散",
+      "usage": "npx skills add obra/superpowers",
+      "experience": "human-in-the-loop，核心意见会思考确认后再执行，避免无效扩展"
+    }
+  },
+  {
+    "id": "R024",
+    "csv_record": 25,
+    "title": "DeepSeek-TUI：终端编码工具",
+    "group": "coding",
+    "how_to": "原表记录了 npm 安装方式；使用前从项目入口查看当前安装与 API 配置说明。",
+    "supplemental_links": [
+      "https://github.com/Hmbown/DeepSeek-TUI"
+    ],
+    "original": {
+      "category": "辅助写代码",
+      "entry": "DeepSeek-TUI",
+      "purpose": "让DeepSeek直接进入你的本地项目目录，读代码、改文件、执行命令、看报错、做Git操作，甚至调用子智能体",
+      "usage": "npm install -g deepseek-tui",
+      "experience": "DeepSeek-TUI 是一款由 Rust 编写的轻量级终端命令行程序。它通过调用 DeepSeek 接口，不仅能在终端内直接对本地文件进行读取和修改、执行系统命令以及管理 Git，还支持实时显示模型的逻辑推理过程。同时，它具备多任务并行处理能力，并提供三种不同级别的权限控制模式，以确保对本地文件和系统操作的安全与可控。"
+    }
+  },
+  {
+    "id": "R025",
+    "csv_record": 26,
+    "title": "编程提示词的六项需求说明",
+    "group": "coding",
+    "how_to": "按功能、信息、限制、优先事项、避免事项和回答形式整理任务。",
+    "supplemental_links": [],
+    "original": {
+      "category": "辅助写代码",
+      "entry": " https://xhslink.cn/o/AqKcSV6izHz",
+      "purpose": "利用大模型写代码时，比较适用的提示词",
+      "usage": "在利用大模型写代码时，不要只告诉它你想要什么，重点是告诉他：1、你想实现的功能。2、可用的信息。3、存在哪些限制。4、希望优先考虑什么。5、希望能避免什么。6、希望以什么方式进行回答",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R026",
+    "csv_record": 27,
+    "title": "研究想法早期讨论提示词",
+    "group": "ideas-review",
+    "how_to": "给出领域、问题与想法，请模型先检查最关键的逻辑与改进空间。",
+    "supplemental_links": [],
+    "original": {
+      "category": "LLM审稿（LLM对文章初稿思路把关）",
+      "entry": "各种大模型（这里推荐Gemini）",
+      "purpose": "在idea成型初期，可以让LLM模拟自己的导师/同领域专家，进行头脑风暴，检查自己的idea是否有逻辑不严谨/可改进的地方",
+      "usage": "使用的prompt：“假设你是XXXX领域的专家，现在我有一个关于XXXX的idea，主要内容是XXXXX，请你帮我检查上述的内容是否存在逻辑不严谨或可改进的地方”",
+      "experience": "可以进行多轮对话不断深入讨论，有的时候LLM会过于追究细枝末节，不过还是可以发现一些问题，自我体验来看，Gemini在这方面做得更好一些"
+    }
+  },
+  {
+    "id": "R027",
+    "csv_record": 28,
+    "title": "ChatGPT：方法与创新性讨论",
+    "group": "ideas-review",
+    "how_to": "提供论文或方法说明，把需要讨论的创新性、潜在问题和改进要求列清。",
+    "supplemental_links": [],
+    "original": {
+      "category": "LLM审稿（LLM对文章初稿思路把关）",
+      "entry": "ChatGPT（https://chatgpt.com/）",
+      "purpose": "可以初步评估方法创新性、方法可能存在的问题、审稿人可能质疑的地方、方法可完善的地方及调整方法等",
+      "usage": "将论文文件传给llm，根据具体需求写提示词即可，可以根据具体需求的难度、特点，选择“思考一下”等选项",
+      "experience": "个人觉得它提出的建议比大部分llm更有参考价值；但每天有免费上传文件数的限制、免费对话轮次的限制，可以将多个需求分点列出并一次传给大模型，节省对话次数"
+    }
+  },
+  {
+    "id": "R028",
+    "csv_record": 32,
+    "title": "Stanford Agentic Reviewer",
+    "group": "ideas-review",
+    "how_to": "在补充入口上传论文 PDF，按页面流程提交并查看反馈。",
+    "supplemental_links": [
+      "https://paperreview.ai/"
+    ],
+    "original": {
+      "category": "LLM审稿（LLM对文章最终版审查、提修改建议和缺点）",
+      "entry": "Stanford Agentic Reviewer - Submit Paper",
+      "purpose": "模拟AI会议审稿",
+      "usage": "直接根据界面提示使用，无提示词",
+      "experience": "上传文件要求：上传10M以下，15页以下的PDF论文，主要是针对AI会议。\n\nAI生成的审稿报告包括7个维度打分：原创性、重要性、论点支持、实验可靠性、清晰度、社区价值、上下文关联。最终合成1-10分的总分（针对ICLR等）。可操作修改建议：不是泛泛而谈，而是基于相关论文的比较，指出哪里可以改进。比如，“你的方法在基准测试上落后于最近的X论文，建议添加Y实验对比”。"
+    }
+  },
+  {
+    "id": "R029",
+    "csv_record": 33,
+    "title": "CSpaper：按会议模板审稿",
+    "group": "ideas-review",
+    "how_to": "先选拟投会议，再按页面提示提交论文并选择可用模型。",
+    "supplemental_links": [],
+    "original": {
+      "category": "LLM审稿（LLM对文章最终版审查、提修改建议和缺点）",
+      "entry": "CSpaper--https://cspaper.org/",
+      "purpose": "模拟顶会审稿人AI辅助审稿",
+      "usage": "首先选择待投的会议，然后选择推荐的大模型进行审稿",
+      "experience": "一个账号有免费三次机会，cspaper审稿模板基本和会议本身的审稿模板一致，针对AI会议。\n\n对比斯坦福审稿AI，审稿结果在【形式上】会更符合想要投会议的要求，审稿意见也会更mean一些。因为cspaper次数有限，可以先用斯坦福多次审稿后，再使用cspaper进行终版辅助检查。"
+    }
+  },
+  {
+    "id": "R030",
+    "csv_record": 34,
+    "title": "Strict & Precise：严格审稿提示词",
+    "group": "ideas-review",
+    "how_to": "从原仓库获取提示词，连同论文交给模型；逐项核对意见与原文的对应关系。",
+    "supplemental_links": [],
+    "original": {
+      "category": "LLM审稿（LLM对文章最终版审查、提修改建议和缺点）",
+      "entry": "https://chatgpt.com/\n提示词网站：https://github.com/kody-black/The-Strict-Precise-AI-Academic-Reviewer",
+      "purpose": "作为严格审稿人进行审稿",
+      "usage": "在GPT上上传论文文件后，输入该提示词：（提示词见gihub网址内容）",
+      "experience": "审稿语气十分严厉，给出的意见非常的mean，可以作为主要修改的点，但不要因为过于严厉的审稿意见而灰心。"
+    }
+  },
+  {
+    "id": "R031",
+    "csv_record": 35,
+    "title": "通用会议模拟审稿提示词",
+    "group": "ideas-review",
+    "how_to": "提供论文并复制原表英文模板；需要时使用其评分量表。",
+    "supplemental_links": [],
+    "original": {
+      "category": "LLM审稿（LLM对文章最终版审查、提修改建议和缺点）",
+      "entry": "各种大模型",
+      "purpose": "模拟顶会审稿人AI辅助审稿",
+      "usage": "使用prompt：Please help me review this paper and output the review comments in the following format.\n* Overall Review\nPlease briefly summarize the main points and contributions of this paper.\nxxx\n* Paper Strength\nPlease provide a list of the strengths of this paper, including but not limited to: innovative and practical methodology, insightful empirical findings or in-depth theoretical analysis,\nwell-structured review of relevant literature, and any other factors that may make the paper valuable to readers. (Maximum length: 2,000 characters)\n(1)xxx\n(2)xxx\n(3)xxx\n* Paper Weakness\nPlease provide a numbered list of your main concerns regarding this paper (so authors could respond to the concerns individually).\nThese may include, but are not limited to: inadequate implementation details for reproducing the study, limited evaluation and ablation studies for the proposed method,\ncorrectness of the theoretical analysis or experimental results, lack of comparisons or discussions with widely-known baselines in the field, lack of clarity in exposition,\nor any other factors that may impede the reader's understanding or benefit from the paper. Please kindly refrain from providing a general assessment of the paper's novelty without providing detailed explanations. (Maximum length: 2,000 characters)\n(1)xxx\n(2)xxx\n(3)xxx\n* Questions To Authors And Suggestions For Rebuttal\nPlease provide a numbered list of specific and clear questions that pertain to the details of the proposed method, evaluation setting, or additional results that would aid in supporting the authors' claims.\nThe questions should be formulated in a manner that, after the authors have answered them during the rebuttal, it would enable a more thorough assessment of the paper's quality. (Maximum length: 2,000 characters)\n*Overall score (1-10)\nThe paper is scored on a scale of 1-10, with 10 being the full mark, and 6 stands for borderline accept. Then give the reason for your rating.\nxxx",
+      "experience": "如果想获取比较严格的建议，想了解更多潜在的不足，可以进一步追问：Please list more shortcomings of this paper from all aspects"
+    }
+  },
+  {
+    "id": "R032",
+    "csv_record": 37,
+    "title": "Grammarly：拼写语法检查",
+    "group": "writing",
+    "how_to": "按平台的当前集成方式检查文本，再确认建议是否保持技术含义。",
+    "supplemental_links": [],
+    "original": {
+      "category": "LLM typo检查",
+      "entry": "grammarly(https://app.grammarly.com/)",
+      "purpose": "虽然不是LLM，但是是非常方便好用的【语法/单词纠错】插件",
+      "usage": "在edge或Chrome浏览器上下载grammarly插件，然后在同浏览器上的overleaf网站上进行写作，grammarly会实时进行语法纠错和单词拼写纠错",
+      "experience": "仅能检查明显的语法错误和单词拼写错误，更深层语义逻辑层面的typo错误无法检查。"
+    }
+  },
+  {
+    "id": "R033",
+    "csv_record": 38,
+    "title": "只改错误的 typo 检查提示词",
+    "group": "writing",
+    "how_to": "输入原文，明确只改拼写、语法、时态和单复数等错误，其他内容保留。",
+    "supplemental_links": [],
+    "original": {
+      "category": "LLM typo检查",
+      "entry": "Gemini(https://gemini.google.com/)、GPT(https://chatgpt.com/)网页版",
+      "purpose": "通用大模型，可以检索到最新的论文",
+      "usage": "输入提示词，“帮我检查下面的论文中的typo问题，包括语法、句法、时态、单复数形式等。初次之外，不要修改其他内容，不要对原文的表达进行修改。”",
+      "experience": "使用LLM对论文批量进行typo改正"
+    }
+  },
+  {
+    "id": "R034",
+    "csv_record": 42,
+    "title": "Turnitin 相关查重入口（原表）",
+    "group": "writing",
+    "how_to": "原表链接与使用条件保留在下方；正式使用时通过所在机构或官方入口确认服务。",
+    "supplemental_links": [
+      "https://www.turnitin.com/"
+    ],
+    "original": {
+      "category": "文稿查重与AI率检测",
+      "entry": "Turnitin查重工具 (https://www.turnitinchn.com/)",
+      "purpose": "对文章进行查重",
+      "usage": "直接根据界面提示使用，无提示词",
+      "experience": "上传论文的要求：500字-3万字。AI率：AI生成内容比例≥20%会显示具体数值并标蓝/紫色，<20%则以“✳”代替，提示少量AI痕迹。\n\n数据库覆盖全球学术文献和互联网内容，适合国际期刊投稿前检查"
+    }
+  },
+  {
+    "id": "R035",
+    "csv_record": 47,
+    "title": "保留原意的中文转英文提示词",
+    "group": "writing",
+    "how_to": "提供中文终稿及固定英文术语，要求翻译不增删含义和逻辑。",
+    "supplemental_links": [],
+    "original": {
+      "category": "LLM翻译（面向学术类写作）",
+      "entry": "https://chatgpt.com/",
+      "purpose": "翻译【论文中文终版】为英文，可以基本保持中文原有的行文逻辑和内容。",
+      "usage": "先输入待翻译论文段落中文，并输入提示词：将上述中文翻译成英文，要求： 1. 不要丢失和增加任何意思和逻辑！！！！ 2.要用最直观最常用的英文单词，不要用晦涩不常用的英文单词 3.尽量不要使用被动语态 4.用词符合顶级学术会议习惯 5. 多去分析和揣测我给的中文上的逻辑，保证翻译的英文除了在内容上保持一致，逻辑也要保持一致 6. 我写成英文的地方就不要动了！7. 语法句式尽量精炼",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R036",
+    "csv_record": 48,
+    "title": "Word 纯文本学术翻译提示词",
+    "group": "writing",
+    "how_to": "复制完整模板并填入中文草稿，可得到英文段落和对应中文核对文本。",
+    "supplemental_links": [],
+    "original": {
+      "category": "LLM翻译（面向学术类写作）",
+      "entry": "各种大模型",
+      "purpose": "",
+      "usage": "# Role\n你是一位兼具顶尖科研写作专家与资深会议审稿人（ICML/ICLR/NeurIPS/ACL 等）双重身份的助手。你的学术品味极高，对逻辑漏洞和语言瑕疵零容忍。\n\n# Task\n请处理我提供的【中文草稿】，将其翻译并润色为适合 Word 编辑的【英文学术论文片段】。\n\n# Constraints\n1. 视觉与排版：\n   - 绝对不要使用任何 Markdown 语法（包括但不限于 `###` 标题、`**` 加粗、`*` 斜体、`>` 引用或 ``` 代码块等）。\n   - 请直接输出纯文本，以便于一键无缝复制到 Word 文档中，不会带入任何多余的排版符号。\n   - 尽量少用引号，以免影响学术论文的视觉观感。\n\n2. 风格与逻辑：\n   - 要求逻辑严谨，用词准确，表达凝练连贯，尽量使用常见的单词，避免生僻词。\n   - 尽量不要使用破折号（—），推荐使用从句或同位语替代。\n   - 拒绝使用任何项目符号（Bullet points）或列表形式，必须使用连贯的段落表达。\n   - 去除“AI味”，行文自然流畅，避免机械的连接词堆砌。\n\n3. 时态规范：\n   - 统一使用一般现在时描述方法、架构和实验结论。\n   - 仅在明确提及特定历史事件时使用过去时。\n\n4. 输出格式：\n   - Part 1 [English Draft]：只输出翻译成英文后的内容本身。\n     * 语言要求：必须是全英文。\n     * 符号规范：直接输出标准文本符号（如 95%、model_v1、R&D 等），**切勿**进行类似 LaTeX 的斜杠转义。\n     * 公式保留：Word 支持直接转换数学文本，请保留原草稿中的公式排版（如保留 $ 符号以界定公式范围），以数学形式的因果逻辑（$\\because, \\therefore, \\implies$）串联推导过程。\n   - Part 2 [Translation]：对应的中文直译（用于核对逻辑是否符合原意）。\n   - 除以上两部分外，不要输出任何多余的对话、前缀说明或解释。\n\n# Execution Protocol\n在输出最终结果前，请务必在后台进行自我审查：\n1. 审稿人视角：假设你是最挑剔的 Reviewer，检查是否存在过度排版、格式乱码、逻辑跳跃或未翻译的中文。\n2. 立即纠正：针对发现的问题进行修改，确保最终输出的内容严谨、纯净且完全英文化。\n\n# Input\n[在此处粘贴你的中文草稿]",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R037",
+    "csv_record": 51,
+    "title": "Academic AI Prompt：科研提示词集合",
+    "group": "reference",
+    "how_to": "按选题、文献综述或写作任务到原仓库选择模板。",
+    "supplemental_links": [],
+    "original": {
+      "category": "其他",
+      "entry": "https://github.com/bohyy/academic-ai-prompt",
+      "purpose": "89+个精心设计的Prompt，覆盖从论文选题到文献综述的全流程",
+      "usage": "",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R038",
+    "csv_record": 52,
+    "title": "模型图：先整理结构再生成图像",
+    "group": "figures",
+    "how_to": "先把方法转成 VISUAL SCHEMA，再交给有绘图功能的工具或用于人工绘制。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文模型图",
+      "entry": "Nano-Bunana(https://gemini.google.com/)\ngpt-image-2",
+      "purpose": "根据要求绘制精美模型图",
+      "usage": "要先让具备强逻辑理解能力的 LLM（如 Gemini 3 Pro、GPT-5、Claude 4.5 等），将论文的算法或方法结构转化为 [VISUAL SCHEMA] 蓝图。这一步类似于让 AI “看懂”你论文的逻辑，并输出清晰的视觉结构指令。然后通过绘图模型（如 Nano-Banana Pro）将上一步生成的蓝图转化为像素级视觉成品。虽然AI生成的图片有AI味，但是可以给自己提供绘图灵感，比如整体模型布局，配色等等。吸取其中的优点，自己再画一份模型图",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R039",
+    "csv_record": 53,
+    "title": "Nature Skills：科研技能套件",
+    "group": "reference",
+    "how_to": "从按名称补充的项目下载，按任务选择技能；需要时连同 nature-shared 使用。",
+    "supplemental_links": [
+      "https://github.com/Yuan1z0825/nature-skills"
+    ],
+    "original": {
+      "category": "其他",
+      "entry": "nature-skills",
+      "purpose": "包含论文写作业方法绘图的一系列skills",
+      "usage": "使用agent时自动加载来帮助完成写作和绘图",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R040",
+    "csv_record": 54,
+    "title": "Edit Banana：图像转可编辑图形",
+    "group": "figures",
+    "how_to": "上传已有图像，查看转换结果，再在相应编辑器核对并调整组件。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文模型图",
+      "entry": "https://www.editbanana.net/app",
+      "purpose": "可以将AI生成的图转化成draw.io等可以识别的矢量图",
+      "usage": "先让具有画图能力的llm例如gpt、gemini等针对你的想法把模型图画出来，虽然可能整体具有AI味不尽如人意，但是其中的部分组件可能会有所启发或者是直接能拿来用的水平，可以使用这个工具将其转换为可编辑的矢量图，直接将该组件拖下来使用",
+      "experience": "直接上传图片能够自动识别将其转化为可编辑的矢量图，且整体效果不错"
+    }
+  },
+  {
+    "id": "R041",
+    "csv_record": 55,
+    "title": "Zotero + zotero-gpt",
+    "group": "reading",
+    "how_to": "先安装 Zotero，再按插件说明配置兼容版本和模型服务，围绕论文提问或整理笔记。",
+    "supplemental_links": [],
+    "original": {
+      "category": "辅助阅读论文",
+      "entry": "Zotero + zotero-gpt（https://github.com/MuiseDestiny/zotero-gpt）",
+      "purpose": "zotero插件",
+      "usage": "文献管理、PDF 问答、笔记整理、选中文本解释、引用辅助",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R042",
+    "csv_record": 56,
+    "title": "AI-Scientist：自动化科研项目",
+    "group": "ideas-review",
+    "how_to": "阅读原项目 README，了解研究模板、模型 API 与实验运行环境，再按需配置。",
+    "supplemental_links": [],
+    "original": {
+      "category": "idea获取",
+      "entry": "AI-Scientist（https://github.com/SakanaAI/AI-Scientist）",
+      "purpose": "用AI从零到一产出一篇论文（26年nature）",
+      "usage": "GitHub仓库拖下来后按照readme文件配置设置key和url即可使用，可以和他进行头脑风暴，如果真有比较好的idea甚至可以直接让它做。一开始有预设三个研究方向模板，若需要将自己的研究方向加进去，只需要按照GitHub中的指示制作自己的模板即可",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R043",
+    "csv_record": 57,
+    "title": "Scientific Manuscript Editor",
+    "group": "writing",
+    "how_to": "下载完整技能目录，在对应 Agent 中加载并提供论文材料与修改要求。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "https://github.com/deathcats4/scientific-manuscript-editor",
+      "purpose": "避免防御性写作",
+      "usage": "按照github的readme进行codex的skill安装即可",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R044",
+    "csv_record": 58,
+    "title": "Humanizer：减少机械表达",
+    "group": "writing",
+    "how_to": "导入技能后提交段落；可按原表经验提供少量有代表性的文风参考片段。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "https://github.com/blader/humanizer",
+      "purpose": "去除AI味",
+      "usage": "可以直接按照github说明下载使用；还可以根据自己对写作风格的需要找几篇合适的论文分段拆分放入skills做定制化优化（直接给整篇论文，尤其是pdf格式可能会影响效果）",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R045",
+    "csv_record": 60,
+    "title": "Anti-Defensive Writing（Adkid-Zephyr）",
+    "group": "writing",
+    "how_to": "选择该作者版本，导入其技能目录后提交需要修改的论文段落。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill",
+      "purpose": "去除AI味",
+      "usage": "直接导入skills即可，去除gpt的效果不错",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R046",
+    "csv_record": 61,
+    "title": "计算机科研方法总目录",
+    "group": "reference",
+    "how_to": "按研究问题查阅数学、算法和方法设计条目，作为进一步阅读与讨论的索引。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "",
+      "purpose": "",
+      "usage": "# 计算机科研：数学理论、算法技术与方法设计思想总目录\n\n范围：\n整合前文与附件中的方法性内容，并补充本轮发现的缺漏。\n\n收录：\n数学理论、统计建模、理论分析工具、优化算法、学习方法、\n损失函数、网络结构、推理机制、数据结构、系统机制、方法设计思想。\n\n不单独收录：\n常规实验流程、数据划分规范、评测指标清单、基准数据集清单、\n随机种子管理、环境配置、论文汇报与复现管理。\n\n分类说明：\n基础理论、方法族、具体算法、代表性模型不是同一层级；\n代表性模型放在其对应的方法类别内。\n目录覆盖本次合并与扩展的范围，不视为所有科研方法的封闭全集。\n\n\n# 一、数学分析、函数空间与数值计算\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 微积分与局部分析 | 极限、连续性、导数、微分、积分、偏导数、方向导数、链式法则、泰勒展开、局部线性化、隐函数定理、逆函数定理 |\n| 多元与向量分析 | 全微分、梯度、Jacobian 矩阵、Hessian 矩阵、多元极值、拉格朗日乘数法、重积分、散度、旋度、向量微积分 |\n| 函数收敛 | 函数列、函数项级数、点态收敛、一致收敛、绝对收敛、弱收敛、强收敛 |\n| 连续性与正则性 | 一致连续、Lipschitz 连续、Hölder 连续、绝对连续、有界变差、光滑性、局部正则性 |\n| 分析不等式 | Jensen 不等式、Cauchy–Schwarz 不等式、Hölder 不等式、Minkowski 不等式、Young 不等式、Gronwall 不等式 |\n| 实分析与测度论 | 测度、可测函数、Lebesgue 积分、几乎处处收敛、依测度收敛、Lp 收敛、Fatou 引理、控制收敛定理、Fubini 定理、Radon–Nikodym 导数 |\n| 复分析 | 解析函数、复积分、Cauchy 积分公式、留数定理、奇点分析、解析延拓、共形映射 |\n| 泛函分析 | 度量空间、赋范空间、Banach 空间、Hilbert 空间、Sobolev 空间、对偶空间、线性泛函、再生核 Hilbert 空间 |\n| 算子理论 | 线性算子、有界算子、紧算子、自伴算子、谱理论、算子范数、积分算子、微分算子 |\n| 变分法 | 泛函极值、变分导数、Euler–Lagrange 方程、约束变分、弱形式、最小作用量原理 |\n| 数值误差与稳定性 | 舍入误差、截断误差、前向误差、后向误差、误差传播、条件数、数值稳定性、病态问题、预条件化 |\n| 数值逼近 | 插值、多项式逼近、样条、Chebyshev 逼近、最小二乘逼近、有理逼近、数值积分 |\n| 数值求解 | 二分法、Newton 求根法、割线法、不动点迭代、迭代线性求解、非线性方程组求解 |\n| 自动微分 | 前向模式自动微分、反向模式自动微分、Jacobian–向量积、向量–Jacobian 积、Hessian–向量积、伴随方法、隐式微分 |\n| 逆问题与正则化 | 适定性、可辨识性、Tikhonov 正则化、截断正则化、迭代正则化、贝叶斯逆问题、参数反演 |\n\n\n# 二、线性代数、矩阵计算与张量方法\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 向量与线性空间 | 线性相关性、基、维数、秩、零空间、列空间、行空间、子空间、线性映射、基变换、正交补 |\n| 矩阵结构 | 对称矩阵、正交矩阵、酉矩阵、正定矩阵、半正定矩阵、块矩阵、稀疏矩阵、低秩矩阵、Toeplitz 矩阵、循环矩阵 |\n| 矩阵运算与性质 | 特征值、特征向量、迹、行列式、二次型、矩阵指数、矩阵对数、矩阵微积分 |\n| 内积与范数 | 内积、向量范数、矩阵范数、算子范数、谱范数、Frobenius 范数、核范数、Schatten 范数 |\n| 距离与相似性 | 欧氏距离、余弦相似度、马氏距离、投影距离、子空间夹角、主角度 |\n| 矩阵分解 | 特征值分解、奇异值分解、QR 分解、LU 分解、Cholesky 分解、Schur 分解、极分解、CUR 分解 |\n| 投影与最小二乘 | 正交投影、斜投影、最小二乘、加权最小二乘、广义最小二乘、广义逆、Moore–Penrose 伪逆 |\n| 低秩方法 | 截断 SVD、低秩近似、低秩参数化、低秩更新、矩阵补全、低秩回归、随机化矩阵分解、增量 SVD |\n| 稀疏与结构化分解 | 稀疏编码、字典学习、非负矩阵分解、低秩加稀疏分解、鲁棒 PCA、结构化稀疏、组稀疏 |\n| 子空间与成分分解 | 主成分分析、独立成分分析、典型相关分析、共享—特有子空间分解、多视图子空间学习、残差分解 |\n| 张量运算 | 张量积、Kronecker 积、Khatri–Rao 积、Hadamard 积、张量收缩、张量展开 |\n| 张量分解 | CP 分解、Tucker 分解、Tensor Train 分解、张量环分解、张量补全、低秩张量近似、张量网络 |\n| 大规模矩阵计算 | Krylov 子空间、Lanczos 算法、Arnoldi 迭代、幂迭代、随机迹估计、矩阵草图、近似矩阵乘法 |\n| 谱与高维矩阵分析 | 随机矩阵理论、谱分布、特征值集中、谱隙分析、低秩扰动、有效秩、稳定秩、矩阵扰动理论 |\n\n\n# 三、抽象代数、几何、拓扑与结构数学\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 抽象代数 | 群、环、域、模、同态、商结构、代数、半群、幺半群、布尔代数、格论 |\n| 数论与计算代数 | 模运算、Euclid 算法、中国剩余定理、有限域、素性测试、多项式运算、Gröbner 基、符号计算 |\n| 基础几何 | 欧氏几何、仿射几何、射影几何、凸几何、距离几何 |\n| 微分几何 | 流形、切空间、余切空间、微分形式、测地线、曲率、联络 |\n| 非欧几何与信息几何 | 黎曼几何、双曲几何、球面几何、信息几何、辛几何 |\n| 特殊流形 | Grassmann 流形、Stiefel 流形、正定矩阵流形、乘积流形、商流形 |\n| 流形计算 | 流形优化、黎曼梯度、黎曼信赖域、测地线插值、流形均值 |\n| 对称性与表示 | 群作用、群表示、表示论、Lie 群、Lie 代数、几何代数、不变性、等变性 |\n| 常见对称约束 | 置换不变性、置换等变性、平移等变性、旋转等变性、尺度不变性、群卷积 |\n| 基础拓扑 | 连通性、紧致性、邻域、连续映射、同胚、同伦 |\n| 代数拓扑 | 单纯复形、胞腔复形、链复形、同调、上同调、基本群 |\n| 拓扑数据分析 | 持久同调、持久图、条形码、拓扑特征、多尺度拓扑分析、拓扑损失、拓扑正则化 |\n| 层论与高阶结构 | 胞腔层、层上同调、Hodge 分解、Hodge 拉普拉斯、层拉普拉斯、单纯复形上的学习 |\n| 层结构神经方法 | Neural Sheaf Diffusion、Deep Neural Sheaf Diffusion、层邻接算子、矩阵值边映射 |\n| 范畴与组合结构 | 范畴、函子、自然变换、单子、幺半范畴、组合式建模 |\n\n\n# 四、微分方程、动力系统与控制理论\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 微分方程 | 常微分方程、偏微分方程、差分方程、随机微分方程、初值问题、边值问题、弱解 |\n| 动力系统 | 状态空间、平衡点、不动点、吸引子、相空间、分岔、混沌、连续时间动力系统、离散时间动力系统 |\n| 收敛与稳定性 | 收缩映射、不动点理论、Lyapunov 方法、扰动稳定性、输入—状态稳定性、递归误差传播、反馈稳定性 |\n| 微分方程数值方法 | Euler 方法、Runge–Kutta 方法、多步法、有限差分法、有限元法、有限体积法、谱方法、自适应步长 |\n| 系统建模 | 状态空间模型、传递函数、输入—输出模型、线性系统、非线性系统、时变系统、混合系统 |\n| 系统性质 | 可控性、可观测性、可检测性、可稳定化性、鲁棒性 |\n| 基础控制 | 开环控制、反馈控制、PID、状态反馈、观测器、前馈控制 |\n| 最优与预测控制 | 最优控制、LQR、LQG、模型预测控制、动态规划控制、轨迹优化 |\n| 鲁棒与自适应控制 | 鲁棒控制、自适应控制、H∞ 控制、滑模控制、增益调度 |\n| 安全与约束控制 | 控制障碍函数、可达性分析、鲁棒不变集、约束控制、事件触发控制 |\n| 系统辨识 | 参数辨识、子空间辨识、黑箱辨识、灰箱辨识、在线辨识 |\n| 动态建模与算子方法 | 动态模式分解、Koopman 算子、稀疏动力系统辨识、SINDy |\n\n\n# 五、概率论、随机过程与高维概率\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 概率基础 | 条件概率、全概率公式、Bayes 公式、独立性、条件独立性、联合分布、边缘分布、条件分布、边缘化 |\n| 随机变量与矩 | 期望、方差、协方差、相关系数、条件期望、矩、矩母函数、特征函数、累积量 |\n| 概率收敛 | 依概率收敛、几乎必然收敛、依分布收敛、Lp 收敛、一致可积性 |\n| 极限定理 | 大数定律、中心极限定理、连续映射定理、Slutsky 定理、Delta 方法 |\n| 集中不等式 | Markov 不等式、Chebyshev 不等式、Chernoff 界、Hoeffding 不等式、Bernstein 不等式、Azuma–Hoeffding 不等式、McDiarmid 不等式 |\n| 随机过程 | 马尔可夫链、Poisson 过程、更新过程、生灭过程、随机游走、Brownian 运动、鞅、Gaussian 过程、Lévy 过程 |\n| 过程性质 | 平稳性、遍历性、混合性、混合时间、停时、耦合方法、马尔可夫性 |\n| 事件与点过程 | 随机点过程、Hawkes 过程、时空点过程、事件强度建模 |\n| 随机分析 | Itô 积分、Itô 公式、Fokker–Planck 方程、Feynman–Kac 公式、Langevin 动力学、扩散过程 |\n| Monte Carlo 估计 | Monte Carlo 积分、重要性采样、拒绝采样、分层采样、控制变量、对偶变量、方差缩减、准 Monte Carlo |\n| 马尔可夫链采样 | MCMC、Gibbs 采样、Metropolis–Hastings、Hamiltonian Monte Carlo、Langevin Monte Carlo |\n| 序贯采样 | 序贯 Monte Carlo、重采样、粒子方法、自适应重要性采样 |\n| 高维概率 | 次高斯分布、次指数分布、大偏差理论、测度集中、随机投影、Johnson–Lindenstrauss 引理 |\n| 经验过程 | 覆盖数、打包数、度量熵、经验过程、对称化、链式法、统一收敛 |\n| 随机迭代 | 随机逼近、Robbins–Monro 方法、随机递推、随机稳定性 |\n\n\n# 六、统计估计、鲁棒统计与序贯推断\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 参数估计 | 最大似然估计、最大后验估计、矩估计、广义矩估计、贝叶斯估计、收缩估计、正则化估计 |\n| 充分性与可识别性 | 充分统计量、最小充分统计量、指数族、可识别性、Fisher 信息、Cramér–Rao 下界、Rao–Blackwell 化 |\n| 回归建模 | 线性模型、广义线性模型、广义加性模型、混合效应模型、层次模型、分位数回归 |\n| 鲁棒统计 | 中位数估计、截尾均值、M 估计、Huber 损失、Tukey 损失、Median-of-Means、RANSAC、鲁棒协方差估计、影响函数、崩溃点 |\n| 非参数统计 | 核密度估计、核回归、局部多项式回归、经验分布、直方图估计、样条回归、最近邻估计、秩统计 |\n| 统计检验方法 | 似然比检验、Wald 检验、得分检验、置换检验、秩检验、多重检验校正、FDR 控制 |\n| 区间估计与重采样 | 置信区间、预测区间、Bootstrap、Jackknife、参数 Bootstrap、分层 Bootstrap、块 Bootstrap |\n| 时间序列 | AR、MA、ARMA、ARIMA、VAR、指数平滑、季节分解、非平稳建模 |\n| 变化检测 | 变点检测、CUSUM、贝叶斯在线变点检测、概念漂移检测、分布漂移检测 |\n| 事件时间建模 | 生存分析、风险函数、事件历史分析、删失数据建模 |\n| 序贯有效推断 | 置信序列、时间一致置信界、e-value、e-process、检验鞅、任意时刻有效推断、可选停止 |\n| 信息获取设计 | 贝叶斯实验设计、最优实验设计、D-optimal 设计、A-optimal 设计、自适应信息获取 |\n| 统计决策与下界 | 极小极大估计、统计决策理论、Le Cam 方法、Fano 方法、Assouad 方法、估计风险下界 |\n\n\n# 七、贝叶斯建模、潜变量与概率计算\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 贝叶斯建模 | 共轭先验、层次贝叶斯、经验贝叶斯、后验预测、Bayes 因子、贝叶斯模型选择、贝叶斯模型平均 |\n| 贝叶斯非参数 | Gaussian Process、Dirichlet Process、层次 Dirichlet Process、Indian Buffet Process |\n| 概率图模型 | 贝叶斯网络、马尔可夫随机场、条件随机场、因子图、动态贝叶斯网络 |\n| 图模型推断 | 变量消去、信念传播、循环信念传播、联合树算法、最大积算法、和积算法 |\n| 潜变量模型 | 混合模型、Gaussian 混合模型、因子分析、概率 PCA、主题模型、潜在 Dirichlet 分配 |\n| EM 与交替推断 | EM、广义 EM、变分 EM、在线 EM、随机 EM、硬 EM |\n| 变分推断 | ELBO、均值场近似、结构化变分推断、摊销推断、随机变分推断、黑箱变分推断 |\n| 其他近似推断 | Laplace 近似、期望传播、假设密度滤波、变分粒子方法 |\n| 序列概率模型 | 隐马尔可夫模型、状态空间模型、切换状态空间模型、动态潜变量模型 |\n| 状态估计与滤波 | 贝叶斯滤波、Kalman 滤波、扩展 Kalman 滤波、无迹 Kalman 滤波、粒子滤波、平滑估计、状态跟踪 |\n| Stein 方法 | Stein 恒等式、Stein 差异、Stein 变分梯度下降、核化 Stein 差异 |\n| 仿真推断 | 近似贝叶斯计算、基于仿真的推断、神经后验估计、神经似然估计、神经似然比估计 |\n| 可处理概率计算 | 概率电路、和积网络、算术电路、可处理边缘化、概率知识编译、概率电路编译 |\n\n\n# 八、因果推断、不确定性与非概率推理\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 因果建模 | 结构因果模型、因果 DAG、潜在结果框架、混杂、干预、反事实、选择偏差 |\n| 因果识别 | 后门准则、前门准则、后门调整、前门调整、do-calculus、工具变量、因果可识别性 |\n| 因果效应估计 | 倾向得分匹配、逆概率加权、双重稳健估计、双重差分、回归不连续设计、中介分析、双重机器学习、因果森林 |\n| 因果发现与时序因果 | 约束式因果发现、评分式因果发现、函数因果模型、Granger 因果、时序因果发现、序贯因果推断 |\n| 因果表示与迁移 | 因果表示学习、不变因果预测、独立因果机制、因果抽象、因果迁移、因果特征选择 |\n| 不确定性建模 | 认知不确定性、偶然不确定性、后验不确定性、预测分布、不确定性分解、深度集成、Monte Carlo Dropout |\n| 概率校准 | 温度缩放、Platt 缩放、保序回归、分组校准、多重校准 |\n| 预测风险控制 | 共形预测、预测集合、选择性预测、选择性生成、拒答机制、风险控制 |\n| 模糊集与模糊逻辑 | 模糊集、隶属函数、模糊关系、模糊逻辑、模糊规则、模糊推理、模糊聚类、神经模糊系统 |\n| 可能性理论 | 可能性分布、可能性测度、必要性测度、可能性推理 |\n| 粗糙集 | 不可分辨关系、上近似、下近似、属性约简、决策规则、模糊粗糙集 |\n| 证据理论 | Dempster–Shafer 证据理论、基本概率分配、信任函数、似然函数、证据组合、冲突处理、可靠性折扣 |\n| 区间与不精确推断 | 区间分析、上下概率、不精确概率、概率区间、集合值预测 |\n\n\n# 九、优化理论与优化算法\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 优化基本理论 | 凸集、凸函数、强凸性、光滑性、次梯度、凸共轭、最优性条件、拉格朗日对偶、KKT 条件、Slater 条件 |\n| 一阶优化 | 梯度下降、随机梯度下降、动量法、Nesterov 加速、AdaGrad、RMSProp、Adam、AdamW |\n| 二阶与曲率方法 | Newton 法、Gauss–Newton 法、拟 Newton 法、BFGS、L-BFGS、共轭梯度、自然梯度、Fisher 预条件、信赖域方法 |\n| 非凸优化 | 局部极小值分析、鞍点分析、随机扰动、连续化方法、同伦方法、逃逸鞍点 |\n| 约束优化 | 投影梯度、罚函数法、障碍函数法、内点法、增广拉格朗日法、原始—对偶方法、Frank–Wolfe 算法 |\n| 近端与非光滑优化 | 近端算子、近端点法、近端梯度、软阈值、ISTA、FISTA、镜像下降 |\n| 分解与交替优化 | 坐标下降、块坐标下降、交替最小化、主化—最小化、差分凸优化、ADMM、Douglas–Rachford 分裂、前向—后向分裂 |\n| 结构化数学规划 | 线性规划、二次规划、二阶锥规划、半正定规划、整数规划、混合整数规划、随机规划 |\n| 双层与可微优化 | 双层优化、超参数优化、超梯度、隐式微分、可微优化层、元优化、学习优化器、优化展开 |\n| 多目标优化 | Pareto 最优、Pareto 前沿、加权标量化、ε 约束法、词典序优化、多目标进化算法 |\n| 鲁棒与风险优化 | 极小极大优化、鲁棒优化、分布鲁棒优化、对抗优化、机会约束、风险敏感优化、CVaR 优化 |\n| 黑箱优化 | 贝叶斯优化、Gaussian Process 优化、随机搜索、零阶优化、无导数优化、多保真优化、代理模型优化 |\n| 进化与群体优化 | 遗传算法、遗传编程、进化策略、CMA-ES、粒子群优化、蚁群优化、协同进化 |\n| 启发式与质量多样性 | 模拟退火、禁忌搜索、新颖性搜索、质量多样性优化、MAP-Elites |\n| 方差缩减优化 | SVRG、SAGA、随机方差缩减、控制变量式梯度估计 |\n| 分布式优化 | 共识优化、梯度跟踪、去中心化优化、异步优化 |\n| 结构化优化器 | Adafactor、Shampoo、SOAP、Muon、Kronecker 因子预条件、矩阵正交化更新、极分解相关更新 |\n| 锐度与损失几何 | 锐度感知优化、SAM、平坦极小值、损失曲面分析、梯度噪声分析 |\n\n\n# 十、组合优化、集合选择、最优传输与博弈方法\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 组合优化问题 | 背包问题、集合覆盖、最大覆盖、设施选址、旅行商问题、调度优化 |\n| 离散求解方法 | 动态规划、分支定界、割平面、线性松弛、舍入、列生成、局部搜索 |\n| 集合函数优化 | 子模优化（次模优化）、拟阵优化、覆盖优化、多样性优化 |\n| 集合价值与选择 | 边际收益选择、集合条件化选择、去冗余选择、边际贡献估计、Shapley 值 |\n| 多样性建模 | 行列式点过程、最大多样性选择、代表性选择、排斥式采样 |\n| 匹配与资源分配 | 二分图匹配、指派问题、最大流、最小割、最小费用流、预算分配、资源分配 |\n| 最优传输 | Wasserstein 距离、Kantorovich 松弛、熵正则化、Sinkhorn 算法、非平衡最优传输、部分最优传输 |\n| 结构化传输 | Gromov–Wasserstein、Wasserstein 重心、集合对齐、结构对齐、分布重心 |\n| 随机传输与桥问题 | Schrödinger Bridge、Bridge Matching、Diffusion Schrödinger Bridge Matching、Iterative Markovian Fitting |\n| 非合作博弈 | Nash 均衡、零和博弈、重复博弈、势博弈、拥塞博弈、Stackelberg 博弈 |\n| 合作与演化博弈 | 合作博弈、核心、协商解、贡献分配、演化博弈、复制者动力学 |\n| 机制与激励 | 机制设计、拍卖理论、激励相容、网络效用最大化 |\n\n\n# 十一、信息论、编码压缩与信号处理\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 信息度量 | 熵、条件熵、交叉熵、互信息、条件互信息、KL 散度、JS 散度、Rényi 熵、信息增益 |\n| 信息论基本理论 | 数据处理不等式、Fano 不等式、信道容量、源编码定理、信道编码定理、率失真理论 |\n| 信息压缩与表示 | 信息瓶颈、变分信息瓶颈、最小描述长度、最小消息长度、任务充分表示、信息最大化 |\n| 算法信息论 | Kolmogorov 复杂度、算法随机性、通用编码、算法概率 |\n| 分布差异 | f-divergence、Bregman 散度、Hellinger 距离、总变差距离、最大均值差异、能量距离 |\n| 无损编码 | Huffman 编码、算术编码、熵编码、预测编码、游程编码、字典编码 |\n| 有损压缩与量化 | 标量量化、向量量化、乘积量化、残差量化、变换编码、率失真优化 |\n| 纠错与信道编码 | 线性分组码、卷积码、Reed–Solomon 码、LDPC 码、Polar 码、纠错解码 |\n| 学习式压缩 | 学习式熵模型、可微量化、超先验、任务导向压缩、可变码率压缩 |\n| 变换与频域分析 | Fourier 变换、离散 Fourier 变换、快速 Fourier 变换、Laplace 变换、Z 变换、离散余弦变换、频谱分析 |\n| 时频与多尺度分析 | 短时 Fourier 变换、小波变换、多分辨率分析、功率谱估计、滤波器组、多尺度分解 |\n| 信号运算与滤波 | 卷积、相关分析、线性滤波、Wiener 滤波、自适应滤波、匹配滤波、数字滤波器设计 |\n| 信号恢复与去噪 | 压缩感知、稀疏恢复、基追踪、匹配追踪、正交匹配追踪、总变差去噪、反卷积、盲源分离 |\n\n\n# 十二、机器学习理论与理论分析工具\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 统计学习理论 | 经验风险最小化、结构风险最小化、PAC 学习、PAC-Bayes、VC 维、Rademacher 复杂度、泛化界、样本复杂度 |\n| 泛化分析 | 统一收敛、算法稳定性、压缩界、基于信息的泛化界、在线到批量转换 |\n| 学习能力与误差 | 偏差—方差分解、逼近误差、估计误差、优化误差、可学习性、一致性 |\n| 现代学习理论 | 过参数化、双下降、隐式正则化、隐式偏置、神经切线核、良性过拟合、插值学习 |\n| 参数化与规模迁移 | 最大更新参数化 μP、μTransfer、Tensor Programs、无限宽极限、特征学习极限 |\n| 规模规律 | 缩放定律、计算最优训练、数据—参数配比、内在维度、超参数迁移 |\n| 收敛分析工具 | 下降引理、递推不等式、望远镜求和、势函数、Lyapunov 函数、收缩性、单调性 |\n| 随机分析工具 | 鞅方法、集中不等式、耦合方法、停时方法、随机逼近、方差控制 |\n| 误差传播分析 | 扰动分析、灵敏度分析、误差递推、误差累积界、稳定性界、残差界 |\n| 上下界证明 | 构造性上界、极小极大下界、信息论下界、归约下界、Le Cam 方法、Fano 方法、Assouad 方法 |\n| 复杂度分析 | 时间复杂度、空间复杂度、样本复杂度、查询复杂度、通信复杂度、IO 复杂度 |\n| 近似与在线保证 | 近似比、竞争比、遗憾界、动态遗憾界、可行性保证 |\n| 表达能力分析 | 通用逼近、表示容量、网络深度—宽度权衡、秩限制、状态容量、记忆容量 |\n| 可识别性与恢复分析 | 可识别性、充分条件、必要条件、精确恢复、稳定恢复、一致估计 |\n| 结构与不变量分析 | 程序不变量、守恒量、对称性约束、单调性约束、结构保持 |\n\n\n# 十三、经典机器学习与数据挖掘\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 回归与分类 | 线性回归、Logistic 回归、岭回归、Lasso、Elastic Net、朴素贝叶斯、K 近邻、支持向量机、支持向量回归 |\n| 判别与生成分类 | 线性判别分析、二次判别分析、贝叶斯分类、生成式分类、判别式分类 |\n| 树模型与集成 | 决策树、随机森林、Extra Trees、Bagging、Boosting、AdaBoost、GBDT、XGBoost、LightGBM、CatBoost、Stacking |\n| 聚类 | K-means、K-medoids、层次聚类、谱聚类、DBSCAN、HDBSCAN、Gaussian 混合聚类、均值漂移、模糊聚类、子空间聚类、共聚类 |\n| 聚类扩展 | 约束聚类、深度聚类、多视图聚类、流式聚类、在线聚类、原型聚类、共识聚类 |\n| 降维与流形学习 | PCA、核 PCA、ICA、MDS、Isomap、LLE、Laplacian Eigenmaps、t-SNE、UMAP、随机投影 |\n| 特征选择 | 过滤式选择、包裹式选择、嵌入式选择、递归特征消除、互信息选择、稀疏选择 |\n| 特征构造 | 特征交叉、特征离散化、特征变换、字典学习、原型特征、多视图特征融合 |\n| 核与概率学习 | 核技巧、核岭回归、多核学习、核均值嵌入、Gaussian Process 回归、Gaussian Process 分类、稀疏 Gaussian Process |\n| 异常与开放环境识别 | One-Class SVM、Isolation Forest、局部离群因子、密度检测、重建误差检测、能量检测、开放集识别、分布外检测 |\n| 推荐方法 | 协同过滤、矩阵分解、因子分解机、序列推荐、图推荐、上下文感知推荐、反事实推荐 |\n| 模式挖掘 | 关联规则、频繁项集挖掘、序列模式挖掘、子图模式挖掘、事件模式发现 |\n| 自动化机器学习 | AutoML、自动特征工程、自动模型选择、自动超参数优化、流水线搜索 |\n\n\n# 十四、表示学习、自监督与结构学习\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 度量与对比学习 | 度量学习、对比学习、监督对比学习、InfoNCE、噪声对比估计、三元组学习、困难负样本挖掘 |\n| 原型与邻域学习 | 原型学习、中心约束、邻域保持、局部结构保持、原型分配、原型更新 |\n| 重建与预测 | 自编码、去噪重建、掩码预测、预测编码、潜变量预测、重建约束 |\n| 多视图表示 | 多视图融合、共享表示、视图特有表示、共享—特有分解、典型相关分析、多核融合 |\n| 解耦与结构化表示 | 解耦表示、子空间表示、稀疏表示、低秩表示、正交表示、层次表示 |\n| 非对比式表示学习 | 去相关学习、方差—协方差正则化、冗余约减、自蒸馏表示学习、表示坍缩防护 |\n| 联合嵌入预测 | Joint-Embedding Predictive Architecture、JEPA、潜在空间目标预测、动作条件化潜在预测 |\n| 图结构学习 | 图结构估计、可学习邻接关系、节点—边联合学习、图重连、异构图结构学习 |\n| 图表示机制 | 图卷积、消息传递、图注意力、图池化、图粗化、图采样、图自编码 |\n| 几何与拓扑约束 | 流形约束、测地距离约束、拓扑约束、等变约束、平滑约束、正交约束 |\n| 跨对象对齐 | 跨模态对齐、共享空间对齐、集合对齐、时序对齐、关系对齐、分布对齐 |\n| 表示与结构闭环 | 交替聚类与表示学习、结构估计—表示更新、伪标签刷新、原型—编码器协同更新 |\n\n\n# 十五、神经网络架构与可学习计算\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 基础神经网络 | 多层感知机、卷积网络、循环网络、LSTM、GRU、时序卷积网络、残差网络、编码器—解码器 |\n| 注意力与 Transformer | 自注意力、交叉注意力、多头注意力、稀疏注意力、局部注意力、线性注意力、多查询注意力、分组查询注意力 |\n| 位置与序列表示 | 绝对位置编码、相对位置编码、RoPE、ALiBi、时间编码 |\n| 状态空间与递归结构 | 状态空间序列模型、结构化状态空间模型、选择性状态空间模型、线性递归网络、循环深度网络 |\n| 图神经网络 | GCN、GAT、GraphSAGE、GIN、消息传递神经网络、图自编码器、图 Transformer、异构图网络、时序图网络、超图神经网络 |\n| 集合与几何网络 | Deep Sets、Set Transformer、群等变网络、旋转等变网络、SE(3) 等变网络、球面网络、双曲神经网络 |\n| 连续与隐式网络 | Neural ODE、Neural CDE、Neural SDE、深度平衡模型、隐式层、可微固定点层 |\n| 专家与条件计算 | Mixture of Experts、稀疏专家、软路由、硬路由、门控机制、动态网络、早退网络、模块化神经网络 |\n| 权重生成与动态参数 | HyperNetworks、超网络、输入条件化权重、动态权重、参数生成网络、快权重 |\n| 可学习函数基 | Kolmogorov–Arnold Networks、KAN、可学习边函数、样条参数化网络、乘法交互、双线性网络 |\n| 局部规则与自组织 | 神经细胞自动机、可微细胞自动机、共享局部更新、自组织状态演化 |\n| 联想与外部记忆网络 | Hopfield 网络、现代 Hopfield 网络、记忆网络、神经图灵机、可微神经计算机、内容寻址记忆 |\n| 神经架构搜索 | 可微架构搜索、进化架构搜索、权重共享搜索、单次训练架构搜索、多目标架构搜索 |\n\n\n# 十六、生成建模、扩散、流与可学习采样\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 自编码与潜变量生成 | 自编码器、去噪自编码器、稀疏自编码器、VAE、VQ-VAE、掩码自编码器、层次潜变量模型 |\n| 自回归生成 | 自回归模型、条件自回归生成、自回归潜变量模型、层次自回归 |\n| 对抗与能量生成 | GAN、能量模型、Boltzmann 机、对比散度、得分匹配 |\n| 可逆与连续流 | Normalizing Flow、归一化流、连续归一化流、可逆变换、Jacobian 行列式建模 |\n| 流匹配生成 | Flow Matching、条件流匹配、Rectified Flow、随机插值、向量场学习 |\n| 扩散生成 | 去噪扩散模型、得分式生成模型、潜在扩散、条件扩散、得分 SDE、概率流 ODE |\n| 扩散采样与控制 | 扩散采样加速、分类器引导、无分类器引导、约束采样、引导采样、后验采样 |\n| 一致性与少步生成 | Consistency Models、一致性训练、一致性蒸馏、潜在一致性模型、一步生成、少步生成、MeanFlow、平均速度建模 |\n| 离散与语言扩散 | 离散扩散、吸收态扩散、掩码扩散、块级扩散、迭代去掩码生成、扩散语言模型、LLaDA、iLLaDA |\n| 非自回归生成 | 非自回归生成、半自回归生成、并行解码、迭代修正解码 |\n| 生成流网络 | GFlowNet、奖励比例采样、流守恒目标、详细平衡、轨迹平衡、子轨迹平衡、组合对象采样 |\n| 生成先验与逆问题 | Plug-and-Play 先验、去噪正则化、扩散后验采样、生成式数据同化 |\n| 统计物理视角 | 配分函数、自由能、Gibbs 分布、Boltzmann 分布、平均场近似、退火、相变分析 |\n\n\n# 十七、学习范式、训练策略与知识迁移\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 基本学习范式 | 监督学习、无监督学习、半监督学习、弱监督学习、自监督学习、多任务学习 |\n| 半监督与弱监督 | 伪标签、自训练、协同训练、标签传播、一致性正则化、正例—未标注学习、多实例学习、噪声标签学习 |\n| 闭环与自举学习 | 自举学习、教师—学生循环、交替聚类与表示学习、伪标签刷新、EMA 教师 |\n| 迁移与领域适应 | 迁移学习、领域适应、领域泛化、分布外泛化、重要性加权、分布对齐、MMD、CORAL、对抗领域适应 |\n| 元学习与少样本 | 元学习、少样本学习、零样本学习、MAML、Reptile、原型网络、匹配网络、关系网络、孪生网络 |\n| 多任务学习 | 硬参数共享、软参数共享、任务关系学习、任务加权、梯度冲突处理、共享—特有模块分解 |\n| 持续与增量学习 | 持续学习、增量学习、经验回放、生成回放、EWC、Learning without Forgetting、参数隔离、动态网络扩展、知识巩固、持续域适应 |\n| 主动学习 | 不确定性采样、查询委员会、期望模型变化、期望误差降低、核心集选择、BALD、批量主动学习 |\n| 课程与采样策略 | 课程学习、自步学习、困难样本挖掘、困难负例挖掘、样本重加权、重采样、动态数据选择 |\n| 正则化与增强 | 权重衰减、Dropout、标签平滑、早停、Mixup、CutMix、随机深度、对抗训练、谱归一化、Jacobian 正则、梯度惩罚 |\n| 训练稳定化 | 参数初始化、BatchNorm、LayerNorm、RMSNorm、残差连接、梯度裁剪、学习率预热、学习率调度、指数滑动平均 |\n| 联邦学习 | FedAvg、FedProx、SCAFFOLD、个性化联邦学习、安全聚合 |\n| 分布式学习 | 分裂学习、去中心化学习、Gossip 学习、异步学习、分布式优化 |\n| 自动训练组织 | 人口式训练、超参数调度、自动损失加权、自动数据配比、多阶段训练 |\n\n\n# 十八、损失函数、监督构造与可微训练\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 回归目标 | 平方误差、绝对误差、Huber 损失、分位数损失、异方差回归损失 |\n| 分类与概率目标 | 负对数似然、交叉熵、二元交叉熵、Hinge 损失、Focal Loss、适当评分规则、Brier 损失 |\n| 排序与偏好目标 | Pairwise Logistic Loss、Margin Ranking Loss、Listwise Loss、排序分布匹配、偏好对比目标 |\n| 对比与度量目标 | Contrastive Loss、Triplet Loss、InfoNCE、监督对比损失、中心损失、原型一致性 |\n| 重建与生成目标 | 重建损失、去噪损失、掩码预测损失、ELBO、得分匹配目标、流匹配目标 |\n| 表示约束目标 | 正交约束、去相关约束、方差保持、协方差正则、稀疏约束、低秩约束 |\n| 分布匹配目标 | KL 正则、JS 目标、MMD 目标、Wasserstein 目标、对抗分布匹配 |\n| 结构与物理目标 | 图平滑损失、拓扑损失、守恒约束、物理残差、逻辑约束、几何一致性 |\n| 多目标与辅助监督 | 辅助任务、深度监督、中间层监督、多任务损失、动态权重、约束松弛、任务平衡 |\n| 离散梯度估计 | 得分函数估计、REINFORCE 估计、直通估计、Gumbel–Softmax、连续松弛 |\n| 连续梯度估计 | 重参数化技巧、路径导数、隐式梯度、伴随梯度、随机计算图 |\n| 监督信号构造 | 教师标注、伪标签生成、执行反馈标注、可验证答案筛选、符号推导监督、反事实监督、过程监督、结果监督 |\n\n\n# 十九、模型蒸馏、参数适配、合并与机器遗忘\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 模型蒸馏 | 输出蒸馏、特征蒸馏、关系蒸馏、自蒸馏、在线蒸馏、数据无关蒸馏 |\n| 过程与行为蒸馏 | 过程蒸馏、推理轨迹蒸馏、策略蒸馏、工具使用蒸馏、上下文蒸馏 |\n| 教师—学生学习 | 教师—学生框架、EMA 教师、Mean Teacher、特权信息学习、LUPI、广义蒸馏 |\n| 参数高效适配 | Adapter、LoRA、QLoRA、Prefix Tuning、Prompt Tuning、低秩适配、稀疏参数更新、选择性参数更新 |\n| 极低维适配 | 内在维度、子空间微调、参数共享适配、随机投影适配、TinyLoRA |\n| 模型压缩 | 结构化剪枝、非结构化剪枝、训练后量化、量化感知训练、混合精度、低秩压缩、模型稀疏化 |\n| 模型合并 | Model Merging、参数平均、权重平均、模型汤、任务向量、任务算术 |\n| 合并对齐与冲突处理 | 参数置换对齐、任务向量合并、参数符号冲突消解、TIES-Merging |\n| 知识与模型编辑 | 知识定位、事实编辑、参数编辑、局部模型编辑、批量模型编辑、检索式知识更新 |\n| 机器遗忘 | 精确遗忘、近似遗忘、认证遗忘、定向知识移除、数据删除学习 |\n| 遗忘优化 | 遗忘集梯度更新、保留集约束、遗忘—保留权衡、Negative Preference Optimization、NPO |\n| 模型更新组织 | 局部更新、模块更新、增量适配、参数隔离、编辑约束、知识冲突消解 |\n\n\n# 二十、数据集蒸馏、合成数据与数据价值\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 数据集蒸馏 | Dataset Distillation、Dataset Condensation、合成训练集优化、可学习合成样本 |\n| 蒸馏匹配目标 | 梯度匹配、训练轨迹匹配、特征分布匹配、注意力匹配、特征函数匹配 |\n| 合成数据生成 | 教师生成数据、程序生成数据、合成指令、合成推理轨迹、合成定理、合成证明 |\n| 反事实与结构化生成 | 反事实样本构造、角色翻转样本、最小编辑样本、结构保持增强、逻辑约束生成 |\n| 数据选择与压缩 | 核心集选择、代表样本选择、子集选择、样本重加权、困难样本选择、训练集压缩 |\n| 数据去重与清洗算法 | 近重复检测、语义去重、实体解析、噪声标签校正、异常样本过滤 |\n| 数据质量控制 | 拒绝采样过滤、难度控制、覆盖控制、可靠性加权、来源条件化过滤 |\n| 数据价值与归因 | 影响函数、Data Shapley、梯度贡献估计、边际贡献估计、训练数据归因 |\n| 数据反馈闭环 | 失败驱动数据生成、主动标注、模型辅助标注、错误类型定向生成、动态数据混合 |\n\n\n# 二十一、机制可解释性、归因与内部干预\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 输入与参数归因 | 梯度归因、积分梯度、影响函数、Shapley 值、特征贡献估计、样本归因 |\n| 解释模型 | 局部解释、全局解释、代理模型、规则提取、反事实解释 |\n| 表示分析 | 表征探针、线性探测、表示相似性、典型相关分析、中心化核对齐、概念探测 |\n| 可解释特征提取 | 稀疏自编码器、SAE、字典特征、Transcoder、Crosscoder、跨层 Transcoder |\n| 内部电路分析 | Mechanistic Interpretability、Circuit Discovery、Circuit Tracing、归因图、注意力头电路、特征交互路径 |\n| 激活与路径干预 | Activation Patching、Attribution Patching、Path Patching、特征干预、路径干预、迭代 Patching、因果追踪 |\n| 内部状态控制 | 激活引导、表示工程、引导向量、特征抑制、特征增强、跨层特征控制 |\n| 概念与知识移除 | 概念擦除、线性概念移除、特征级控制、表示去偏 |\n| 机制分析工具 | 特征叠加分析、残差流分析、替代模型、机制忠实性分析、电路完整性分析 |\n\n\n# 二十二、强化学习、在线学习与序贯决策\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 决策建模 | MDP、POMDP、信念状态、效用理论、贝叶斯决策、风险敏感决策、序贯决策、最优停止 |\n| 价值学习 | Bellman 方程、价值迭代、策略迭代、Monte Carlo 方法、时序差分、Q-learning、SARSA、DQN |\n| 策略优化 | 策略梯度、REINFORCE、Actor–Critic、A2C、A3C、TRPO、PPO、DDPG、TD3、SAC、GRPO |\n| 信用分配 | 优势函数、广义优势估计、资格迹、时间信用分配、轨迹级信用分配、反事实信用分配 |\n| 模型式强化学习 | 环境模型、世界模型、想象轨迹、潜在动力学、模型式规划 |\n| 离线强化学习 | 保守价值估计、行为正则化、离线策略学习、离线策略评估、分布偏移控制 |\n| 分层与技能学习 | 分层强化学习、Options、子目标学习、技能发现、目标条件策略、后继表示 |\n| 强化学习扩展 | 多智能体强化学习、安全强化学习、约束强化学习、风险敏感强化学习 |\n| 模仿与奖励学习 | 模仿学习、行为克隆、DAgger、逆强化学习、奖励建模、奖励塑形 |\n| 偏好与对齐学习 | 偏好学习、RLHF、RLAIF、DPO |\n| 推理强化学习 | 可验证奖励强化学习、RLVR、规则奖励、执行结果奖励、结果监督、过程监督、过程奖励模型 |\n| 探索与老虎机 | 多臂老虎机、上下文老虎机、ε-greedy、UCB、Thompson Sampling、EXP3、内在奖励、好奇心驱动探索、信息增益探索 |\n| 在线学习 | 在线梯度下降、在线镜像下降、FTRL、乘法权重、Hedge、指数加权、遗憾最小化、动态遗憾 |\n| 信息获取与停止 | 主动感知、信息价值、期望信息增益、序贯概率比检验、自适应停止、预算分配 |\n\n\n# 二十三、大模型训练、测试时计算与潜在推理\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 预训练 | 自回归预训练、掩码语言建模、去噪预训练、继续预训练、领域适应预训练 |\n| 后训练 | 监督微调、指令微调、偏好对齐、奖励建模、推理轨迹学习 |\n| 提示与上下文学习 | 零样本提示、少样本提示、上下文学习、示例选择、示例排序、软提示、提示集成 |\n| 上下文组织 | 上下文选择、提示分解、结构化上下文、查询条件化上下文、检索增强上下文 |\n| 显式推理 | 思维链、自一致性、最少到最多提示、问题分解、思维树、思维图、搜索式推理 |\n| 测试时计算扩展 | Test-Time Scaling、Inference-Time Scaling、Best-of-N、并行候选搜索、顺序修正、验证器引导搜索 |\n| 推理预算控制 | 自适应推理预算、计算最优分配、Budget Forcing、预算条件化、动态停止、s1 |\n| 生成与验证 | 生成—验证、生成—精修、候选筛选、过程验证器、过程奖励模型、执行验证 |\n| 潜在空间推理 | Latent Reasoning、Continuous Thought、Coconut、隐状态反馈、循环深度、Recurrent-Depth Reasoning |\n| 测试时适应 | Test-Time Adaptation、熵最小化、自监督适应、归一化统计更新、测试时参数适配 |\n| 测试时训练 | Test-Time Training、TTT 层、快权重更新、上下文到参数压缩、TTT-E2E、In-Place TTT |\n| 嵌套与多尺度学习 | Nested Learning、多层优化、多时间尺度更新、不同频率参数更新、Continuum Memory System、自修改学习模块、Hope |\n| 程序化与递归推理 | 程序辅助推理、代码执行式推理、外部环境式上下文、程序化上下文操作、递归模型调用、Recursive Language Models |\n| 语言反馈优化 | 自然语言反馈、反思式优化、提示进化、轨迹驱动提示修改、Pareto 候选保留、GEPA |\n| 生成控制 | 贪心解码、束搜索、温度采样、Top-k 采样、Top-p 采样、约束解码、语法约束、结构化输出、选择性生成 |\n\n\n# 二十四、信息检索、排序、证据选择与 RAG\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 基础检索 | TF-IDF、BM25、稀疏检索、稠密检索、混合检索 |\n| 检索模型 | 双编码器、交叉编码器、迟交互检索、向量相似度检索 |\n| 索引与近似搜索 | 倒排索引、近似最近邻搜索、局部敏感哈希、HNSW、倒排文件索引、乘积量化索引、向量聚类索引 |\n| 查询处理 | 查询改写、查询扩展、查询分解、多查询检索、相关反馈、伪相关反馈 |\n| 排序与融合 | Pointwise 排序、Pairwise 排序、Listwise 排序、重排序、级联排序、倒数排名融合、最大边际相关性 |\n| 集合与证据选择 | 集合条件化排序、覆盖驱动选择、多样性重排、边际贡献选择、证据去重、证据聚合 |\n| 证据判断 | 蕴含判断、矛盾检测、来源归因、可信度估计、事实一致性检查、时间敏感证据处理 |\n| 检索增强 | RAG、GraphRAG、多跳检索、迭代检索、自适应检索、图检索、结构化检索 |\n| 上下文处理 | 文档切分、语义分块、重叠分块、上下文选择、证据排序、上下文重排、上下文压缩 |\n| 检索与生成联合优化 | 检索器—生成器联合训练、任务条件化检索、下游反馈排序、可微检索、检索策略学习 |\n| 跨对象对齐 | 跨模态对齐、共享空间对齐、集合对齐、时序对齐、关系对齐 |\n\n\n# 二十五、记忆架构、记忆管理与长上下文\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 记忆类型 | 工作记忆、短期记忆、长期记忆、情景记忆、语义记忆、程序性记忆 |\n| 记忆载体 | 参数化记忆、非参数化记忆、文本记忆、向量记忆、图记忆、软 token 记忆、潜在记忆 |\n| 记忆寻址与读取 | 键值记忆、内容寻址记忆、关联检索、查询条件化读取、分层读取 |\n| 结构化记忆 | 知识图谱记忆、事件图、时间图、层次记忆、多尺度记忆、时序索引、版本化记忆 |\n| 记忆操作 | 记忆写入、记忆读取、记忆检索、记忆合并、记忆更新、记忆压缩、记忆巩固、记忆遗忘、记忆淘汰、记忆去重 |\n| 写入与更新控制 | 写入门控、写入准入、保守更新、局部更新、差量更新、稀疏修改、冲突消解、来源追踪、可逆更新 |\n| 压缩与容量控制 | 抽取式压缩、摘要压缩、软提示压缩、潜在压缩、查询条件化压缩、任务相关压缩、容量约束、时效衰减 |\n| 循环与长上下文 | 分块处理、滑动窗口、递归摘要、循环状态更新、层次摘要、长期依赖建模 |\n| 状态化记忆 | 状态—观测分离、信念状态、预测—校正、置信度更新、多假设状态、贝叶斯记忆更新 |\n| 参数化在线记忆 | 快权重记忆、梯度式记忆写入、惊讶度驱动更新、Titans、多时间尺度记忆更新 |\n| Delta Rule 记忆 | Delta Rule、Gated Delta Rule、Gated DeltaNet、Gated DeltaNet-2、通道级衰减、擦除—写入解耦 |\n| 查表式条件记忆 | Conditional Memory、Engram、N-gram 记忆、哈希寻址、稀疏查表、记忆预取、计算—存储分离 |\n| 可学习记忆控制 | 记忆操作动作化、策略学习式记忆管理、长短期记忆联合控制、任务回报驱动更新、AgeMem |\n| 经验与技能记忆 | 经验抽象、案例复用、技能库、失败经验记忆、成功轨迹复用、策略记忆 |\n| 共享与多模态记忆 | 共享记忆、私有记忆、跨 Agent 记忆同步、多模态记忆、视觉情景记忆、记忆访问权限 |\n\n\n# 二十六、智能体规划、工作流与多智能体协作\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 工具与执行 | 工具调用、工具选择、执行反馈、结构化动作、工作流编排 |\n| 任务规划 | 规划—执行、任务分解、子目标规划、分层规划、约束规划、预算约束规划 |\n| 推理与行动结合 | ReAct、交替推理与行动、检索—推理—行动、环境反馈驱动决策 |\n| 修正与恢复 | 反思、自我修正、迭代精炼、失败恢复、回溯、重规划、状态回滚 |\n| 工作流结构 | 串行流程、并行流程、条件分支、循环流程、生成—审查、规划—执行—验证 |\n| 多智能体组织 | 角色分工、任务分配、集中式协调、去中心化协调、黑板架构 |\n| 多智能体交互 | 通信协议、信息共享、协商、辩论、共识、协同决策 |\n| 多智能体学习 | 通信学习、协作规划、共享奖励、个体奖励、反事实信用分配、竞争—合作学习 |\n| 工作流自动优化 | 自动提示优化、自动工具路由、工作流搜索、执行轨迹优化、反馈驱动流程修改 |\n\n\n# 二十七、知识表示、神经符号与自动发现\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 知识表示 | 知识图谱、语义网络、本体、描述逻辑、规则系统、事件知识表示、时序知识表示 |\n| 关系建模 | 关系嵌入、知识图谱嵌入、张量分解式关系建模、路径表示、关系组合 |\n| 符号推理 | 逻辑编程、规则推理、Datalog、约束满足、SAT、SMT、自动定理证明 |\n| 推理方式 | 演绎推理、归纳推理、溯因推理、非单调推理、默认推理、信念修正 |\n| 神经符号学习 | Neuro-Symbolic Learning、可微逻辑、概率逻辑编程、DeepProbLog、逻辑张量网络 |\n| 神经符号协作 | 神经模型生成候选、符号引擎推导、可验证证明搜索、辅助构造生成、AlphaGeometry |\n| 程序生成 | 程序综合、程序补全、程序归纳、约束引导程序生成、搜索式程序生成 |\n| 程序反馈与修正 | 执行反馈、反例驱动修正、编译反馈、符号约束、生成—执行—修复 |\n| 自动算法发现 | 进化式程序搜索、程序种群搜索、自动评估器、算法改写、代码自改进、AlphaEvolve |\n| 学习增强算法 | Learning-Augmented Algorithms、带预测的在线算法、预测式缓存、预测与经典算法融合、鲁棒回退 |\n\n\n# 二十八、软件工程、编程语言与形式化方法\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 程序分析 | 静态分析、动态分析、数据流分析、控制流分析、调用图、程序切片 |\n| 执行与安全分析 | 符号执行、混合执行、污点分析、路径约束分析、依赖分析 |\n| 程序语义 | Lambda 演算、操作语义、指称语义、公理语义、程序等价性、语义保持变换 |\n| 类型系统 | 类型推断、多态类型、依赖类型、线性类型、效果系统、精化类型、Curry–Howard 对应 |\n| 逻辑基础 | 命题逻辑、一阶逻辑、模态逻辑、时序逻辑 |\n| 约束求解 | SAT、SMT、约束规划、逻辑编程、Datalog、约束传播 |\n| 形式化验证 | Hoare 逻辑、分离逻辑、模型检查、定理证明、证明检查、程序不变量、抽象解释、形式化规格 |\n| 编译表示 | 抽象语法树、中间表示、控制流图、SSA、程序依赖图 |\n| 编译优化 | 常量传播、死代码消除、公共子表达式消除、循环优化、向量化、寄存器分配、等价重写 |\n| 程序综合方法 | 神经引导程序综合、反例引导综合、CEGIS、约束驱动综合、学习型搜索启发式 |\n| 等价与重写方法 | 项重写、等价饱和、e-graph、规范化、程序等价检查 |\n| 自动化测试算法 | 模糊测试、覆盖引导模糊测试、变异测试、差分测试、蜕变测试、属性测试、约束驱动测试生成 |\n| 程序修复 | 自动程序修复、故障定位、补丁生成、执行反馈修复、反例驱动修复 |\n| 软件维护与复用 | 缺陷预测、重构、代码克隆检测、变更影响分析、代码检索、结构匹配、语义匹配、模式提取 |\n| 软件数据分析 | 软件仓库挖掘、代码变更建模、测试优先级排序、过程挖掘 |\n\n\n# 二十九、离散数学、算法、数据结构与计算理论\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 集合与离散结构 | 集合论、等价关系、偏序、格、布尔代数、拟阵 |\n| 组合数学 | 排列组合、容斥原理、鸽巢原理、递推关系、生成函数、组合设计、概率方法 |\n| 基础图论 | 路径、连通性、生成树、二分图、匹配、图着色、网络流、图割、有向无环图、超图 |\n| 算法设计范式 | 递归、分治、动态规划、贪心、回溯、分支定界、随机化算法、近似算法、在线算法、流式算法、增量算法 |\n| 搜索算法 | 广度优先搜索、深度优先搜索、A*、迭代加深、束搜索、最佳优先搜索、启发式搜索、局部搜索 |\n| 博弈搜索 | Minimax、Alpha–Beta 剪枝、Monte Carlo 树搜索 |\n| 图算法 | 最短路径、最小生成树、最大流、最小割、二分图匹配、拓扑排序、强连通分量 |\n| 图结构分析 | 图拉普拉斯、谱图方法、图划分、社区发现、PageRank、个性化 PageRank、中心性分析、随机游走、图稀疏化 |\n| 基础数据结构 | 数组、链表、栈、队列、哈希表、堆、平衡树、B 树、B+ 树、Trie、并查集、跳表 |\n| 高级数据结构 | 线段树、树状数组、持久化数据结构、后缀数组、后缀树、稀疏矩阵 |\n| 空间索引 | KD-tree、R-tree、四叉树、八叉树、空间划分、空间范围索引 |\n| 概率数据结构 | Bloom Filter、Cuckoo Filter、Count-Min Sketch、Count Sketch、HyperLogLog、MinHash |\n| 流式算法 | 蓄水池抽样、滑动窗口、流式聚类、流式统计、近似计数、Sketch |\n| 字符串匹配 | KMP、Rabin–Karp、Aho–Corasick、近似字符串匹配 |\n| 序列比较与对齐 | 编辑距离、最长公共子序列、序列对齐、动态时间规整 |\n| 计算几何 | 凸包、最近点对、Voronoi 图、Delaunay 三角剖分、几何范围查询、碰撞检测 |\n| 自动机与形式语言 | 有限自动机、正则语言、上下文无关文法、下推自动机、语法分析、图灵机、状态机 |\n| 可计算性与复杂性 | 可判定性、不可判定性、归约、P、NP、NP 完全性、NP 困难性、计数复杂性、参数化复杂性、通信复杂性 |\n| 学习型算法与结构 | 学习型索引、学习型数据结构、神经组合优化、学习启发式、预测辅助近似算法 |\n\n\n# 三十、数据库、分布式系统与存储机制\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 数据模型 | 关系模型、文档模型、键值模型、图模型、时序模型、向量数据模型 |\n| 查询与索引 | 关系代数、索引、连接算法、查询优化、代价模型、物化视图 |\n| 数据组织 | 关系数据库、图数据库、向量数据库、时序数据库、键值存储、结构化知识存储 |\n| 事务与并发控制 | ACID、事务隔离、锁机制、乐观并发控制、MVCC、预写日志 |\n| 增量数据处理 | 增量计算、增量视图维护、流处理、变更数据捕获、差量更新 |\n| 来源与版本化状态 | 数据血缘、数据溯源、依赖追踪、事件溯源、版本化状态、快照、状态回放 |\n| 缓存与复用 | 记忆化、结果缓存、多级缓存、缓存准入、缓存失效、预计算、惰性计算、预取 |\n| 缓存策略 | LRU、LFU、频率驱动淘汰、时间驱动淘汰、价值驱动缓存、预测式缓存 |\n| 存储机制 | 分层存储、数据压缩、日志结构存储、计算—存储分离 |\n| 分布式组织 | 数据分片、复制、状态机复制、集中式协调、去中心化协调 |\n| 一致性理论 | 一致性模型、线性一致性、因果一致性、最终一致性、CAP、共识 |\n| 共识与可合并状态 | Paxos、Raft、CRDT |\n| 分布式事务 | 两阶段提交、三阶段提交、补偿事务 |\n| 容错与恢复 | 检查点、故障检测、幂等性、重试、回滚、状态恢复 |\n| 分布式数据处理 | MapReduce、消息传递、分布式聚合、流批一体处理、分布式任务调度 |\n\n\n# 三十一、并发、高效计算、大规模训练与推理\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 并发与操作系统 | 进程、线程、协程、锁、信号量、原子操作、无锁算法、无等待算法 |\n| 内存与执行 | 虚拟内存、内存层次、流水线、批处理、SIMD、SIMT |\n| 调度与资源管理 | 优先级调度、动态调度、资源调度、负载均衡、背压、计算卸载 |\n| 性能与资源理论 | 排队论、Little 定律、Amdahl 定律、Roofline 模型、IO 复杂度、容量建模 |\n| 训练并行 | 数据并行、模型并行、张量并行、流水线并行、专家并行 |\n| 训练内存优化 | 梯度累积、梯度检查点、激活重计算、参数分片、混合精度 |\n| 通信与执行优化 | 通信重叠、梯度压缩、消息传递、算子融合、稀疏计算 |\n| 推理缓存 | KV Cache、前缀缓存、结果缓存、Paged Attention |\n| 注意力与内核优化 | FlashAttention、局部注意力计算、稀疏注意力计算、融合算子、内存访问优化 |\n| 推理调度 | 连续批处理、动态批处理、动态路由、自适应计算、推测解码、预填充—解码分离 |\n| 软硬件协同 | 自动调优、内核生成、算子调度、模型—硬件协同设计、硬件感知压缩、近存计算、存内计算 |\n| 网络与通信方法 | 路由、拥塞控制、流量工程、网络编码、软件定义网络、可编程数据平面 |\n| 边缘与协同计算 | 边缘计算、云边协同、端侧推理、通信—计算联合优化 |\n\n\n# 三十二、多模态、视觉几何、语音与具身技术\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 多模态表示与融合 | 联合嵌入、跨模态对齐、早期融合、晚期融合、交叉注意力融合、门控融合、多模态对比学习 |\n| 文本与语言表示 | 分词、子词建模、BPE、Unigram 分词、字符级表示、词嵌入、句子嵌入、文档嵌入 |\n| 语言结构方法 | 序列标注、依存句法分析、成分句法分析、语义角色建模、共指建模、语义解析 |\n| 信息抽取机制 | 实体识别、关系抽取、事件抽取、实体链接、结构化预测、文本蕴含 |\n| 世界模型 | 潜在动力学、状态预测、动作条件预测、预测式表示学习、模型式规划 |\n| 联合嵌入世界模型 | JEPA 世界模型、V-JEPA、V-JEPA 2、V-JEPA 2.1、潜在视频预测、动作条件化潜在规划、密集预测监督、多层自监督 |\n| 图像与局部特征 | 卷积滤波、形态学处理、图像配准、局部描述子、SIFT、ORB、特征匹配、几何验证 |\n| 时空视觉方法 | 光流、运动估计、时空特征融合、轨迹关联、时序状态更新 |\n| 多视图几何 | 极线几何、位姿恢复、三角化、Structure from Motion、多视图立体视觉、束调整 |\n| 三维几何与表示 | 点云配准、ICP、点云表示、网格表示、体素表示、占据场、符号距离函数 |\n| 神经场与场景表示 | 隐式神经表示、神经辐射场、NeRF、显式辐射场、3D Gaussian Splatting |\n| 可微图形 | 可微渲染、可微光栅化、可微几何优化、体渲染、逆向渲染、场景参数优化 |\n| 图形与仿真计算 | 光线追踪、路径追踪、蒙特卡洛渲染、几何处理、物理动画 |\n| 语音序列建模 | 连接时序分类、CTC、RNN-T、声学模型、语音—文本对齐、说话人表示 |\n| 音频与语音生成 | 语音增强、声源分离、说话人分离、神经声码器、语音 token 化、韵律建模 |\n| 机器人建模 | 正运动学、逆运动学、刚体变换、机器人动力学、接触建模 |\n| 定位与建图 | SLAM、视觉里程计、视觉惯性里程计、位姿图优化、地图融合 |\n| 运动与任务规划 | RRT、RRT*、PRM、轨迹优化、避障规划、任务与运动规划 |\n| 生成式动作策略 | Diffusion Policy、动作扩散、动作序列生成、视觉条件策略、流匹配动作生成、滚动时域控制 |\n| 具身学习 | 视觉—语言—动作模型、VLA、动作分块、技能学习、示范学习、Sim-to-Real、域随机化 |\n| 主动与异步感知 | 主动视觉、信息增益规划、多传感器融合、事件相机、事件流表示、事件式 SLAM |\n\n\n# 三十三、科学机器学习、结构保持与可微仿真\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 科学机器学习 | 神经算子、物理信息神经网络、微分方程代理模型、数据同化、不确定性量化 |\n| 算子学习 | Fourier Neural Operator、DeepONet、图神经算子、条件算子学习 |\n| 结构保持学习 | 守恒约束、Hamiltonian 神经网络、Lagrangian 神经网络、辛结构保持、物理一致性约束 |\n| 多保真与降阶 | 多保真建模、降阶模型、代理模型、多尺度建模、模型降阶 |\n| 可微仿真 | 可微物理、可微仿真、可微渲染、梯度式参数反演、仿真—学习联合优化 |\n| 仿真校准 | 模拟器校准、参数反演、贝叶斯校准、仿真推断 |\n| 科学发现 | 符号回归、方程发现、程序搜索、主动科学学习、生成—评估式发现 |\n| 主动推断 | 主动推断、变分自由能、期望自由能、信念更新、感知—行动联合推断 |\n\n\n# 三十四、神经形态、超维计算与量子方法\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 脉冲神经元 | 积分发放神经元、LIF 神经元、脉冲时序编码、脉冲频率编码 |\n| 脉冲学习 | STDP、替代梯度学习、脉冲反向传播、局部可塑性规则 |\n| 神经形态计算 | 事件驱动计算、异步计算、神经形态硬件、低功耗脉冲计算 |\n| 生物启发学习 | Hebbian 学习、预测编码、局部学习规则、平衡传播、反馈对齐 |\n| 储备池方法 | 储备池计算、回声状态网络、液态状态机、固定动态系统读出学习 |\n| 超维与向量符号计算 | 超维计算、向量符号架构、绑定、叠加、置换、全息约化表示、张量积表示 |\n| 量子计算基础 | 量子比特、量子门、量子线路、量子纠缠、量子 Fourier 变换、振幅放大、量子纠错 |\n| 变分量子算法 | VQE、QAOA、参数化量子线路、参数移位法 |\n| 量子机器学习 | 量子核、量子神经网络、量子生成模型、量子—经典混合优化 |\n\n\n# 三十五、密码学、隐私、公平性与可信学习\n\n| 分类 | 理论、方法与技术 |\n|---|---|\n| 密码学基础 | 对称加密、非对称加密、密码哈希、消息认证码、数字签名、密钥交换 |\n| 安全计算 | 多方安全计算、同态加密、零知识证明、可信执行环境 |\n| 差分隐私 | 差分隐私、局部差分隐私、隐私预算、隐私会计、差分隐私随机梯度下降 |\n| 隐私保护机制 | 安全聚合、匿名化、数据最小化、敏感数据检测、成员推断防护 |\n| 系统访问与隔离 | 访问控制、信息流控制、权限约束、隔离机制、沙箱、可信执行验证 |\n| 模型与数据安全 | 对抗样本、数据投毒、模型后门、成员推断、模型反演、模型窃取 |\n| 模型防护方法 | 对抗训练、鲁棒聚合、异常更新检测、后门检测、投毒检测、隐私保护训练 |\n| 大模型与检索防护 | 提示注入防护、检索污染防护、工具调用约束、来源可信度控制、输出约束 |\n| 认证可靠性 | 认证鲁棒性、随机平滑、可证明隐私、形式化安全约束、风险控制 |\n| 公平性方法 | 群体公平性、个体公平性、最差群体风险、公平表示、群体校准、约束式公平学习 |\n| 内容来源与真实性 | 内容溯源、水印、数字签名验证、合成内容检测、来源完整性验证 |\n\n\n# 三十六、可跨领域复用的方法设计思想\n\n| 分类 | 方法思想 |\n|---|---|\n| 问题形式化 | 抽象建模、状态表示、目标函数设计、约束建模、概率建模、图建模、能量建模、状态空间建模、潜变量建模 |\n| 问题重构 | 改变表示、改变优化对象、改变监督方式、改变计算顺序、改变信息粒度、改变状态定义 |\n| 结构假设 | 稀疏性、低秩性、平滑性、单调性、凸性、局部性、对称性、不变性、等变性、条件独立、因果结构 |\n| 问题拆解 | 分治、分解、解耦、层次化、模块化、变量分裂、任务分解、子问题归约 |\n| 结构分解 | 共享—特有分解、低秩—稀疏分解、全局—局部分解、状态—观测分离、预测—校正、主干—残差分解 |\n| 近似与替代 | 局部线性化、连续松弛、凸松弛、代理目标、上界优化、下界优化、变分近似、采样近似、低秩近似 |\n| 迭代改进 | 交替优化、坐标更新、残差修正、不动点迭代、自训练、自举学习、教师—学生协同、闭环反馈、反馈控制 |\n| 层次与尺度 | 粗到细、全局—局部协同、多尺度、多粒度、多分辨率、层次表示、分层规划、分层记忆、多时间尺度更新 |\n| 表示与结构协同 | 表示—聚类交替、结构估计—特征更新、原型—编码器协同、检索—生成联合优化 |\n| 信息处理 | 压缩、重建、去噪、筛选、去冗余、补覆盖、补全、聚合、对齐、解耦、蒸馏、巩固、遗忘 |\n| 选择与分配 | 独立打分、集合条件化选择、覆盖驱动、边际收益驱动、多样性驱动、不确定性驱动、信息价值驱动 |\n| 流程组织 | 先召回后精排、先覆盖后去噪、先去噪后扩展、先覆盖后精修、先去噪后精修、候选生成—验证、生成—精修 |\n| 可靠操作 | 提案—验证—提交、可逆操作、保守更新、稀疏修改、门控更新、局部修正、版本化更新、回滚、冲突消解 |\n| 训练组织 | 教师—学生、生成—判别、生成—验证、局部监督—全局反馈、离线预训练—在线适应、训练时学习—测试时更新 |\n| 不确定性处理 | 置信度加权、保留多假设、延迟决策、选择性预测、主动查询、可靠性折扣 |\n| 资源分配 | 按需计算、条件计算、自适应预算、动态路由、早停、级联、缓存复用、增量更新、计算—存储权衡 |\n| 知识与过程迁移 | 经验抽象、技能复用、模型合并、数据集蒸馏、推理过程蒸馏、策略迁移 |\n| 学习与系统协同 | 学习增强算法、可微算法层、可学习数据结构、模型—索引联合优化、模型—硬件协同优化 |\n| 搜索与反馈闭环 | 提案—评估—保留、生成—执行—反馈、搜索—验证—修正、探索—利用 |\n| 决策权衡 | 探索—利用、偏差—方差、稳定性—可塑性、覆盖率—精度、准确率—成本、鲁棒性—适应性、压缩率—信息保真度 |\n\n\n# 术语边界\n\n模型蒸馏 ≠ 数据集蒸馏。\n模型集成 ≠ 模型合并。\n测试时计算扩展 ≠ 测试时适应 ≠ 测试时训练。\nGFlowNet ≠ Normalizing Flow ≠ Flow Matching。\n外部记忆淘汰 ≠ 参数化机器遗忘。\n文本重建 ≠ 像素重建 ≠ 潜在空间预测。\n正交性 ≠ 统计独立性 ≠ 语义解耦。\n状态估计 ≠ 文本摘要 ≠ 显式贝叶斯滤波。\n因果推断 ≠ 输入干预 ≠ 模型归因。\nCrosscoder ≠ 跨层 Transcoder。\n概率 ≠ 模糊隶属度 ≠ 可能性 ≠ 证据信任度。\n误差理论分析 ≠ 实验误差统计。\n自动化测试生成算法 ≠ 论文中的常规测试流程。\n理论工具、方法族、具体算法、网络结构、系统机制可以组合，但不能仅凭名称相近就视为同一种技术。",
+      "experience": "整理idea"
+    }
+  },
+  {
+    "id": "R047",
+    "csv_record": 62,
+    "title": "ML Paper Writing（Orchestra Research）",
+    "group": "writing",
+    "how_to": "读取技能说明，提供研究材料；引用检索、模板编译等功能按上游要求配置。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "https://github.com/Orchestra-Research/AI-research-SKILLs/tree/main/20-ml-paper-writing",
+      "purpose": "论文写作技能",
+      "usage": "撰写适用于NeurIPS、ICML、ICLR、ACL、AAAI、COLM等会议的出版级机器学习/人工智能论文。适用于从研究代码库起草论文、构建论证、核实引用或准备最终投稿版本。",
+      "experience": "直接让Agent安装使用"
+    }
+  },
+  {
+    "id": "R048",
+    "csv_record": 63,
+    "title": "Anti-Defensive Writing（Kiterlin）",
+    "group": "writing",
+    "how_to": "选择该作者版本，加载技能后提交草稿，按其说明去掉冗余铺垫并保留必要范围。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "https://github.com/Kiterlin/anti-defensive-writing",
+      "purpose": "避免防御性写作",
+      "usage": "防御性写作消除法引入了一种智能体技能规范，该规范能够系统性地诊断并消除防御性认知开销，同时严格保持方法论有效性、实证范围以及伦理/法律边界。通过将防御性免责声明替换为积极的范围界定，并根据观察到的证据校准不确定性，该框架使研究人员和专业人士能够以权威的清晰度、结构化的焦点和最大的信噪比来传达研究结果。",
+      "experience": "直接让Agent安装使用"
+    }
+  },
+  {
+    "id": "R049",
+    "csv_record": 64,
+    "title": "论文初稿辅助写作网站（原表）",
+    "group": "writing",
+    "how_to": "按原表入口提供研究领域、目标会议、背景和问题定义；该 IP 入口未作可用性保证。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "http://43.159.131.189:9000/",
+      "purpose": "基于既有论文写作思路整理的初稿 skill，根据提供的信息撰写引言、方法、相关工作的初稿",
+      "usage": "提供研究领域、方向、目标会议、背景和问题定义等等信息，会参考田老师之前的写作思路撰写初稿",
+      "experience": "网站直接使用"
+    }
+  },
+  {
+    "id": "R050",
+    "csv_record": 65,
+    "title": "Paper Banana：学术图表生成",
+    "group": "figures",
+    "how_to": "输入图表描述，选择模板、风格和版面，再检查生成图的模块与标注。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文模型图",
+      "entry": "https://paper-banana.org/zh#generator",
+      "purpose": "输入学术图表描述生成模型图，可以选择视觉风格，支持原理图、统计图表、系统架构图、流程图和海报素材等多种类型",
+      "usage": "可以调整风格、模型、比例、画质和格式，一次生多图，可以作为论文模型图的初步参考。",
+      "experience": "可以优先使用匹配的模板，用模板生成的效果比自选的好一些"
+    }
+  },
+  {
+    "id": "R051",
+    "csv_record": 66,
+    "title": "Scribbr：语法检查",
+    "group": "writing",
+    "how_to": "在页面粘贴待检查文本，逐项查看错误标注和修改版本。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "https://www.scribbr.com/grammar-checker/",
+      "purpose": "语法检查并修改",
+      "usage": "直接在网站中上传需要检查的文本，会标注出语法问题并提供修改后的版本",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R052",
+    "csv_record": 67,
+    "title": "Manchester Academic Phrasebank",
+    "group": "writing",
+    "how_to": "按写作功能查找常见学术表达，结合自己的论证和上下文使用。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文写作润色",
+      "entry": "https://www.phrasebank.manchester.ac.uk/",
+      "purpose": "学术短语库",
+      "usage": "虽然不是llm，但是适合前期没有足够积累的时候检索使用",
+      "experience": ""
+    }
+  },
+  {
+    "id": "R053",
+    "csv_record": 68,
+    "title": "Academic Research Skills：学术流程套件",
+    "group": "figures",
+    "how_to": "保留完整项目，按其平台安装说明选择研究、写作、审稿或绘图任务。",
+    "supplemental_links": [],
+    "original": {
+      "category": "论文模型图",
+      "entry": "https://github.com/Imbad0202/academic-research-skills",
+      "purpose": "论文模型画图skill",
+      "usage": "全流程学术 Skill 套件，内置 visualization_agent，能读论文数据自动生成 Matplotlib/Seaborn 或 R ggplot2 代码，支持柱状图、箱线图、小提琴图、森林图、漏斗图、热图等二十多种图型，还配套 APA 7.0 图注、色盲友好配色、300 DPI 投稿分辨率和 LaTeX 插图代码。",
+      "experience": ""
+    }
+  }
+]

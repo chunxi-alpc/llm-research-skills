@@ -1,0 +1,186 @@
+[
+  {
+    "kind": "starter",
+    "path": "downloads/research-skills-starter.zip",
+    "skill_count": 10,
+    "bytes": 62760
+  },
+  {
+    "kind": "new-skill",
+    "path": "downloads/individual/research-literature-search.zip",
+    "name": "research-literature-search",
+    "skill_count": 1,
+    "bytes": 3620
+  },
+  {
+    "kind": "new-skill",
+    "path": "downloads/individual/research-paper-reading.zip",
+    "name": "research-paper-reading",
+    "skill_count": 1,
+    "bytes": 3353
+  },
+  {
+    "kind": "new-skill",
+    "path": "downloads/individual/academic-language-polish.zip",
+    "name": "academic-language-polish",
+    "skill_count": 1,
+    "bytes": 3079
+  },
+  {
+    "kind": "new-skill",
+    "path": "downloads/individual/method-logic-check.zip",
+    "name": "method-logic-check",
+    "skill_count": 1,
+    "bytes": 3139
+  },
+  {
+    "kind": "new-skill",
+    "path": "downloads/individual/research-idea-discussion.zip",
+    "name": "research-idea-discussion",
+    "skill_count": 1,
+    "bytes": 27571
+  },
+  {
+    "kind": "new-skill",
+    "path": "downloads/individual/paper-peer-review.zip",
+    "name": "paper-peer-review",
+    "skill_count": 1,
+    "bytes": 4769
+  },
+  {
+    "kind": "new-skill",
+    "path": "downloads/individual/academic-proofreading.zip",
+    "name": "academic-proofreading",
+    "skill_count": 1,
+    "bytes": 2849
+  },
+  {
+    "kind": "new-skill",
+    "path": "downloads/individual/academic-translation.zip",
+    "name": "academic-translation",
+    "skill_count": 1,
+    "bytes": 4333
+  },
+  {
+    "kind": "new-skill",
+    "path": "downloads/individual/coding-task-brief.zip",
+    "name": "coding-task-brief",
+    "skill_count": 1,
+    "bytes": 2942
+  },
+  {
+    "kind": "new-skill",
+    "path": "downloads/individual/paper-figure-brief.zip",
+    "name": "paper-figure-brief",
+    "skill_count": 1,
+    "bytes": 4213
+  },
+  {
+    "kind": "upstream-skill",
+    "path": "downloads/individual/blader--humanizer--humanizer.zip",
+    "project": "blader--humanizer",
+    "name": "humanizer",
+    "title": "Humanizer",
+    "skill_count": 1,
+    "bytes": 29631
+  },
+  {
+    "kind": "upstream-skill",
+    "path": "downloads/individual/adkid-zephyr--anti-defensive-writing--anti-defensive-writing.zip",
+    "project": "adkid-zephyr--anti-defensive-writing",
+    "name": "anti-defensive-writing",
+    "title": "Anti-Defensive Writing 中文版（Adkid-Zephyr）",
+    "skill_count": 1,
+    "bytes": 4392
+  },
+  {
+    "kind": "upstream-skill",
+    "path": "downloads/individual/adkid-zephyr--anti-defensive-writing--anti-defensive-writing-en.zip",
+    "project": "adkid-zephyr--anti-defensive-writing",
+    "name": "anti-defensive-writing-en",
+    "title": "Anti-Defensive Writing 英文版（Adkid-Zephyr）",
+    "skill_count": 1,
+    "bytes": 4403
+  },
+  {
+    "kind": "upstream-skill",
+    "path": "downloads/individual/kiterlin--anti-defensive-writing--anti-defensive-writing.zip",
+    "project": "kiterlin--anti-defensive-writing",
+    "name": "anti-defensive-writing",
+    "title": "Anti-Defensive Writing（Kiterlin）",
+    "skill_count": 1,
+    "bytes": 10935
+  },
+  {
+    "kind": "upstream-skill",
+    "path": "downloads/individual/deathcats4--scientific-manuscript-editor--scientific-manuscript-editor.zip",
+    "project": "deathcats4--scientific-manuscript-editor",
+    "name": "scientific-manuscript-editor",
+    "title": "Scientific Manuscript Editor",
+    "skill_count": 1,
+    "bytes": 80977
+  },
+  {
+    "kind": "upstream-skill",
+    "path": "downloads/individual/multica-ai--andrej-karpathy-skills--karpathy-guidelines.zip",
+    "project": "multica-ai--andrej-karpathy-skills",
+    "name": "karpathy-guidelines",
+    "title": "Karpathy Guidelines",
+    "skill_count": 1,
+    "bytes": 2015
+  },
+  {
+    "kind": "upstream-suite",
+    "path": "downloads/upstream/adkid-zephyr--anti-defensive-writing.zip",
+    "project": "adkid-zephyr--anti-defensive-writing",
+    "bytes": 22858
+  },
+  {
+    "kind": "upstream-suite",
+    "path": "downloads/upstream/blader--humanizer.zip",
+    "project": "blader--humanizer",
+    "bytes": 30823
+  },
+  {
+    "kind": "upstream-suite",
+    "path": "downloads/upstream/deathcats4--scientific-manuscript-editor.zip",
+    "project": "deathcats4--scientific-manuscript-editor",
+    "bytes": 82370
+  },
+  {
+    "kind": "upstream-suite",
+    "path": "downloads/upstream/imbad0202--academic-research-skills.zip",
+    "project": "imbad0202--academic-research-skills",
+    "bytes": 15303504
+  },
+  {
+    "kind": "upstream-suite",
+    "path": "downloads/upstream/kiterlin--anti-defensive-writing.zip",
+    "project": "kiterlin--anti-defensive-writing",
+    "bytes": 3508465
+  },
+  {
+    "kind": "upstream-suite",
+    "path": "downloads/upstream/multica-ai--andrej-karpathy-skills.zip",
+    "project": "multica-ai--andrej-karpathy-skills",
+    "bytes": 19300
+  },
+  {
+    "kind": "upstream-suite",
+    "path": "downloads/upstream/obra--superpowers.zip",
+    "project": "obra--superpowers",
+    "bytes": 677991
+  },
+  {
+    "kind": "upstream-suite",
+    "path": "downloads/upstream/orchestra-research--ai-research-skills.zip",
+    "project": "orchestra-research--ai-research-skills",
+    "bytes": 18717075
+  },
+  {
+    "kind": "upstream-suite",
+    "path": "downloads/upstream/yuan1z0825--nature-skills.zip",
+    "project": "yuan1z0825--nature-skills",
+    "bytes": 37431618
+  }
+]

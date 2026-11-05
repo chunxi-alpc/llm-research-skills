@@ -1,0 +1,26 @@
+name: Complete repository publication
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - name: Collect original project archives
+        run: python scripts/fetch_upstream.py > reports/publish-fetch.log
+      - name: Build catalogue and download packages
+        run: |
+          python scripts/build_catalog.py > reports/publish-catalog.log
+          python scripts/package_skills.py > reports/publish-packages.log
+          python scripts/verify_repository.py > reports/publish-verification.log
+      - name: Publish completed files
+        run: |
+          python -c "from pathlib import Path; Path('.github/workflows/publish-artifacts.yml').unlink()"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          git commit -m '补齐第三方技能与下载包'
+          git push origin HEAD:main

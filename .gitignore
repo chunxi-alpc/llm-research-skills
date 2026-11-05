@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.build-tools/
+.DS_Store
+Thumbs.db
+.env
+reports/*.log
+reports/download-log.json

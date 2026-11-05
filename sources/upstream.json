@@ -1,0 +1,219 @@
+[
+  {
+    "key": "adkid-zephyr--anti-defensive-writing",
+    "repository": "Adkid-Zephyr/anti-defensive-writing-Skill",
+    "url": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill",
+    "branch": "main",
+    "retrieved": "2026-11-05",
+    "source_ids": [
+      "R045"
+    ],
+    "license": "MIT",
+    "supplemented_by_name": false,
+    "archive": "downloads/upstream/adkid-zephyr--anti-defensive-writing.zip",
+    "local": "third_party/adkid-zephyr--anti-defensive-writing",
+    "local_scope": "complete repository",
+    "skill_files": [
+      "skills/anti-defensive-writing/SKILL.md",
+      "skills/anti-defensive-writing-en/SKILL.md"
+    ],
+    "archive_bytes": 22858
+  },
+  {
+    "key": "blader--humanizer",
+    "repository": "blader/humanizer",
+    "url": "https://github.com/blader/humanizer",
+    "branch": "main",
+    "retrieved": "2026-11-05",
+    "source_ids": [
+      "R044"
+    ],
+    "license": "MIT",
+    "supplemented_by_name": false,
+    "archive": "downloads/upstream/blader--humanizer.zip",
+    "local": "third_party/blader--humanizer",
+    "local_scope": "complete repository",
+    "skill_files": [
+      "SKILL.md"
+    ],
+    "archive_bytes": 30823
+  },
+  {
+    "key": "deathcats4--scientific-manuscript-editor",
+    "repository": "deathcats4/scientific-manuscript-editor",
+    "url": "https://github.com/deathcats4/scientific-manuscript-editor",
+    "branch": "main",
+    "retrieved": "2026-11-05",
+    "source_ids": [
+      "R043"
+    ],
+    "license": "MIT",
+    "supplemented_by_name": false,
+    "archive": "downloads/upstream/deathcats4--scientific-manuscript-editor.zip",
+    "local": "third_party/deathcats4--scientific-manuscript-editor",
+    "local_scope": "complete repository",
+    "skill_files": [
+      "SKILL.md"
+    ],
+    "archive_bytes": 82370
+  },
+  {
+    "key": "imbad0202--academic-research-skills",
+    "repository": "Imbad0202/academic-research-skills",
+    "url": "https://github.com/Imbad0202/academic-research-skills",
+    "branch": "main",
+    "retrieved": "2026-11-05",
+    "source_ids": [
+      "R053"
+    ],
+    "license": "CC-BY-NC-4.0",
+    "supplemented_by_name": false,
+    "archive": "downloads/upstream/imbad0202--academic-research-skills.zip",
+    "local": "third_party/imbad0202--academic-research-skills",
+    "local_scope": "complete repository",
+    "skill_files": [
+      "academic-paper/SKILL.md",
+      "academic-paper-reviewer/SKILL.md",
+      "academic-pipeline/SKILL.md",
+      "deep-research/SKILL.md",
+      "sr-screener/SKILL.md"
+    ],
+    "archive_bytes": 15303504
+  },
+  {
+    "key": "kiterlin--anti-defensive-writing",
+    "repository": "Kiterlin/anti-defensive-writing",
+    "url": "https://github.com/Kiterlin/anti-defensive-writing",
+    "branch": "main",
+    "retrieved": "2026-11-05",
+    "source_ids": [
+      "R048"
+    ],
+    "license": "MIT",
+    "supplemented_by_name": false,
+    "archive": "downloads/upstream/kiterlin--anti-defensive-writing.zip",
+    "local": "third_party/kiterlin--anti-defensive-writing",
+    "local_scope": "complete repository",
+    "skill_files": [
+      "skill/anti-defensive-writing/SKILL.md",
+      "SKILL.md"
+    ],
+    "archive_bytes": 3508465
+  },
+  {
+    "key": "multica-ai--andrej-karpathy-skills",
+    "repository": "multica-ai/andrej-karpathy-skills",
+    "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+    "branch": "main",
+    "retrieved": "2026-11-05",
+    "source_ids": [
+      "R022"
+    ],
+    "license": "MIT (README declaration)",
+    "supplemented_by_name": true,
+    "archive": "downloads/upstream/multica-ai--andrej-karpathy-skills.zip",
+    "local": "third_party/multica-ai--andrej-karpathy-skills",
+    "local_scope": "complete repository",
+    "skill_files": [
+      "skills/karpathy-guidelines/SKILL.md"
+    ],
+    "archive_bytes": 19300
+  },
+  {
+    "key": "obra--superpowers",
+    "repository": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "branch": "main",
+    "retrieved": "2026-11-05",
+    "source_ids": [
+      "R023"
+    ],
+    "license": "MIT",
+    "supplemented_by_name": false,
+    "archive": "downloads/upstream/obra--superpowers.zip",
+    "local": "third_party/obra--superpowers",
+    "local_scope": "complete repository",
+    "skill_files": [
+      "skills/brainstorming/SKILL.md",
+      "skills/diagnosing-superpowers/SKILL.md",
+      "skills/dispatching-parallel-agents/SKILL.md",
+      "skills/executing-plans/SKILL.md",
+      "skills/finishing-a-development-branch/SKILL.md",
+      "skills/receiving-code-review/SKILL.md",
+      "skills/requesting-code-review/SKILL.md",
+      "skills/subagent-driven-development/SKILL.md",
+      "skills/systematic-debugging/SKILL.md",
+      "skills/test-driven-development/SKILL.md",
+      "skills/using-git-worktrees/SKILL.md",
+      "skills/using-superpowers/SKILL.md",
+      "skills/verification-before-completion/SKILL.md",
+      "skills/writing-plans/SKILL.md",
+      "skills/writing-skills/SKILL.md"
+    ],
+    "archive_bytes": 677991
+  },
+  {
+    "key": "orchestra-research--ai-research-skills",
+    "repository": "Orchestra-Research/AI-Research-SKILLs",
+    "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+    "branch": "main",
+    "retrieved": "2026-11-05",
+    "source_ids": [
+      "R047"
+    ],
+    "license": "MIT",
+    "supplemented_by_name": false,
+    "archive": "downloads/upstream/orchestra-research--ai-research-skills.zip",
+    "local": "third_party/orchestra-research--ai-research-skills",
+    "local_scope": "20-ml-paper-writing/",
+    "skill_files": [
+      "20-ml-paper-writing/academic-plotting/SKILL.md",
+      "20-ml-paper-writing/ml-paper-writing/SKILL.md",
+      "20-ml-paper-writing/presenting-conference-talks/SKILL.md",
+      "20-ml-paper-writing/systems-paper-writing/SKILL.md"
+    ],
+    "archive_bytes": 18717075
+  },
+  {
+    "key": "yuan1z0825--nature-skills",
+    "repository": "Yuan1z0825/nature-skills",
+    "url": "https://github.com/Yuan1z0825/nature-skills",
+    "branch": "main",
+    "retrieved": "2026-11-05",
+    "source_ids": [
+      "R039"
+    ],
+    "license": "Apache-2.0",
+    "supplemented_by_name": true,
+    "archive": "downloads/upstream/yuan1z0825--nature-skills.zip",
+    "local": "third_party/yuan1z0825--nature-skills",
+    "local_scope": "complete repository",
+    "skill_files": [
+      "skills/nature-academic-search/SKILL.md",
+      "skills/nature-citation/SKILL.md",
+      "skills/nature-data/SKILL.md",
+      "skills/nature-downloader/SKILL.md",
+      "skills/nature-experiment-log/SKILL.md",
+      "skills/nature-figure/SKILL.md",
+      "skills/nature-image2ppt/SKILL.md",
+      "skills/nature-literature-pipeline/SKILL.md",
+      "skills/nature-paper-card/SKILL.md",
+      "skills/nature-paper-to-patent/SKILL.md",
+      "skills/nature-paper-trans/SKILL.md",
+      "skills/nature-paper-xray/SKILL.md",
+      "skills/nature-paper2ppt/SKILL.md",
+      "skills/nature-paper2word/SKILL.md",
+      "skills/nature-polishing/SKILL.md",
+      "skills/nature-proposal-writer/SKILL.md",
+      "skills/nature-reader/SKILL.md",
+      "skills/nature-ref-verifier/SKILL.md",
+      "skills/nature-response/SKILL.md",
+      "skills/nature-reviewer/SKILL.md",
+      "skills/nature-shared/SKILL.md",
+      "skills/nature-social-science/SKILL.md",
+      "skills/nature-statistics/SKILL.md",
+      "skills/nature-writing/SKILL.md"
+    ],
+    "archive_bytes": 37431618
+  }
+]

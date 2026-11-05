@@ -1,0 +1,52 @@
+[
+  {
+    "skill": "academic-language-polish",
+    "valid": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "skill": "academic-proofreading",
+    "valid": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "skill": "academic-translation",
+    "valid": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "skill": "coding-task-brief",
+    "valid": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "skill": "method-logic-check",
+    "valid": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "skill": "paper-figure-brief",
+    "valid": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "skill": "paper-peer-review",
+    "valid": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "skill": "research-idea-discussion",
+    "valid": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "skill": "research-literature-search",
+    "valid": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "skill": "research-paper-reading",
+    "valid": true,
+    "message": "Skill is valid!"
+  }
+]
