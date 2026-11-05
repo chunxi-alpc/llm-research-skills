@@ -18,7 +18,6 @@ jobs:
           python scripts/verify_repository.py > reports/publish-verification.log
       - name: Publish completed files
         run: |
-          python -c "from pathlib import Path; Path('.github/workflows/publish-artifacts.yml').unlink()"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add --all
