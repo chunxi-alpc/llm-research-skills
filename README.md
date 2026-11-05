@@ -2,7 +2,7 @@
 
 找论文、读论文、修改论文、准备模型图、整理编程需求——从你现在要做的一件事开始。
 
-**[按任务选技能](#choose)** · **[下载 10 个技能合集](downloads/research-skills-starter.zip?raw=true)** · **[直接复制提示词](#prompts)** · [查找网站与工具](#resources)
+**[按任务选技能](#choose)** · **[下载 10 个技能合集](downloads/research-skills-starter.zip?raw=true)** · **[直接复制提示词](#prompts)** · [按类别找资料](#resources)
 
 这里有 **10 个科研技能、53 条工具与使用经验**。Skill 是可重复使用的任务说明和配套参考文件，供支持 Skills 的 AI 工具读取。如果平时只用聊天网页，可以直接复制提示词。
 
@@ -107,17 +107,24 @@
 
 <a id="resources"></a>
 
-## 查找网站、应用与使用经验
+## 按科研任务查找资料
 
-| 任务 | 从这里查看 |
+资料沿用 CSV 的 **12 个类别**，名称做了简化。点进对应任务，查看工具、提示词、使用经验和相关 Skills；上方的 10 个技能提供常见任务的直接下载入口。
+
+| 我要做的事 | 查看这一类 |
 |---|---|
-| 检索论文、核对引文 | [文献检索与引文核对](catalog/literature.md) |
-| 阅读论文、整理知识库 | [论文阅读与知识整理](catalog/reading.md) |
-| 写作、润色、纠错、翻译 | [论文写作工具与提示词](catalog/writing.md) |
-| 讨论研究想法、模拟审稿 | [研究思路与模拟审稿](catalog/ideas-review.md) |
-| 写代码、调试、整理需求 | [科研编程工具](catalog/coding.md) |
-| 准备模型图、绘制科研图表 | [模型图与科研绘图](catalog/figures.md) |
-| 查提示词集合与研究方法 | [参考资料](catalog/reference.md) · [计算机科研方法总目录](references/computer-science-methods.md) |
+| 检索相关论文、核对引文 | [找论文](catalog/literature.md) |
+| 读懂论文、比较方法、整理知识库 | [读论文](catalog/reading.md) |
+| 寻找研究方向与新想法 | [研究想法获取](catalog/ideas.md) |
+| 检查初稿思路、讨论方法与创新性 | [初稿思路把关](catalog/idea-check.md) |
+| 写代码、调试、整理编程需求 | [编程与调试](catalog/coding.md) |
+| 写论文、改进表达、检查方法逻辑 | [写作与润色](catalog/writing.md) |
+| 整理模型结构、准备绘图提示词 | [论文模型图](catalog/figures.md) |
+| 保留原意翻译学术段落 | [学术翻译](catalog/translation.md) |
+| 只修改拼写和语法错误 | [拼写与语法纠错](catalog/proofreading.md) |
+| 检查完整论文、获取审稿意见 | [投稿前模拟审稿](catalog/peer-review.md) |
+| 查找查重与 AI 率检测入口 | [查重与 AI 率检测](catalog/originality.md) |
+| 查阅综合技能套件与科研方法目录 | [综合参考资料](catalog/reference.md) |
 
 <details>
 <summary>现成技能与套件：Humanizer、Nature Skills、Superpowers 等</summary>

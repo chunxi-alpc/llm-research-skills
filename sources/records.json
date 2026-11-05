@@ -392,7 +392,7 @@
     "id": "R026",
     "csv_record": 27,
     "title": "研究想法早期讨论提示词",
-    "group": "ideas-review",
+    "group": "idea-check",
     "how_to": "给出领域、问题与想法，请模型先检查最关键的逻辑与改进空间。",
     "supplemental_links": [],
     "original": {
@@ -407,7 +407,7 @@
     "id": "R027",
     "csv_record": 28,
     "title": "ChatGPT：方法与创新性讨论",
-    "group": "ideas-review",
+    "group": "idea-check",
     "how_to": "提供论文或方法说明，把需要讨论的创新性、潜在问题和改进要求列清。",
     "supplemental_links": [],
     "original": {
@@ -422,7 +422,7 @@
     "id": "R028",
     "csv_record": 32,
     "title": "Stanford Agentic Reviewer",
-    "group": "ideas-review",
+    "group": "peer-review",
     "how_to": "在补充入口上传论文 PDF，按页面流程提交并查看反馈。",
     "supplemental_links": [
       "https://paperreview.ai/"
@@ -439,7 +439,7 @@
     "id": "R029",
     "csv_record": 33,
     "title": "CSpaper：按会议模板审稿",
-    "group": "ideas-review",
+    "group": "peer-review",
     "how_to": "先选拟投会议，再按页面提示提交论文并选择可用模型。",
     "supplemental_links": [],
     "original": {
@@ -454,7 +454,7 @@
     "id": "R030",
     "csv_record": 34,
     "title": "Strict & Precise：严格审稿提示词",
-    "group": "ideas-review",
+    "group": "peer-review",
     "how_to": "从原仓库获取提示词，连同论文交给模型；逐项核对意见与原文的对应关系。",
     "supplemental_links": [],
     "original": {
@@ -469,7 +469,7 @@
     "id": "R031",
     "csv_record": 35,
     "title": "通用会议模拟审稿提示词",
-    "group": "ideas-review",
+    "group": "peer-review",
     "how_to": "提供论文并复制原表英文模板；需要时使用其评分量表。",
     "supplemental_links": [],
     "original": {
@@ -484,7 +484,7 @@
     "id": "R032",
     "csv_record": 37,
     "title": "Grammarly：拼写语法检查",
-    "group": "writing",
+    "group": "proofreading",
     "how_to": "按平台的当前集成方式检查文本，再确认建议是否保持技术含义。",
     "supplemental_links": [],
     "original": {
@@ -499,7 +499,7 @@
     "id": "R033",
     "csv_record": 38,
     "title": "只改错误的 typo 检查提示词",
-    "group": "writing",
+    "group": "proofreading",
     "how_to": "输入原文，明确只改拼写、语法、时态和单复数等错误，其他内容保留。",
     "supplemental_links": [],
     "original": {
@@ -514,7 +514,7 @@
     "id": "R034",
     "csv_record": 42,
     "title": "Turnitin 相关查重入口（原表）",
-    "group": "writing",
+    "group": "originality",
     "how_to": "原表链接与使用条件保留在下方；正式使用时通过所在机构或官方入口确认服务。",
     "supplemental_links": [
       "https://www.turnitin.com/"
@@ -531,7 +531,7 @@
     "id": "R035",
     "csv_record": 47,
     "title": "保留原意的中文转英文提示词",
-    "group": "writing",
+    "group": "translation",
     "how_to": "提供中文终稿及固定英文术语，要求翻译不增删含义和逻辑。",
     "supplemental_links": [],
     "original": {
@@ -546,7 +546,7 @@
     "id": "R036",
     "csv_record": 48,
     "title": "Word 纯文本学术翻译提示词",
-    "group": "writing",
+    "group": "translation",
     "how_to": "复制完整模板并填入中文草稿，可得到英文段落和对应中文核对文本。",
     "supplemental_links": [],
     "original": {
@@ -638,7 +638,7 @@
     "id": "R042",
     "csv_record": 56,
     "title": "AI-Scientist：自动化科研项目",
-    "group": "ideas-review",
+    "group": "ideas",
     "how_to": "阅读原项目 README，了解研究模板、模型 API 与实验运行环境，再按需配置。",
     "supplemental_links": [],
     "original": {
@@ -698,7 +698,7 @@
     "id": "R046",
     "csv_record": 61,
     "title": "计算机科研方法总目录",
-    "group": "reference",
+    "group": "writing",
     "how_to": "按研究问题查阅数学、算法和方法设计条目，作为进一步阅读与讨论的索引。",
     "supplemental_links": [],
     "original": {
