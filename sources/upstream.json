@@ -95,8 +95,8 @@
     "local": "third_party/kiterlin--anti-defensive-writing",
     "local_scope": "complete repository",
     "skill_files": [
-      "skill/anti-defensive-writing/SKILL.md",
-      "SKILL.md"
+      "SKILL.md",
+      "skill/anti-defensive-writing/SKILL.md"
     ],
     "archive_bytes": 3508465
   },

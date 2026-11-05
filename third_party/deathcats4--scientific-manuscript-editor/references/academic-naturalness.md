@@ -1,0 +1,189 @@
+# Academic naturalness and AI-style review
+
+Use with [academic-protection.md](academic-protection.md) for AI-style diagnosis
+or integrated naturalness revision. Review only the supplied editable scope; a
+paragraph supports local observations about expression. These are editorial
+heuristics for writing decisions, not authorship features or detector scores.
+
+## Identify a defect before editing
+
+A finding identifies a specific span and explains the writing problem. Evaluate
+words, punctuation, sentence length, and parallel forms through their local
+function. A phrase is actionable when it supplies empty framing or an
+unsupported rhetorical relation; a repeated form is actionable when recurrence
+adds no needed function. Preserve purposeful repetition identified by academic
+protection.
+
+Inspect structure before vocabulary. Within the authorized scope, read paragraph
+roles, sentence relationships, and local phrasing in that order. Use the
+manuscript-reasoning reference for substantive restructuring; keep the scientific
+argument within the author's supplied material.
+
+## Candidate patterns and their boundaries
+
+| Candidate | Actual problem to establish | Repair and false-positive boundary |
+|---|---|---|
+| Generic opening or significance ending | The sentence could attach to unrelated studies without adding a relevant claim | State existing substantive content directly. Keep a supported contribution, scope statement, or section orientation. |
+| Forced teleology or purpose announcement | The prose inserts a gap, objective, or “therefore” sentence only to satisfy an editorial plan, repeats information without useful orientation, or jumps from background to study without a content-bearing bridge | Remove or recast the empty announcement and repair a missing scientific relation. Keep an explicit study move when it supplies needed content or navigation; do not infer a defect solely from `因此`、`基于此`、`this study`, or similar wording. |
+| Repeated mini-essay structure | Each paragraph restarts the same premise and ends with the same abstract takeaway | Remove duplicated work or reorganize around real relationships. Parallel studies and procedures may legitimately remain parallel. |
+| Artificial opposition | A negative half invents a position solely to make the positive claim sound stronger | Retain supported claims and state the real relation. A genuine exclusion, comparison, or additive `not only X but also Y` carries content. |
+| Defensive repetition | Several caveats repeat one already calibrated boundary or rebut an unclaimed stronger proposition | State the existing boundary at its proper location. Preserve limitations that change interpretation. |
+| Formulaic rhythm | Repeated openings, triads, fragments, or sentence shapes add padding or obscure emphasis | Let information and reasoning determine sentence boundaries. Keep necessary list items, including three findings when the parallel structure carries information. |
+| Empty transitions or restatement | A connective, heading echo, or summary repeats without advancing understanding | Remove the empty part while keeping the logical relation and any needed inferential step. |
+| Inflated or vague evaluation | Praise substitutes for a supported result, comparison, or contribution | Use specifics already supplied. When removal would change the author's claim, flag it or follow author-control rules; supporting detail comes from the supplied basis. |
+| Vague collective attribution | Citations stand in for content: `it has been widely reported`, `numerous studies have shown`, or a citation cluster attached to a claim that no specific study is cited for | Attribute the actual finding to the specific work, or state it from the supplied basis without the collective frame. Multi-reference support for one concrete claim remains legitimate. |
+| Narrative overreach | Dramatized framing—mystery or puzzle vocabulary, storytelling arcs—substitutes for the actual scientific tension | State the real anomaly, contrast, or open question in working terms. A genuine, content-bearing puzzle statement stays. |
+| Chat or editing residue | Text speaks to the user about drafting rather than to the manuscript reader about the subject | Remove only the process text. Protect quotations, research data, methodological explanations, and substantive clauses sharing the sentence. |
+
+Paragraph interchangeability, uniform length, and repeated closers are prompts
+to inspect function. Introductory framing, topic sentences, conclusions, and
+explicit inference can all be necessary; preserve reasoning while improving
+observable defects. Similar form is acceptable when it fits the scientific
+content; variation is not a repair goal by itself.
+
+Resolve recurrence at the function level, not the string level. A repeated
+form is actionable only when the function it performs is duplicated across
+instances; the same closer can be load-bearing in one paragraph and empty in
+another. Rank same-function instances in this order: the author's latest
+explicit accepted scientific decision, or the current manuscript's working
+position when no such decision is recovered; correctness of evidence,
+conditions, scope, and modality; terminology and cross-section continuity;
+and only when those
+tie, the instance that names the more specific processes, objects, systems,
+or conditions. Never select an instance for deletion because its surface
+form is the most pattern-visible, and never let specificity overrule state
+or evidence—the most concrete wording of a superseded or weaker-supported
+claim is still the one to retire. When two instances cannot be ranked on
+current state or evidence, keep both and report the conflict to the author
+instead of deleting by specificity. Before deleting or compressing any span
+identified by a
+pattern finding, state the function it performs and locate where that
+function survives after the edit; when nothing absorbs it, repair the form
+(reword, merge, relocate) instead of deleting the content. When instances
+are folded or merged, leave the surviving instance self-contained in its
+position: its references, demonstratives, and unstated presuppositions must
+not depend on a deleted neighbor. A sentence that
+names the specific unresolved object of the study is content, not a template
+instance: if it is the only statement of that gap, removing it is a
+structural change outside a naturalness edit.
+
+A deletion verdict stays provisional until the edited passage is reread with
+the deletion applied: the passage must still perform its needed function,
+and any dependent text must still have the context or support it needs.
+A deletion that passes at sentence level can fail at paragraph or manuscript
+level; when it does, restore the content and repair the form instead.
+Include local cohesion in that reread: a demonstrative or connective whose
+antecedent was removed with the span (a stranded `This process` or
+`However`), a surviving sentence that now presupposes deleted information,
+and a citation the span carried. When the deleted span held the only
+citation of a source, surface the reference-list consequence rather than
+leaving a silent orphan or silently removing evidence support.
+
+After a deletion or a merge, the same reread checks the manuscript's
+apparatus dependencies: every `Fig.`, `Table`, `Eq.`, supplementary
+figure or table, footnote, and appendix reference in the edited scope
+still has its target; the deleted sentence was not the only place a
+display, equation, or supplement entered the manuscript;
+demonstratives such as `this figure`, `上述结果`, or `该过程` still have
+recoverable antecedents; citation keys, the reference list, labels, and
+captions still agree; and a merged sentence keeps the conditions, scope,
+modality, and evidence role its sources carried, not just their gist.
+Expand reading beyond the edited passage only when one of these checks
+finds a display, equation, supplementary, or cross-section dependency;
+otherwise the reread stays paragraph-local and never becomes a
+full-text scan by default.
+
+## English checks
+
+- Inspect ornamental framing such as `It is important to note that`, vague
+  significance claims, and trailing participial clauses that merely announce
+  importance. A participial clause expressing a real process or consequence
+  remains content.
+- Review repeated sentence-initial connectors in context. Change placement or
+  combine sentences only when the underlying addition or contrast survives.
+- Prefer a precise ordinary verb when a longer phrase adds nothing; retain
+  technical senses and calibrated verbs. `significant` may carry statistical
+  meaning; `robust` may name a method or a demonstrated property.
+- Use dashes, semicolons, long sentences, passive voice, and nominalization when
+  their function and rhythm support readability.
+
+## Chinese checks
+
+- Inspect generic setups and endings such as `随着……的不断发展` or
+  `具有重要意义` for a concrete role in the current argument. Repair empty
+  framing, not every occurrence of these strings.
+- Check long modifier chains, unclear subjects, and translation-driven word
+  order. Reorder to clarify who or what does what while retaining conditions,
+  scope, and reference attachment.
+- Review repeated `此外`、`然而`、`因此` against the actual logical relation.
+  A necessary connection remains valid even if the same word appears nearby.
+- In introductions, inspect purpose and gap markers such as `因此，有必要……`,
+  `这为本研究提供了依据`, and `基于此，本研究……` for actual content. Do not
+  add or remove them by rule: retain a marker that expresses a necessary
+  inference or useful orientation, but remove or fold in one that merely
+  exposes the drafting plan.
+- Keep established scholarly terms and morphology. Shorten `进行分析` to `分析`
+  when it improves the sentence; retain `形成`, `构建`, `性`, and `化` when
+  they carry the intended scholarly relation and keep formal prose formal.
+
+For mixed-language prose, apply each check to its local language and protect
+embedded terminology, formulas, and citations. These language notes remain
+subordinate to the manuscript's terminology and the authorized style source.
+
+For an Introduction, test suspected redundant framing from the intended
+reader's position. Consider removing it only when the remaining prose preserves
+the scientific relationship, emphasis, and useful orientation it supplies.
+Recoverability of a fact from adjacent prose alone is not enough: a topic
+sentence or recap may still help a reader who does not yet know the study.
+Repair established redundancy without automatically deleting purpose, gap,
+significance, or summary sentences. Keep the needed relation, object,
+condition, or operation explicit when the reader could not recover it. Do not
+require every Introduction to state a gap or every paragraph to announce one.
+
+## Review and delivery
+
+For a detection-only request, report the exact span, its observable defect, and a
+repair direction. Separate clear findings from uncertain context. State when the
+supplied scope contains no actionable defect; reserve rewriting for an explicit
+author request.
+
+For integrated revision, use the entrypoint's combined workflow and proportional
+final check. This is the naturalness component of that check. Repair established
+problems, reread the affected passage in context, and check for template
+recurrence, preserved claims and reasoning, and qualifiers or connectives whose
+only role is academic decoration. Compare the revision with the original, not
+only with itself: the repair must not install a uniformity of its own—merged-sentence
+sprawl, one house set of connectives, levelled rhythm—and must not leave the
+passage more patterned than it was found. Model replacement wording on the
+surrounding approved prose under the style-source rules rather than on a default
+revision register. Return the requested deliverable and share the
+inspection when an audit or explanation is requested.
+
+Use counts as descriptive aids. Let information and reasoning determine
+sentence-length variance, connector density, paragraph ratios, and word count.
+Finish when the identified defects are repaired and meaning and register are
+intact.
+
+## Protect academic fluency
+
+Apply the entrypoint's academic naturalness invariant. Preserve a functional
+pattern whenever changing it would reduce fluency, scholarly register, or
+scientific fidelity; report it as non-actionable when a finding list is
+requested.
+
+## Contrastive examples
+
+These constructed examples illustrate decisions, not reusable manuscript prose.
+
+| Input or situation | Expected decision |
+|---|---|
+| `It is important to note that the estimate was 0.42 (95% CI 0.31–0.53; Fig. 2).` | Remove the empty preface; preserve the estimate, interval, punctuation within the notation, and figure reference. |
+| `The association may possibly reflect X.` | Reduce duplicated modality to `may reflect X` when both qualifiers express the same uncertainty; retain the original causal strength. |
+| `X predicts Y. This finding provides important insights into the prediction of Y by X.` | Remove the second sentence's empty restatement and keep the supplied scientific scope. |
+| `此外，X 升高。相比之下，Y 降低。` | Keep the contrast. Whether the initial addition marker is useful depends on preceding context. |
+| `结果表明 X 升高。这一发现为理解 X 的升高提供了重要参考。` | Keep the result and its original strength; remove the empty second sentence. |
+| Three paragraphs report three distinct model comparisons with the same syntax | Retain necessary parallelism; flag only redundant framing, not the comparison structure itself. |
+| Three Introduction paragraphs repeat the same gap; their status and support agree, one identifies the relevant processes, outcome, and system, two supply neither distinct content nor useful orientation | Keep the content-bearing gap and remove or fold the redundant announcements. Do not replace them with another uniform closing pattern or delete the specific gap because its form is the most pattern-visible. |
+| Two duplicate gap statements: one matches the author's latest accepted position, the other is more specific but reflects a superseded or weaker-supported reading | Keep the current-state, correctly supported instance regardless of specificity; retire the superseded wording, and when the two cannot be ranked keep both and report the conflict. |
+| `We surveyed 120 participants. I have made this paragraph more concise.` | Keep the first sentence and its count; remove the editing narration. |
+| A prose-only draft supplies no magnitude for `a substantial improvement` | Preserve the magnitude claim and flag the evidential gap outside the draft when the supplied basis cannot resolve it. |
