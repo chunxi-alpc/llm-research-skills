@@ -6,7 +6,7 @@
 
 这里有 **10 个科研技能、53 条工具与使用经验**。Skill 是可重复使用的任务说明和配套参考文件，供支持 Skills 的 AI 工具读取。如果平时只用聊天网页，可以直接复制提示词。
 
-**第一次使用？** 建议先跟着 [英文纠错示例](#start) 试一次，再按需要选择其他技能。
+**第一次使用？** 从 [把论文写得更清楚](#start) 开始，看看如何用技能改进自己的论文段落。
 
 <a id="choose"></a>
 
@@ -31,28 +31,37 @@
 
 <a id="start"></a>
 
-## 第一次使用：跟着这个例子走
+## 第一次使用：把论文写得更清楚
 
-1. **下载。** 点击 [拼写与语法纠错技能](downloads/individual/academic-proofreading.zip?raw=true)。
-2. **解压并导入。** 把整个 `academic-proofreading` 文件夹导入所用工具，或放入它的技能目录。需要保留其中的参考文件，目录应如下所示。[查看具体安装方法](docs/getting-started.md#3-导入或放入技能目录)。
+以论文 Method 中介绍检索流程的段落为例：让读者看清每一步做什么、为什么需要这一步，以及各步骤如何衔接。
+
+1. **下载。** 点击 [学术语言润色技能](downloads/individual/academic-language-polish.zip?raw=true)。
+2. **解压并导入。** 把整个 `academic-language-polish` 文件夹导入所用工具，或放入它的技能目录。需要保留其中的参考文件，目录应如下所示。[查看具体安装方法](docs/getting-started.md#3-导入或放入技能目录)。
 
    ~~~text
-   academic-proofreading/
+   academic-language-polish/
    ├── SKILL.md
    ├── SOURCE.md
    └── references/
    ~~~
 
-3. **开始对话。** 加载技能后，把下面的任务复制给 AI：
+3. **开始对话。** 加载技能后，把下面的任务复制给 AI。可以先试用这段演示文本，也可以替换成自己的论文段落：
 
    ~~~text
-   使用 academic-proofreading，检查下面的英文。
-   只修正拼写和语法错误，其他表达保持原样，并列出改动。
+   使用 academic-language-polish，润色下面的论文 Method 段落。
+   让读者清楚理解为什么需要重排序，以及检索、重排序和生成之间的关系。
+   可以调整句序、拆分长句、删除重复表达；保留方法步骤、数值和术语，不增加原文没有的结果或结论。
+   请给出修改后的英文段落，并用中文简要说明关键改动。
 
-   Our method use two encoders. It improves accuracy by 2.1 points.
+   原文：
+   For each question, we first retrieve 20 candidate passages from the corpus. These passages are then processed by a reranker, which is used because some of the retrieved passages are not relevant to the question. The reranker assigns a relevance score to each question–passage pair. Based on these scores, we select the five passages with the highest scores, and these selected passages are used as the context for the language model to generate an answer.
    ~~~
 
-这个例子应只改 `use → uses`，第二句保持原样。接下来，把示例替换成你自己的段落即可。
+**改写示意：**
+
+> For each question, we retrieve 20 candidate passages from the corpus. To filter out irrelevant passages, a reranker scores each question–passage pair by relevance. We select the five highest-scoring passages and provide them to the language model as context for answer generation.
+
+改写后，“检索 20 个候选段落 → 重排序 → 选出前 5 个 → 作为生成回答的上下文”的流程更容易读懂；重排序的目的紧接对应操作，重复表达也被删去。实际输出可以不同，重点是保留方法事实，让步骤和衔接更清楚。
 
 **找不到“导入技能”？** 可以先用 [下方的普通提示词](#prompts)，或查看 [安装指南](docs/getting-started.md)。
 
