@@ -4,7 +4,7 @@
 
 ## R001 · NotebookLM：多论文比较
 
-[完整条目](../catalog/entries/R001.md) · [复制提示词示例](../README.md#prompt-research-paper-reading)。
+[完整条目](../catalog/entries/R001.md) · [完整技能提示词与使用示例](../README.md#prompt-research-paper-reading)。
 
 ````text
 输入下列提示词：“Compare these 5 papers and identify research gaps”，并选择或上传所需要检索的论文
@@ -12,7 +12,7 @@
 
 ## R002 · Gemini / ChatGPT：按条件找论文
 
-[完整条目](../catalog/entries/R002.md) · [复制提示词示例](../README.md#prompt-research-literature-search)。
+[完整条目](../catalog/entries/R002.md) · [完整技能提示词与使用示例](../README.md#prompt-research-literature-search)。
 
 ````text
 输入提示词，“帮我查找xxx领域xxx方向，在xxx年份发表在xxx会议的论文”
@@ -20,7 +20,7 @@
 
 ## R010 · Method 逻辑与术语统一提示词
 
-[完整条目](../catalog/entries/R010.md) · [复制提示词示例](../README.md#prompt-method-logic-check)。
+[完整条目](../catalog/entries/R010.md) · [完整技能提示词与使用示例](../README.md#prompt-method-logic-check)。
 
 ````text
 先输入待整理的论文，并输入下列提示词：“名词定义和解释：请把这个小节的符号和定义都按照我们（上面讨论好的/Section...）形式化表示更换，注意要保持名词定义的一致性。再次检查逻辑gap，用常用的表达常用词，尽量不要提出新的名词，提出了就要解释清楚”
@@ -28,7 +28,7 @@
 
 ## R013 · 学术段落润色提示词
 
-[完整条目](../catalog/entries/R013.md) · [复制提示词示例](../README.md#prompt-academic-language-polish)。
+[完整条目](../catalog/entries/R013.md) · [完整技能提示词与使用示例](../README.md#prompt-academic-language-polish)。
 
 ````text
 先输入待整理的论文，并输入下列提示词：“Below is a paragraph from an academic paper. Rephrase the writing to meet the academic style,improve the spelling, grammar, clarity, concision and overall readability. Paragraph:"
@@ -36,7 +36,7 @@
 
 ## R014 · 清晰表达与固定术语提示词
 
-[完整条目](../catalog/entries/R014.md) · [复制提示词示例](../README.md#prompt-academic-language-polish)。
+[完整条目](../catalog/entries/R014.md) · [完整技能提示词与使用示例](../README.md#prompt-academic-language-polish)。
 
 ````text
 先输入待整理的论文，并输入下列提示词：“Write like a careful NLP student who wants peers and advisors to understand the paper.
@@ -50,7 +50,7 @@ Avoid long or showy sentences. Every sentence should carry real information."
 
 ## R025 · 编程提示词的六项需求说明
 
-[完整条目](../catalog/entries/R025.md) · [复制提示词示例](../README.md#prompt-coding-task-brief)。
+[完整条目](../catalog/entries/R025.md) · [完整技能提示词与使用示例](../README.md#prompt-coding-task-brief)。
 
 ````text
 在利用大模型写代码时，不要只告诉它你想要什么，重点是告诉他：1、你想实现的功能。2、可用的信息。3、存在哪些限制。4、希望优先考虑什么。5、希望能避免什么。6、希望以什么方式进行回答
@@ -58,7 +58,7 @@ Avoid long or showy sentences. Every sentence should carry real information."
 
 ## R026 · 研究想法早期讨论提示词
 
-[完整条目](../catalog/entries/R026.md) · [复制提示词示例](../README.md#prompt-research-idea-discussion)。
+[完整条目](../catalog/entries/R026.md) · [完整技能提示词与使用示例](../README.md#prompt-research-idea-discussion)。
 
 ````text
 使用的prompt：“假设你是XXXX领域的专家，现在我有一个关于XXXX的idea，主要内容是XXXXX，请你帮我检查上述的内容是否存在逻辑不严谨或可改进的地方”
@@ -66,7 +66,7 @@ Avoid long or showy sentences. Every sentence should carry real information."
 
 ## R031 · 通用会议模拟审稿提示词
 
-[完整条目](../catalog/entries/R031.md) · [复制提示词示例](../README.md#prompt-paper-peer-review)。
+[完整条目](../catalog/entries/R031.md) · [完整技能提示词与使用示例](../README.md#prompt-paper-peer-review)。
 
 ````text
 使用prompt：Please help me review this paper and output the review comments in the following format.
@@ -97,7 +97,7 @@ xxx
 
 ## R033 · 只改错误的 typo 检查提示词
 
-[完整条目](../catalog/entries/R033.md) · [复制提示词示例](../README.md#prompt-academic-proofreading)。
+[完整条目](../catalog/entries/R033.md) · [完整技能提示词与使用示例](../README.md#prompt-academic-proofreading)。
 
 ````text
 输入提示词，“帮我检查下面的论文中的typo问题，包括语法、句法、时态、单复数形式等。初次之外，不要修改其他内容，不要对原文的表达进行修改。”
@@ -105,7 +105,7 @@ xxx
 
 ## R035 · 保留原意的中文转英文提示词
 
-[完整条目](../catalog/entries/R035.md) · [复制提示词示例](../README.md#prompt-academic-translation)。
+[完整条目](../catalog/entries/R035.md) · [完整技能提示词与使用示例](../README.md#prompt-academic-translation)。
 
 ````text
 先输入待翻译论文段落中文，并输入提示词：将上述中文翻译成英文，要求： 1. 不要丢失和增加任何意思和逻辑！！！！ 2.要用最直观最常用的英文单词，不要用晦涩不常用的英文单词 3.尽量不要使用被动语态 4.用词符合顶级学术会议习惯 5. 多去分析和揣测我给的中文上的逻辑，保证翻译的英文除了在内容上保持一致，逻辑也要保持一致 6. 我写成英文的地方就不要动了！7. 语法句式尽量精炼
@@ -157,7 +157,7 @@ xxx
 
 ## R038 · 模型图：先整理结构再生成图像
 
-[完整条目](../catalog/entries/R038.md) · [复制提示词示例](../README.md#prompt-paper-figure-brief)。
+[完整条目](../catalog/entries/R038.md) · [完整技能提示词与使用示例](../README.md#prompt-paper-figure-brief)。
 
 ````text
 要先让具备强逻辑理解能力的 LLM（如 Gemini 3 Pro、GPT-5、Claude 4.5 等），将论文的算法或方法结构转化为 [VISUAL SCHEMA] 蓝图。这一步类似于让 AI “看懂”你论文的逻辑，并输出清晰的视觉结构指令。然后通过绘图模型（如 Nano-Banana Pro）将上一步生成的蓝图转化为像素级视觉成品。虽然AI生成的图片有AI味，但是可以给自己提供绘图灵感，比如整体模型布局，配色等等。吸取其中的优点，自己再画一份模型图

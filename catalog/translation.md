@@ -10,9 +10,9 @@
 
 | 技能 | 能帮你做什么 | 下载与使用 |
 |---|---|---|
-| 中英文学术翻译 | 保留含义、逻辑、数值和固定术语。 | [下载 ZIP](../downloads/individual/academic-translation.zip?raw=true) · [复制提示词](../README.md#prompt-academic-translation) · [使用说明](../skills/academic-translation/SKILL.md) |
+| 中英文学术翻译 | 保留含义、逻辑、数值和固定术语。 | [下载 ZIP](../downloads/individual/academic-translation.zip?raw=true) · [复制完整提示词](../README.md#prompt-academic-translation) · [使用说明](../skills/academic-translation/SKILL.md) |
 
-「复制提示词」打开与首页相同的示例，可以直接发给 AI。[查看入门方法](../docs/getting-started.md)。
+「复制完整提示词」打开首页上对应技能的 `SKILL.md` 全文。[查看入门方法](../docs/getting-started.md)。
 
 ## 工具、提示词与原表经验
 

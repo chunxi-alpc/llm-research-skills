@@ -10,9 +10,9 @@
 
 | 技能 | 能帮你做什么 | 下载与使用 |
 |---|---|---|
-| 研究思路讨论 | 给出研究问题与资源条件，返回关键假设和验证建议。 | [下载 ZIP](../downloads/individual/research-idea-discussion.zip?raw=true) · [复制提示词](../README.md#prompt-research-idea-discussion) · [使用说明](../skills/research-idea-discussion/SKILL.md) |
+| 研究思路讨论 | 给出研究问题与资源条件，返回关键假设和验证建议。 | [下载 ZIP](../downloads/individual/research-idea-discussion.zip?raw=true) · [复制完整提示词](../README.md#prompt-research-idea-discussion) · [使用说明](../skills/research-idea-discussion/SKILL.md) |
 
-「复制提示词」打开与首页相同的示例，可以直接发给 AI。[查看入门方法](../docs/getting-started.md)。
+「复制完整提示词」打开首页上对应技能的 `SKILL.md` 全文。[查看入门方法](../docs/getting-started.md)。
 
 ## 工具、提示词与原表经验
 

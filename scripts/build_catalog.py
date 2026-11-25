@@ -149,6 +149,18 @@ def fenced(value):
     fence = "`" * max(4, max((len(x) + 1 for x in re.findall(r"`+", value)), default=4))
     return fence + "text\n" + value + "\n" + fence
 
+def sync_homepage_prompts():
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    for slug, *_ in SKILLS:
+        path = f"skills/{slug}/SKILL.md"
+        begin = f"<!-- BEGIN {path} -->"
+        end = f"<!-- END {path} -->"
+        start = readme.index(begin) + len(begin)
+        stop = readme.index(end, start)
+        prompt = (ROOT / path).read_text(encoding="utf-8").removesuffix("\n")
+        readme = readme[:start] + "\n\n" + fenced(prompt) + "\n\n" + readme[stop:]
+    write("README.md", readme)
+
 def urls(value):
     return list(dict.fromkeys(x.rstrip(").,;") for x in re.findall(r"https?://[^\s<>\"（）\u3000、，；]+", value)))
 
@@ -211,7 +223,7 @@ R001—R053 按原表内容顺序编号。`csv_record` 为 CSV 逻辑记录号�
         text += f"原表类别：{o['category']}。CSV 逻辑记录：{item['csv_record']}。\n\n## 使用方法\n\n{item['how_to']}\n\n"
         example_skill = EXAMPLE_SKILL_BY_RECORD.get(item["id"])
         if example_skill:
-            text += f"[复制提示词示例](../../README.md#prompt-{example_skill})\n\n"
+            text += f"[完整技能提示词与使用示例](../../README.md#prompt-{example_skill})\n\n"
         found = urls(o["entry"]) + urls(o["usage"])
         if found or item["supplemental_links"]:
             text += "## 入口\n\n"
@@ -253,9 +265,9 @@ R001—R053 按原表内容顺序编号。`csv_record` 为 CSV 逻辑记录号�
                 _, name, _, description = skills_by_name[slug]
                 text += (
                     f"| {name} | {description} | [下载 ZIP](../downloads/individual/{slug}.zip?raw=true) · "
-                    f"[复制提示词](../README.md#prompt-{slug}) · [使用说明](../skills/{slug}/SKILL.md) |\n"
+                    f"[复制完整提示词](../README.md#prompt-{slug}) · [使用说明](../skills/{slug}/SKILL.md) |\n"
                 )
-            text += "\n「复制提示词」打开与首页相同的示例，可以直接发给 AI。[查看入门方法](../docs/getting-started.md)。\n\n"
+            text += "\n「复制完整提示词」打开首页上对应技能的 `SKILL.md` 全文。[查看入门方法](../docs/getting-started.md)。\n\n"
         suites = [u for u in upstream if any(r["id"] in u["source_ids"] for r in selected)]
         if suites:
             text += "## 现成 Skills 与套件\n\n| 项目 | 下载 | 使用条件 |\n|---|---|---|\n"
@@ -298,7 +310,7 @@ R001—R053 按原表内容顺序编号。`csv_record` 为 CSV 逻辑记录号�
         prompts += f"## {r['id']} · {r['title']}\n\n[完整条目](../catalog/entries/{r['id']}.md)"
         example_skill = EXAMPLE_SKILL_BY_RECORD.get(r["id"])
         if example_skill:
-            prompts += f" · [复制提示词示例](../README.md#prompt-{example_skill})"
+            prompts += f" · [完整技能提示词与使用示例](../README.md#prompt-{example_skill})"
         prompts += "。\n\n" + fenced(r["original"]["usage"]) + "\n\n"
     prompts += "外部提示词库的未提供全文不在此转载，请从 [参考资料分类](../catalog/reference.md) 和 [写作分类](../catalog/writing.md)中的原项目入口获取。\n"
     write("prompts/original-prompts.md", prompts)
@@ -307,6 +319,7 @@ R001—R053 按原表内容顺序编号。`csv_record` 为 CSV 逻辑记录号�
         skill_list += f"| [{title}]({slug}/SKILL.md) | {description} | [下载](../downloads/individual/{slug}.zip) |\n"
     write("skills/README.md", skill_list)
     write("sources/new-skills.json", json.dumps([{"name": s, "title": t, "source_ids": [f"R{i:03d}" for i in ids], "description": d} for s, t, ids, d in SKILLS], ensure_ascii=False, indent=2))
+    sync_homepage_prompts()
     print(f"Generated {len(records)} entries and {len(SKILLS)} skill source references without contributor attribution.")
 
 if __name__ == "__main__":

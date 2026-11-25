@@ -10,10 +10,10 @@
 
 | 技能 | 能帮你做什么 | 下载与使用 |
 |---|---|---|
-| 学术语言润色 | 给出段落和文风要求，返回修订稿。 | [下载 ZIP](../downloads/individual/academic-language-polish.zip?raw=true) · [复制提示词](../README.md#prompt-academic-language-polish) · [使用说明](../skills/academic-language-polish/SKILL.md) |
-| 方法逻辑与术语一致性检查 | 给出 Method 和已有定义，返回问题定位与统一建议。 | [下载 ZIP](../downloads/individual/method-logic-check.zip?raw=true) · [复制提示词](../README.md#prompt-method-logic-check) · [使用说明](../skills/method-logic-check/SKILL.md) |
+| 学术语言润色 | 给出段落和文风要求，返回修订稿。 | [下载 ZIP](../downloads/individual/academic-language-polish.zip?raw=true) · [复制完整提示词](../README.md#prompt-academic-language-polish) · [使用说明](../skills/academic-language-polish/SKILL.md) |
+| 方法逻辑与术语一致性检查 | 给出 Method 和已有定义，返回问题定位与统一建议。 | [下载 ZIP](../downloads/individual/method-logic-check.zip?raw=true) · [复制完整提示词](../README.md#prompt-method-logic-check) · [使用说明](../skills/method-logic-check/SKILL.md) |
 
-「复制提示词」打开与首页相同的示例，可以直接发给 AI。[查看入门方法](../docs/getting-started.md)。
+「复制完整提示词」打开首页上对应技能的 `SKILL.md` 全文。[查看入门方法](../docs/getting-started.md)。
 
 ## 现成 Skills 与套件
 
