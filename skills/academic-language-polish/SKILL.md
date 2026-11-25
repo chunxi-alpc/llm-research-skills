@@ -1,32 +1,47 @@
 ---
 name: academic-language-polish
-description: 润色中英文学术段落，使句子简洁、衔接清楚、术语一致，同时保持研究事实和结论强度。适用于论文表达改写和可读性提升。
+description: "润色英文学术段落，理清句间逻辑并保持术语一致。"
 metadata:
   source-records: "R013, R014"
 ---
 
 # 学术语言润色
 
-## 适用任务与输入
+根据用户的任务选用对应的提示词，代入用户提供的材料执行。
 
-输入待润色段落及其章节用途，可附上下文、目标会议或期刊、固定术语、偏好的文风。用户只要求拼写语法纠错时，仅做纠错，不扩大为风格改写。
+## 润色英文学术段落
 
-## 处理方法
+来源见原表 R013。
 
-1. 先识别段落的主张和支撑材料，保留数值、引文、方法名称、比较对象、适用条件和不确定性程度。
-2. 让相邻句子的关系清楚，必要时拆分长句或调整句序。优先使用常见词与通行学术表达。
-3. 每个概念使用一个固定名称。自定义术语首次出现时给出简明解释，不为显得新颖而改名。
-4. 去掉重复、空泛的评价和无作用的铺垫。保留影响结论理解的实验条件和限制。
-5. 对缺少证据或逻辑不完整的位置提出具体建议，不能靠编写数据、引文或更强的结论补齐。
+````text
+Below is a paragraph from an academic paper. Rephrase it to meet academic writing standards and improve spelling, grammar, clarity, concision, and overall readability.
 
-## 输出要求
+Paragraph:
+[Paste the paragraph here.]
+````
 
-给出可以直接使用的修订段落，以及少量影响理解的修改说明。若用户只要最终文本，就只输出文本。沿用用户提供的 LaTeX、Word 纯文本或 Markdown 格式。
+**怎么用**
 
-## 调用示例
+把最后一行换成自己的英文段落再发送。例如可以填入 “The purpose of this step is to make a selection of the passages that are useful for answering the question.”
 
-> 使用 academic-language-polish 润色下面的 Method 段落。保留所有公式和方法名称，用常见表达，最后说明最重要的三处改动。
+## 理清句间逻辑，保持术语一致
 
-## 来源
+来源见原表 R014。
 
-本表制作的技能；[原始英文润色提示词](references/source-prompts.md)对应原表 R013、R014。
+````text
+Write like a careful NLP student who wants peers and advisors to understand the paper.
+Keep the logic explicit and smooth. Make the bridge between sentences visible instead of assuming the reader will fill it in.
+Use common expressions, common words, and simple sentence structures by default. Only use uncommon terms or longer sentences when they are needed for technical precision.
+Keep Abstract, Conclusion, and result discussion informative. Every sentence should contribute evidence, explanation, or a bounded claim.
+Keep one canonical term for one concept. Method names, modules, datasets, metrics, and scores should not be renamed across the summary unless the scope change is real and made explicit.
+Every self-defined term must be followed immediately by a plain explanation. If a term cannot be explained cleanly, do not use it.
+Avoid long or showy sentences. Every sentence should carry real information.
+````
+
+**怎么用**
+
+在提示词后粘贴待改段落。例如追加 “We use a passage ranker to select five passages. The evidence sorter then provides these passages to the generator. Here, both names refer to the same module.” 然后一起发送。
+
+## 参考材料
+
+[来源说明](SOURCE.md) · [原表提示词与经验](references/source-prompts.md)

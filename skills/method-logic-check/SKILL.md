@@ -1,32 +1,44 @@
 ---
 name: method-logic-check
-description: 检查论文方法部分的输入输出、步骤逻辑、符号定义和术语一致性，并提出定位明确的修改。适用于 Method 审读与统一形式化表述。
+description: "根据已有定义统一术语和符号，检查方法描述中的逻辑问题。"
 metadata:
   source-records: "R010, R014"
 ---
 
 # 方法逻辑与术语一致性检查
 
-## 适用任务与输入
+根据用户的任务选用对应的提示词，代入用户提供的材料执行。
 
-输入方法章节及其相关上下文，可附术语表、符号表、已讨论好的定义和模型图。已有定义优先；有冲突时指出冲突位置，不自行决定改变算法。
+## 按已有定义统一符号，检查方法逻辑
 
-## 处理方法
+来源见原表 R010。
 
-1. 整理输入、输出、各步骤和中间变量，确认文字、公式与图中的依赖关系能对应起来。
-2. 检查术语和符号是否在使用前定义，同一概念是否多名、同一符号是否多义，缩写是否有首次解释。
-3. 检查每一步是否能由已有输入和前序结果得到，训练阶段与推理阶段的可用信息是否说清。
-4. 对每个实际问题记录原文位置、读者会遇到的理解困难和最小修改建议。未提供的上下文可能包含定义时，明确所检查的范围。
-5. 根据已有定义给出修订措辞。缺少关键定义或算法步骤时提出针对性问题，不自行增加模块和技术名词。
+````text
+请按[前文或章节]中的形式化表示，统一本小节的符号、术语和定义。检查推理或步骤之间是否有缺失的环节。尽量用常见表达。需要引入新术语时，请先解释清楚。
+````
 
-## 输出要求
+**怎么用**
 
-输出“位置—问题—原因—建议”表，以及统一后的术语或符号表。用户要求修订正文时，给出相应段落；检查任务本身不自动改动文件。
+例如把 [前文或章节] 换成「第 2 节」，在提示词下贴上「第 2 节定义 q 为查询、D 为候选文档集合。第 3 节写道：输入问题 x 后，我们对段落集合 C 排序。」一起发送。
 
-## 调用示例
+## 理清句间逻辑，保持术语一致
 
-> 使用 method-logic-check 检查 Section 3。按 Section 2 的符号表统一记号，重点检查检索结果如何传给生成模块，以及新术语是否已解释。
+来源见原表 R014。
 
-## 来源
+````text
+Write like a careful NLP student who wants peers and advisors to understand the paper.
+Keep the logic explicit and smooth. Make the bridge between sentences visible instead of assuming the reader will fill it in.
+Use common expressions, common words, and simple sentence structures by default. Only use uncommon terms or longer sentences when they are needed for technical precision.
+Keep Abstract, Conclusion, and result discussion informative. Every sentence should contribute evidence, explanation, or a bounded claim.
+Keep one canonical term for one concept. Method names, modules, datasets, metrics, and scores should not be renamed across the summary unless the scope change is real and made explicit.
+Every self-defined term must be followed immediately by a plain explanation. If a term cannot be explained cleanly, do not use it.
+Avoid long or showy sentences. Every sentence should carry real information.
+````
 
-本表制作的技能；[原表提示词](references/source-prompts.md)保留 R010、R014 的术语与逻辑检查要求。
+**怎么用**
+
+在提示词后粘贴待改段落。例如追加 “We use a passage ranker to select five passages. The evidence sorter then provides these passages to the generator. Here, both names refer to the same module.” 然后一起发送。
+
+## 参考材料
+
+[来源说明](SOURCE.md) · [原表提示词与经验](references/source-prompts.md)

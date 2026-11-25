@@ -3,77 +3,77 @@
     "kind": "starter",
     "path": "downloads/research-skills-starter.zip",
     "skill_count": 10,
-    "bytes": 62760
+    "bytes": 63085
   },
   {
     "kind": "new-skill",
     "path": "downloads/individual/research-literature-search.zip",
     "name": "research-literature-search",
     "skill_count": 1,
-    "bytes": 3620
+    "bytes": 3500
   },
   {
     "kind": "new-skill",
     "path": "downloads/individual/research-paper-reading.zip",
     "name": "research-paper-reading",
     "skill_count": 1,
-    "bytes": 3353
+    "bytes": 3628
   },
   {
     "kind": "new-skill",
     "path": "downloads/individual/academic-language-polish.zip",
     "name": "academic-language-polish",
     "skill_count": 1,
-    "bytes": 3079
+    "bytes": 3210
   },
   {
     "kind": "new-skill",
     "path": "downloads/individual/method-logic-check.zip",
     "name": "method-logic-check",
     "skill_count": 1,
-    "bytes": 3139
+    "bytes": 3373
   },
   {
     "kind": "new-skill",
     "path": "downloads/individual/research-idea-discussion.zip",
     "name": "research-idea-discussion",
     "skill_count": 1,
-    "bytes": 27571
+    "bytes": 27249
   },
   {
     "kind": "new-skill",
     "path": "downloads/individual/paper-peer-review.zip",
     "name": "paper-peer-review",
     "skill_count": 1,
-    "bytes": 4769
+    "bytes": 5317
   },
   {
     "kind": "new-skill",
     "path": "downloads/individual/academic-proofreading.zip",
     "name": "academic-proofreading",
     "skill_count": 1,
-    "bytes": 2849
+    "bytes": 2208
   },
   {
     "kind": "new-skill",
     "path": "downloads/individual/academic-translation.zip",
     "name": "academic-translation",
     "skill_count": 1,
-    "bytes": 4333
+    "bytes": 5163
   },
   {
     "kind": "new-skill",
     "path": "downloads/individual/coding-task-brief.zip",
     "name": "coding-task-brief",
     "skill_count": 1,
-    "bytes": 2942
+    "bytes": 2919
   },
   {
     "kind": "new-skill",
     "path": "downloads/individual/paper-figure-brief.zip",
     "name": "paper-figure-brief",
     "skill_count": 1,
-    "bytes": 4213
+    "bytes": 3555
   },
   {
     "kind": "upstream-skill",

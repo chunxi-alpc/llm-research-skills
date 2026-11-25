@@ -10,9 +10,13 @@
 
 | 技能 | 能帮你做什么 | 下载与使用 |
 |---|---|---|
-| 编程任务需求整理 | 整理成可直接提交给编码 Agent 的任务说明。 | [下载 ZIP](../downloads/individual/coding-task-brief.zip?raw=true) · [复制完整提示词](../README.md#prompt-coding-task-brief) · [使用说明](../skills/coding-task-brief/SKILL.md) |
+| 编程任务需求整理 | 结合项目文件说明编程需求、拆解任务或按六项信息组织指令。 | [下载 ZIP](../downloads/individual/coding-task-brief.zip?raw=true) · [选提示词](../README.md#prompt-coding-task-brief) |
 
-「复制完整提示词」打开首页上对应技能的 `SKILL.md` 全文。[查看入门方法](../docs/getting-started.md)。
+## 提示词选择
+
+- [结合项目文件修改代码](../README.md#option-r016-project-files)
+- [先拆解需求，再交给编码助手实现](../README.md#option-r020-break-down)
+- [用六项信息说明编程需求](../README.md#option-r025-brief)
 
 ## 现成 Skills 与套件
 

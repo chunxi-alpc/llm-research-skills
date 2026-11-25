@@ -1,0 +1,238 @@
+[
+  {
+    "id": "R001-compare",
+    "source": "R001",
+    "title": "比较五篇论文，找出研究空白",
+    "text": "Compare these 5 papers and identify research gaps.",
+    "example": "在 NotebookLM 的来源列表中选中 5 篇要一起读的论文，例如 5 篇关于长文本检索的论文，然后在对话框发送上面的提示词。",
+    "derived": false,
+    "skills": [
+      "research-paper-reading",
+      "research-literature-search"
+    ]
+  },
+  {
+    "id": "R002-search",
+    "source": "R002",
+    "title": "按领域、方向、年份和会议找论文",
+    "text": "帮我查找[领域]中关于[研究方向]、发表于[年份]年[会议]的论文。",
+    "example": "把方括号换成自己的检索条件，例如直接发送「帮我查找自然语言处理中关于长文档摘要、发表于 2024 年 ACL 的论文。」",
+    "derived": false,
+    "skills": [
+      "research-literature-search"
+    ]
+  },
+  {
+    "id": "R007-strengths",
+    "source": "R007",
+    "title": "概括一篇论文的优缺点",
+    "text": "请概括这篇论文的优点和缺点。",
+    "example": "上传想读的论文 PDF，例如一篇关于多语言摘要的论文，然后发送上面的提示词。",
+    "derived": false,
+    "skills": [
+      "research-paper-reading"
+    ]
+  },
+  {
+    "id": "R007-directions",
+    "source": "R007",
+    "title": "总结论文的后续研究方向",
+    "text": "请根据这篇论文，总结后续可以拓展的研究方向。",
+    "example": "上传论文全文，或者把论文的讨论和局限性两节贴在提示词下面，一起发送给 AI。",
+    "derived": false,
+    "skills": [
+      "research-paper-reading"
+    ]
+  },
+  {
+    "id": "R008-collect",
+    "source": "R008",
+    "title": "检索符合条件的论文、下载并整理大纲",
+    "text": "请帮我检索[领域]中发表于[年份]年 A 类会议的论文，优先选择使用[技术]的工作。把符合条件的论文下载到[目录]，并整理一份总大纲。",
+    "example": "在 WorkBuddy 中启用 Academic Research 和 Agent Browser。可以直接发送「请帮我检索自然语言处理中发表于 2024 年 A 类会议的论文，优先选择使用对比学习的工作。把符合条件的论文下载到项目的 papers/ 文件夹，并整理一份总大纲。」",
+    "derived": false,
+    "skills": [
+      "research-literature-search",
+      "research-paper-reading"
+    ]
+  },
+  {
+    "id": "R009-evidence",
+    "source": "R009",
+    "title": "总结论文思路和方法，并给出原文依据",
+    "text": "请总结这篇论文的研究思路和方法，并指出原文中支持这些概括的具体内容。",
+    "example": "上传论文 PDF 后发送上面的提示词。如果只想读懂其中一步，可以接着问「作者为什么需要重排序？请指出方法部分的依据。」",
+    "derived": true,
+    "skills": [
+      "research-paper-reading"
+    ],
+    "additional_source_fields": [
+      "purpose"
+    ]
+  },
+  {
+    "id": "R010-method",
+    "source": "R010",
+    "title": "按已有定义统一符号，检查方法逻辑",
+    "text": "请按[前文或章节]中的形式化表示，统一本小节的符号、术语和定义。检查推理或步骤之间是否有缺失的环节。尽量用常见表达。需要引入新术语时，请先解释清楚。",
+    "example": "例如把 [前文或章节] 换成「第 2 节」，在提示词下贴上「第 2 节定义 q 为查询、D 为候选文档集合。第 3 节写道：输入问题 x 后，我们对段落集合 C 排序。」一起发送。",
+    "derived": false,
+    "skills": [
+      "method-logic-check"
+    ]
+  },
+  {
+    "id": "R013-polish",
+    "source": "R013",
+    "title": "润色英文学术段落",
+    "text": "Below is a paragraph from an academic paper. Rephrase it to meet academic writing standards and improve spelling, grammar, clarity, concision, and overall readability.\n\nParagraph:\n[Paste the paragraph here.]",
+    "example": "把最后一行换成自己的英文段落再发送。例如可以填入 “The purpose of this step is to make a selection of the passages that are useful for answering the question.”",
+    "derived": false,
+    "skills": [
+      "academic-language-polish"
+    ]
+  },
+  {
+    "id": "R014-clarity",
+    "source": "R014",
+    "title": "理清句间逻辑，保持术语一致",
+    "text": "Write like a careful NLP student who wants peers and advisors to understand the paper.\nKeep the logic explicit and smooth. Make the bridge between sentences visible instead of assuming the reader will fill it in.\nUse common expressions, common words, and simple sentence structures by default. Only use uncommon terms or longer sentences when they are needed for technical precision.\nKeep Abstract, Conclusion, and result discussion informative. Every sentence should contribute evidence, explanation, or a bounded claim.\nKeep one canonical term for one concept. Method names, modules, datasets, metrics, and scores should not be renamed across the summary unless the scope change is real and made explicit.\nEvery self-defined term must be followed immediately by a plain explanation. If a term cannot be explained cleanly, do not use it.\nAvoid long or showy sentences. Every sentence should carry real information.",
+    "example": "在提示词后粘贴待改段落。例如追加 “We use a passage ranker to select five passages. The evidence sorter then provides these passages to the generator. Here, both names refer to the same module.” 然后一起发送。",
+    "derived": false,
+    "skills": [
+      "academic-language-polish",
+      "method-logic-check"
+    ]
+  },
+  {
+    "id": "R016-project-files",
+    "source": "R016",
+    "title": "结合项目文件修改代码",
+    "text": "请参考我提供的项目文件，修改 [文件名]，实现 [功能]。程序的输入是 [输入内容和格式]，预期输出是 [结果和格式]。",
+    "example": "将现有的 `export_notes.py` 和一份 Markdown 笔记发给编程工具。把四个占位项依次填为 `export_notes.py`、提取笔记标题、一个存放 Markdown 笔记的文件夹、一张包含文件名和首个一级标题的 CSV 表，再发送提示词。",
+    "derived": true,
+    "skills": [
+      "coding-task-brief"
+    ]
+  },
+  {
+    "id": "R020-break-down",
+    "source": "R020",
+    "title": "先拆解需求，再交给编码助手实现",
+    "text": "请梳理下面的开发需求，拆成可以逐项实现的任务，再写成一段能直接交给编码助手的提示词。\n\n[粘贴开发需求]",
+    "example": "在末行填入“把文件夹中的 Markdown 笔记导出为 CSV。每行记录文件名和一级标题，没有标题就留空。”先发给 AI，再把生成的提示词交给 Codex 逐项实现。",
+    "derived": true,
+    "skills": [
+      "coding-task-brief"
+    ],
+    "additional_source_fields": [
+      "experience"
+    ]
+  },
+  {
+    "id": "R025-brief",
+    "source": "R025",
+    "title": "用六项信息说明编程需求",
+    "text": "请帮我实现 [想要的功能]。\n可以使用 [已有文件、数据或接口]。\n需要遵守 [限制条件]。\n请优先考虑 [最重要的要求]。\n请避免 [不希望出现的做法或结果]。\n请用 [希望的回答或交付形式] 回复。",
+    "example": "要批量导出笔记标题，可以依次填入「导出笔记标题到 CSV」「已有的 Markdown 文件夹」「只用 Python 标准库」「准确识别一级标题」「避免改写笔记原文」「给出脚本和运行命令」。填好后整段发给编码助手。",
+    "derived": true,
+    "skills": [
+      "coding-task-brief"
+    ]
+  },
+  {
+    "id": "R026-idea",
+    "source": "R026",
+    "title": "讨论早期研究想法的逻辑和改进方向",
+    "text": "假设你是[领域]的专家。我有一个关于[研究主题]的想法：[主要思路]。请帮我检查其中的逻辑，并指出可以改进的地方。",
+    "example": "填好三个位置后直接发送，例如「假设你是信息检索领域的专家。我想用查询长度决定检索多少篇文档：查询越长，就取越多文档。请帮我检查其中的逻辑，并指出可以改进的地方。」",
+    "derived": false,
+    "skills": [
+      "research-idea-discussion"
+    ]
+  },
+  {
+    "id": "R027-draft",
+    "source": "R027",
+    "title": "讨论初稿中的创新性和潜在质疑",
+    "text": "请阅读我的论文初稿，评估方法的创新性。指出方法可能存在的问题、审稿人可能提出的质疑，以及可以如何改进。",
+    "example": "上传包含方法和实验的论文初稿后发送上面的提示词。例如研究的是检索模型，可以再写一句「我尤其想知道，用查询长度决定检索数量这一点，和已有方法有什么实质差异？」",
+    "derived": true,
+    "skills": [
+      "research-idea-discussion",
+      "paper-peer-review"
+    ],
+    "additional_source_fields": [
+      "purpose"
+    ]
+  },
+  {
+    "id": "R031-review",
+    "source": "R031",
+    "title": "按会议模板模拟审稿并评分",
+    "text": "Please help me review this paper and output the review comments in the following format.\n* Overall Review\nPlease briefly summarize the main points and contributions of this paper.\n...\n* Paper Strength\nPlease provide a list of the strengths of this paper, including but not limited to: innovative and practical methodology, insightful empirical findings or in-depth theoretical analysis, well-structured review of relevant literature, and any other factors that may make the paper valuable to readers. (Maximum length: 2,000 characters)\n(1)...\n(2)...\n(3)...\n* Paper Weakness\nPlease provide a numbered list of your main concerns regarding this paper (so authors could respond to the concerns individually).\nThese may include, but are not limited to: inadequate implementation details for reproducing the study, limited evaluation and ablation studies for the proposed method, correctness of the theoretical analysis or experimental results, lack of comparisons or discussions with widely-known baselines in the field, lack of clarity in exposition, or any other factors that may impede the reader's understanding or benefit from the paper. Please kindly refrain from providing a general assessment of the paper's novelty without providing detailed explanations. (Maximum length: 2,000 characters)\n(1)...\n(2)...\n(3)...\n* Questions To Authors And Suggestions For Rebuttal\nPlease provide a numbered list of specific and clear questions that pertain to the details of the proposed method, evaluation setting, or additional results that would aid in supporting the authors' claims.\nThe questions should be formulated in a manner that, after the authors have answered them during the rebuttal, it would enable a more thorough assessment of the paper's quality. (Maximum length: 2,000 characters)\n* Overall score (1-10)\nThe paper is scored on a scale of 1-10, with 10 being the full mark, and 6 stands for borderline accept. Then give the reason for your rating.\n...",
+    "example": "上传要评审的论文全文，再把上面的英文模板原样发送。以附件 manuscript.pdf 为例，AI 会在审稿意见末尾给出 1–10 分和理由，模板中的 6 分表示临界接收。",
+    "derived": false,
+    "skills": [
+      "paper-peer-review"
+    ]
+  },
+  {
+    "id": "R031-followup",
+    "source": "R031",
+    "title": "收到初审意见后，追问更多不足",
+    "text": "Please list more shortcomings of this paper from all aspects.",
+    "example": "收到第一轮审稿意见后，在同一个对话中直接发送上面的英文追问。例如初审只谈了数据集和基线时，可以用它继续查找其他方面的不足。",
+    "derived": false,
+    "skills": [
+      "paper-peer-review"
+    ],
+    "additional_source_fields": [
+      "experience"
+    ]
+  },
+  {
+    "id": "R033-proofread",
+    "source": "R033",
+    "title": "只改拼写和语法错误",
+    "text": "请检查下面论文段落中的拼写、语法、句法、时态和单复数错误。只修正这些错误，保留其余表达。",
+    "example": "在提示词下一行贴原文再发送。例如贴入 “Our method use two encoders.”，校对后应为 “Our method uses two encoders.”",
+    "derived": false,
+    "skills": [
+      "academic-proofreading"
+    ]
+  },
+  {
+    "id": "R035-translate",
+    "source": "R035",
+    "title": "保留原意和已有英文术语的中译英",
+    "text": "请把下面的中文段落翻译成英文。\n1. 保留原文的全部含义和逻辑，避免增添或遗漏信息。\n2. 选用直观、常见的英文词汇。\n3. 尽量使用主动语态。\n4. 用词符合本领域顶级学术会议的写作习惯。\n5. 理清中文句子之间的逻辑关系，并在译文中准确体现。\n6. 原文中已用英文写出的部分保持原样。\n7. 句式尽量精炼。",
+    "example": "在提示词下贴入「我们先用 dense retriever 检索候选段落，再用重排序模型选出前五段。」一起发送。这样可以直接看出原有的英文术语 dense retriever 是否得到保留。",
+    "derived": false,
+    "skills": [
+      "academic-translation"
+    ]
+  },
+  {
+    "id": "R036-word",
+    "source": "R036",
+    "title": "适合 Word 的英文稿和中文直译",
+    "text": "# Role\n你是一位兼具顶尖科研写作专家与资深会议审稿人（ICML/ICLR/NeurIPS/ACL 等）双重身份的助手。你的学术品味极高，对逻辑漏洞和语言瑕疵零容忍。\n\n# Task\n请处理我提供的【中文草稿】，将其翻译并润色为适合 Word 编辑的【英文学术论文片段】。\n\n# Constraints\n1. 视觉与排版：\n   - 绝对不要使用任何 Markdown 语法（包括但不限于 `###` 标题、`**` 加粗、`*` 斜体、`>` 引用或 ``` 代码块等）。\n   - 请直接输出纯文本，以便于一键无缝复制到 Word 文档中，不会带入任何多余的排版符号。\n   - 尽量少用引号，以免影响学术论文的视觉观感。\n\n2. 风格与逻辑：\n   - 要求逻辑严谨，用词准确，表达凝练连贯，尽量使用常见的单词，避免生僻词。\n   - 尽量不要使用破折号（—），推荐使用从句或同位语替代。\n   - 拒绝使用任何项目符号（Bullet points）或列表形式，必须使用连贯的段落表达。\n   - 去除“AI味”，行文自然流畅，避免机械的连接词堆砌。\n\n3. 时态规范：\n   - 统一使用一般现在时描述方法、架构和实验结论。\n   - 仅在明确提及特定历史事件时使用过去时。\n\n4. 输出格式：\n   - Part 1 [English Draft]：只输出翻译成英文后的内容本身。\n     * 语言要求：必须是全英文。\n     * 符号规范：直接输出标准文本符号（如 95%、model_v1、R&D 等），**切勿**进行类似 LaTeX 的斜杠转义。\n     * 公式保留：Word 支持直接转换数学文本，请保留原草稿中的公式排版（如保留 $ 符号以界定公式范围），以数学形式的因果逻辑（$\\because, \\therefore, \\implies$）串联推导过程。\n   - Part 2 [Translation]：对应的中文直译（用于核对逻辑是否符合原意）。\n   - 除以上两部分外，不要输出任何多余的对话、前缀说明或解释。\n\n# Execution Protocol\n在输出最终结果前，请务必在后台进行自我审查：\n1. 审稿人视角：假设你是最挑剔的 Reviewer，检查是否存在过度排版、格式乱码、逻辑跳跃或未翻译的中文。\n2. 立即纠正：针对发现的问题进行修改，确保最终输出的内容严谨、纯净且完全英文化。\n\n# Input\n[在此处粘贴你的中文草稿]",
+    "example": "把模板末尾的 [在此处粘贴你的中文草稿] 换成实际段落，例如「我们将训练集的 95% 用于训练 model_v1，其余样本用于验证。」发送后，把 Part 1 的英文复制到 Word，用 Part 2 的中文逐句核对原意。",
+    "derived": false,
+    "skills": [
+      "academic-translation"
+    ]
+  },
+  {
+    "id": "R038-visual-schema",
+    "source": "R038",
+    "title": "把论文方法整理成 VISUAL SCHEMA，再生成模型图",
+    "text": "请把下面的论文方法整理成一份可直接交给绘图模型的说明，以 [VISUAL SCHEMA] 开头。写清方法包含哪些模块、各模块怎样连接，以及如何安排这些模块，让读者能沿着图看懂处理流程。\n\n[粘贴论文的方法段落或算法描述]",
+    "example": "将末行替换为“检索器先返回 20 个段落，重排序模型选出其中 5 段，生成模型结合问题和这 5 段作答。”把提示词发给 AI，再把它生成的整份 [VISUAL SCHEMA] 交给绘图模型生成模型图。",
+    "derived": true,
+    "skills": [
+      "paper-figure-brief"
+    ]
+  }
+]

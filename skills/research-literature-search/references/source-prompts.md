@@ -2,6 +2,29 @@
 
 此文件保留来源材料，供需要时查阅。当前技能的执行要求以 SKILL.md 为准；原表中的价格、额度、模型版本和个人评价是填写时的记录。
 
+## R001 · NotebookLM：多论文比较
+
+原 CSV 逻辑记录：2。
+
+### 原始入口
+
+````text
+https://notebooklm.google.com/
+````
+
+### 原始使用方法或提示词
+
+````text
+输入下列提示词：“Compare these 5 papers and identify research gaps”，并选择或上传所需要检索的论文
+````
+
+### 原表使用经验
+
+````text
+多论文联合分析，多文档 reasoning 很强，很适合写 related work，形成自己领域的文档库
+````
+
+
 ## R002 · Gemini / ChatGPT：按条件找论文
 
 原 CSV 逻辑记录：3。

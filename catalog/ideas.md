@@ -10,9 +10,12 @@
 
 | 技能 | 能帮你做什么 | 下载与使用 |
 |---|---|---|
-| 研究思路讨论 | 给出研究问题与资源条件，返回关键假设和验证建议。 | [下载 ZIP](../downloads/individual/research-idea-discussion.zip?raw=true) · [复制完整提示词](../README.md#prompt-research-idea-discussion) · [使用说明](../skills/research-idea-discussion/SKILL.md) |
+| 研究思路讨论 | 讨论早期研究想法，结合初稿检查创新性、潜在质疑和改进方向。 | [下载 ZIP](../downloads/individual/research-idea-discussion.zip?raw=true) · [选提示词](../README.md#prompt-research-idea-discussion) |
 
-「复制完整提示词」打开首页上对应技能的 `SKILL.md` 全文。[查看入门方法](../docs/getting-started.md)。
+## 提示词选择
+
+- [讨论早期研究想法的逻辑和改进方向](../README.md#option-r026-idea)
+- [讨论初稿中的创新性和潜在质疑](../README.md#option-r027-draft)
 
 ## 工具、提示词与原表经验
 

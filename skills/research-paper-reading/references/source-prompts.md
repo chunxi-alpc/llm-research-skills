@@ -71,6 +71,29 @@ IMAhttps://ima.qq.com/
 ````
 
 
+## R008 · WorkBuddy：检索并整理论文
+
+原 CSV 逻辑记录：9。
+
+### 原始入口
+
+````text
+workbuddyhttps://www.codebuddy.cn/
+````
+
+### 原始使用方法或提示词
+
+````text
+在workbuddy中的skill中选择academic research和agent browser，然后在交互页面中输入你的要求，例如“我需要一个XXX领域的paper，最好使用了XXXX技术，发表时间在xxxx年的A会上，请你帮我检索一下，并将符合的paper下载到XXXX，并整理一个总的大纲给我”
+````
+
+### 原表使用经验
+
+````text
+可以快速找文献，以目前使用经历来看，找到的文献都是真实准确的，其中还有很多其他skill可供使用，但是做PPT之类的功能比较差
+````
+
+
 ## R009 · DeepSeek / Kimi：论文总结与讨论
 
 原 CSV 逻辑记录：10。

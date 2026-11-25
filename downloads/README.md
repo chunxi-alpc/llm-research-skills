@@ -17,9 +17,9 @@
 | [研究思路讨论](../skills/research-idea-discussion/SKILL.md) | [research-idea-discussion.zip](individual/research-idea-discussion.zip) |
 | [论文模拟审稿](../skills/paper-peer-review/SKILL.md) | [paper-peer-review.zip](individual/paper-peer-review.zip) |
 | [拼写与语法纠错](../skills/academic-proofreading/SKILL.md) | [academic-proofreading.zip](individual/academic-proofreading.zip) |
-| [中英文学术翻译](../skills/academic-translation/SKILL.md) | [academic-translation.zip](individual/academic-translation.zip) |
+| [学术翻译（中译英）](../skills/academic-translation/SKILL.md) | [academic-translation.zip](individual/academic-translation.zip) |
 | [编程任务需求整理](../skills/coding-task-brief/SKILL.md) | [coding-task-brief.zip](individual/coding-task-brief.zip) |
-| [论文模型图说明与绘图提示词](../skills/paper-figure-brief/SKILL.md) | [paper-figure-brief.zip](individual/paper-figure-brief.zip) |
+| [论文模型图](../skills/paper-figure-brief/SKILL.md) | [paper-figure-brief.zip](individual/paper-figure-brief.zip) |
 
 ## 单个第三方技能
 

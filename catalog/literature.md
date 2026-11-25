@@ -10,9 +10,13 @@
 
 | 技能 | 能帮你做什么 | 下载与使用 |
 |---|---|---|
-| 文献检索 | 给出主题、年份和会议，返回带来源的论文清单。 | [下载 ZIP](../downloads/individual/research-literature-search.zip?raw=true) · [复制完整提示词](../README.md#prompt-research-literature-search) · [使用说明](../skills/research-literature-search/SKILL.md) |
+| 文献检索 | 按领域、会议和年份找论文，下载并整理检索结果。 | [下载 ZIP](../downloads/individual/research-literature-search.zip?raw=true) · [选提示词](../README.md#prompt-research-literature-search) |
 
-「复制完整提示词」打开首页上对应技能的 `SKILL.md` 全文。[查看入门方法](../docs/getting-started.md)。
+## 提示词选择
+
+- [按领域、方向、年份和会议找论文](../README.md#option-r002-search)
+- [检索符合条件的论文、下载并整理大纲](../README.md#option-r008-collect)
+- [比较五篇论文，找出研究空白](../README.md#option-r001-compare)
 
 ## 工具、提示词与原表经验
 

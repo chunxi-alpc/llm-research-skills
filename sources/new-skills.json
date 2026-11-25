@@ -3,13 +3,14 @@
     "name": "research-literature-search",
     "title": "文献检索",
     "source_ids": [
+      "R001",
       "R002",
       "R003",
       "R004",
       "R005",
       "R008"
     ],
-    "description": "给出主题、年份和会议，返回带来源的论文清单。"
+    "description": "按领域、会议和年份找论文，下载并整理检索结果。"
   },
   {
     "name": "research-paper-reading",
@@ -18,10 +19,11 @@
       "R001",
       "R006",
       "R007",
+      "R008",
       "R009",
       "R041"
     ],
-    "description": "给出论文与问题，返回方法梳理、原文依据和对比表。"
+    "description": "精读或比较论文，查找原文依据，讨论优缺点和后续研究方向。"
   },
   {
     "name": "academic-language-polish",
@@ -30,7 +32,7 @@
       "R013",
       "R014"
     ],
-    "description": "给出段落和文风要求，返回修订稿。"
+    "description": "润色英文学术段落，理清句间逻辑并保持术语一致。"
   },
   {
     "name": "method-logic-check",
@@ -39,7 +41,7 @@
       "R010",
       "R014"
     ],
-    "description": "给出 Method 和已有定义，返回问题定位与统一建议。"
+    "description": "根据已有定义统一术语和符号，检查方法描述中的逻辑问题。"
   },
   {
     "name": "research-idea-discussion",
@@ -49,7 +51,7 @@
       "R027",
       "R046"
     ],
-    "description": "给出研究问题与资源条件，返回关键假设和验证建议。"
+    "description": "讨论早期研究想法，结合初稿检查创新性、潜在质疑和改进方向。"
   },
   {
     "name": "paper-peer-review",
@@ -61,7 +63,7 @@
       "R030",
       "R031"
     ],
-    "description": "给出论文和审稿要求，返回有依据的修改意见。"
+    "description": "按会议模板模拟审稿并评分，或在收到审稿意见后继续追问。"
   },
   {
     "name": "academic-proofreading",
@@ -71,16 +73,16 @@
       "R033",
       "R051"
     ],
-    "description": "只修正错误，正确表达保持原样。"
+    "description": "修正论文的拼写、语法、句法、时态和单复数错误，保留其余表达。"
   },
   {
     "name": "academic-translation",
-    "title": "中英文学术翻译",
+    "title": "学术翻译（中译英）",
     "source_ids": [
       "R035",
       "R036"
     ],
-    "description": "保留含义、逻辑、数值和固定术语。"
+    "description": "保留原意和英文术语进行中译英，或生成适合 Word 的英文稿和中文直译。"
   },
   {
     "name": "coding-task-brief",
@@ -90,16 +92,16 @@
       "R020",
       "R025"
     ],
-    "description": "整理成可直接提交给编码 Agent 的任务说明。"
+    "description": "结合项目文件说明编程需求、拆解任务或按六项信息组织指令。"
   },
   {
     "name": "paper-figure-brief",
-    "title": "论文模型图说明与绘图提示词",
+    "title": "论文模型图",
     "source_ids": [
       "R038",
       "R040",
       "R050"
     ],
-    "description": "输出模型结构、VISUAL SCHEMA 与绘图提示词。"
+    "description": "根据论文方法整理 VISUAL SCHEMA，再交给绘图模型生成模型图。"
   }
 ]

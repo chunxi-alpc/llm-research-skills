@@ -10,10 +10,16 @@
 
 | 技能 | 能帮你做什么 | 下载与使用 |
 |---|---|---|
-| 学术语言润色 | 给出段落和文风要求，返回修订稿。 | [下载 ZIP](../downloads/individual/academic-language-polish.zip?raw=true) · [复制完整提示词](../README.md#prompt-academic-language-polish) · [使用说明](../skills/academic-language-polish/SKILL.md) |
-| 方法逻辑与术语一致性检查 | 给出 Method 和已有定义，返回问题定位与统一建议。 | [下载 ZIP](../downloads/individual/method-logic-check.zip?raw=true) · [复制完整提示词](../README.md#prompt-method-logic-check) · [使用说明](../skills/method-logic-check/SKILL.md) |
+| 学术语言润色 | 润色英文学术段落，理清句间逻辑并保持术语一致。 | [下载 ZIP](../downloads/individual/academic-language-polish.zip?raw=true) · [选提示词](../README.md#prompt-academic-language-polish) |
+| 方法逻辑与术语一致性检查 | 根据已有定义统一术语和符号，检查方法描述中的逻辑问题。 | [下载 ZIP](../downloads/individual/method-logic-check.zip?raw=true) · [选提示词](../README.md#prompt-method-logic-check) |
 
-「复制完整提示词」打开首页上对应技能的 `SKILL.md` 全文。[查看入门方法](../docs/getting-started.md)。
+## 提示词选择
+
+- [按已有定义统一符号，检查方法逻辑](../README.md#option-r010-method)
+- [润色英文学术段落](../README.md#option-r013-polish)
+- [理清句间逻辑，保持术语一致](../README.md#option-r014-clarity)
+- Ai-prompt 写作与绘图提示词库 · [查看原文](https://github.com/Zhongxuanx/Ai-prompt)
+- Awesome AI Research Writing · [查看原文](https://github.com/Leey21/awesome-ai-research-writing)
 
 ## 现成 Skills 与套件
 

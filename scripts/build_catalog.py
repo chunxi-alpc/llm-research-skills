@@ -4,6 +4,8 @@ import csv
 import json
 import re
 
+from skill_prompt_options import fenced, options_for_skill, render_prompt, render_skill_files
+
 ROOT = Path(__file__).resolve().parents[1]
 CSV_NAME = "LLM辅助科研资料和经验汇总-工作表1.csv"
 FIELDS = ["category", "entry", "purpose", "usage", "experience"]
@@ -112,32 +114,24 @@ RELATED_GROUPS = {
 RELATED_RECORDS = {"literature": [8], "reading": [1], "ideas": [46], "proofreading": [51], "reference": [46]}
 
 SKILLS = [
-    ("research-literature-search", "文献检索", [2, 3, 4, 5, 8], "给出主题、年份和会议，返回带来源的论文清单。"),
-    ("research-paper-reading", "论文阅读与多论文对比", [1, 6, 7, 9, 41], "给出论文与问题，返回方法梳理、原文依据和对比表。"),
-    ("academic-language-polish", "学术语言润色", [13, 14], "给出段落和文风要求，返回修订稿。"),
-    ("method-logic-check", "方法逻辑与术语一致性检查", [10, 14], "给出 Method 和已有定义，返回问题定位与统一建议。"),
-    ("research-idea-discussion", "研究思路讨论", [26, 27, 46], "给出研究问题与资源条件，返回关键假设和验证建议。"),
-    ("paper-peer-review", "论文模拟审稿", [27, 28, 29, 30, 31], "给出论文和审稿要求，返回有依据的修改意见。"),
-    ("academic-proofreading", "拼写与语法纠错", [32, 33, 51], "只修正错误，正确表达保持原样。"),
-    ("academic-translation", "中英文学术翻译", [35, 36], "保留含义、逻辑、数值和固定术语。"),
-    ("coding-task-brief", "编程任务需求整理", [16, 20, 25], "整理成可直接提交给编码 Agent 的任务说明。"),
-    ("paper-figure-brief", "论文模型图说明与绘图提示词", [38, 40, 50], "输出模型结构、VISUAL SCHEMA 与绘图提示词。"),
+    ("research-literature-search", "文献检索", [1, 2, 3, 4, 5, 8], "按领域、会议和年份找论文，下载并整理检索结果。"),
+    ("research-paper-reading", "论文阅读与多论文对比", [1, 6, 7, 8, 9, 41], "精读或比较论文，查找原文依据，讨论优缺点和后续研究方向。"),
+    ("academic-language-polish", "学术语言润色", [13, 14], "润色英文学术段落，理清句间逻辑并保持术语一致。"),
+    ("method-logic-check", "方法逻辑与术语一致性检查", [10, 14], "根据已有定义统一术语和符号，检查方法描述中的逻辑问题。"),
+    ("research-idea-discussion", "研究思路讨论", [26, 27, 46], "讨论早期研究想法，结合初稿检查创新性、潜在质疑和改进方向。"),
+    ("paper-peer-review", "论文模拟审稿", [27, 28, 29, 30, 31], "按会议模板模拟审稿并评分，或在收到审稿意见后继续追问。"),
+    ("academic-proofreading", "拼写与语法纠错", [32, 33, 51], "修正论文的拼写、语法、句法、时态和单复数错误，保留其余表达。"),
+    ("academic-translation", "学术翻译（中译英）", [35, 36], "保留原意和英文术语进行中译英，或生成适合 Word 的英文稿和中文直译。"),
+    ("coding-task-brief", "编程任务需求整理", [16, 20, 25], "结合项目文件说明编程需求、拆解任务或按六项信息组织指令。"),
+    ("paper-figure-brief", "论文模型图", [38, 40, 50], "根据论文方法整理 VISUAL SCHEMA，再交给绘图模型生成模型图。"),
 ]
 
-# These records are the sources for the examples on the repository homepage.
-EXAMPLE_SKILL_BY_RECORD = {
-    "R001": "research-paper-reading",
-    "R002": "research-literature-search",
-    "R009": "research-paper-reading",
-    "R010": "method-logic-check",
-    "R013": "academic-language-polish",
-    "R014": "academic-language-polish",
-    "R025": "coding-task-brief",
-    "R026": "research-idea-discussion",
-    "R031": "paper-peer-review",
-    "R033": "academic-proofreading",
-    "R035": "academic-translation",
-    "R038": "paper-figure-brief",
+# External collections stay at the individual project level used in the source table.
+EXTERNAL_PROMPTS = {
+    "R011": ("Ai-prompt 写作与绘图提示词库", ["academic-language-polish", "paper-figure-brief"]),
+    "R015": ("Awesome AI Research Writing", ["academic-language-polish"]),
+    "R030": ("Strict & Precise 严格审稿提示词", ["paper-peer-review"]),
+    "R037": ("Academic AI Prompt 科研提示词库", []),
 }
 
 def write(path, text):
@@ -145,21 +139,53 @@ def write(path, text):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text.rstrip() + "\n", encoding="utf-8", newline="\n")
 
-def fenced(value):
-    fence = "`" * max(4, max((len(x) + 1 for x in re.findall(r"`+", value)), default=4))
-    return fence + "text\n" + value + "\n" + fence
+def option_anchor(option):
+    return "option-" + option["id"].lower()
 
-def sync_homepage_prompts():
+def option_links(options, prefix):
+    return "".join(f"- [{o['title']}]({prefix}#{option_anchor(o)})\n" for o in options)
+
+def external_prompt_links(records):
+    links = {}
+    for record in records:
+        if record["id"] in EXTERNAL_PROMPTS:
+            title, _ = EXTERNAL_PROMPTS[record["id"]]
+            link = next(url for url in urls(record["original"]["entry"]) if url.startswith("https://github.com/"))
+            links[record["id"]] = f"{title} · [查看原文]({link})"
+    return links
+
+def sync_homepage_prompts(options, external):
+    table = ["| 科研任务 | 提示词与下载 |", "|---|---|"]
+    for slug, title, _, _ in SKILLS:
+        table.append(f"| {title} | [选提示词](#prompt-{slug}) · [下载 ZIP](downloads/individual/{slug}.zip?raw=true) |")
+    lines = ['<a id="choose"></a>', '## 按任务选提示词', "\n".join(table),
+             '<a id="prompts"></a>', '## 提示词与使用示范']
+    for slug, title, _, _ in SKILLS:
+        lines.extend([f'<a id="prompt-{slug}"></a>', f'### {title}'])
+        for option in options_for_skill(options, slug):
+            # Shared choices expand in each relevant section and have one permanent link.
+            anchor = option_anchor(option)
+            if slug != option["skills"][0]:
+                anchor += "-" + slug
+            source = option["source"]
+            note = "据原表用法整理" if option["derived"] else "原表提示词"
+            lines.extend([
+                f'<details>\n<summary>{option["title"]}</summary>',
+                f'<a id="{anchor}"></a>',
+                render_prompt(option),
+                f'{note} · [来源 {source}](catalog/entries/{source}.md)',
+                '</details>',
+            ])
+        lines.extend(external[rid] for rid, (_, names) in EXTERNAL_PROMPTS.items() if slug in names)
+    lines.append("### 综合科研提示词库")
+    lines.extend(external[rid] for rid, (_, names) in EXTERNAL_PROMPTS.items() if not names)
+
+    block = "\n\n".join(lines)
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    for slug, *_ in SKILLS:
-        path = f"skills/{slug}/SKILL.md"
-        begin = f"<!-- BEGIN {path} -->"
-        end = f"<!-- END {path} -->"
-        start = readme.index(begin) + len(begin)
-        stop = readme.index(end, start)
-        prompt = (ROOT / path).read_text(encoding="utf-8").removesuffix("\n")
-        readme = readme[:start] + "\n\n" + fenced(prompt) + "\n\n" + readme[stop:]
-    write("README.md", readme)
+    begin, end = "<!-- BEGIN prompt catalog -->", "<!-- END prompt catalog -->"
+    start = readme.index(begin) + len(begin)
+    stop = readme.index(end, start)
+    write("README.md", readme[:start] + "\n\n" + block + "\n\n" + readme[stop:])
 
 def urls(value):
     return list(dict.fromkeys(x.rstrip(").,;") for x in re.findall(r"https?://[^\s<>\"（）\u3000、，；]+", value)))
@@ -185,6 +211,8 @@ def main():
         group = CATEGORY_GROUPS[fields[0]]
         records.append({"id": f"R{n:03d}", "csv_record": record, "title": title, "group": group,
                         "how_to": how, "supplemental_links": extra, "original": dict(zip(FIELDS, fields))})
+    options = json.loads((ROOT / "sources/prompt-options.json").read_text(encoding="utf-8"))
+    external = external_prompt_links(records)
     write("sources/records.json", json.dumps(records, ensure_ascii=False, indent=2))
     write("sources/README.md", """# 原始资料与条目编号
 
@@ -213,7 +241,7 @@ R001—R053 按原表内容顺序编号。`csv_record` 为 CSV 逻辑记录号�
                     if o[field]:
                         text += f"### {label}\n\n" + fenced(o[field]) + "\n\n"
         write(f"skills/{slug}/references/source-prompts.md", text)
-        write(f"skills/{slug}/SOURCE.md", f"# 来源与整理说明\n\n本技能由《{CSV_NAME}》整理制作，不是第三方原项目的官方技能。\n\n来源记录：{', '.join(f'R{i:03d}' for i in ids)}。\n\n改动：将原表提示词和经验整理为适用任务、输入、处理方法、输出要求与调用示例，补充可追溯来源及任务范围说明。原始措辞见 [配套参考](references/source-prompts.md)。原表没有声明统一开源许可，本仓库不对原资料重新授权。")
+        write(f"skills/{slug}/SOURCE.md", f"# 来源与整理说明\n\n本技能由《{CSV_NAME}》整理制作，不是第三方原项目的官方技能。\n\n来源记录：{', '.join(f'R{i:03d}' for i in ids)}。\n\n改动：按用途列出原表提示词和依照用法整理的指令，每条附有使用示范与来源编号。原始措辞见 [配套参考](references/source-prompts.md)。原表没有声明统一开源许可，本仓库不对原资料重新授权。")
     write("skills/research-idea-discussion/references/methods-directory.md", method_intro + long_text)
     upstream = json.loads((ROOT / "sources/upstream.json").read_text(encoding="utf-8"))
     upstream_by_id = {i: u for u in upstream for i in u["source_ids"]}
@@ -221,9 +249,11 @@ R001—R053 按原表内容顺序编号。`csv_record` 为 CSV 逻辑记录号�
         o = item["original"]
         text = f"# {item['id']} · {item['title']}\n\n[返回分类](../{item['group']}.md) · [53 条覆盖清单](../coverage.md)\n\n"
         text += f"原表类别：{o['category']}。CSV 逻辑记录：{item['csv_record']}。\n\n## 使用方法\n\n{item['how_to']}\n\n"
-        example_skill = EXAMPLE_SKILL_BY_RECORD.get(item["id"])
-        if example_skill:
-            text += f"[完整技能提示词与使用示例](../../README.md#prompt-{example_skill})\n\n"
+        choices = [o for o in options if o["source"] == item["id"]]
+        if choices:
+            text += "可复制的提示词与使用示范：\n\n" + option_links(choices, "../../README.md") + "\n"
+        if item["id"] in external:
+            text += external[item["id"]] + "\n\n"
         found = urls(o["entry"]) + urls(o["usage"])
         if found or item["supplemental_links"]:
             text += "## 入口\n\n"
@@ -265,9 +295,17 @@ R001—R053 按原表内容顺序编号。`csv_record` 为 CSV 逻辑记录号�
                 _, name, _, description = skills_by_name[slug]
                 text += (
                     f"| {name} | {description} | [下载 ZIP](../downloads/individual/{slug}.zip?raw=true) · "
-                    f"[复制完整提示词](../README.md#prompt-{slug}) · [使用说明](../skills/{slug}/SKILL.md) |\n"
+                    f"[选提示词](../README.md#prompt-{slug}) |\n"
                 )
-            text += "\n「复制完整提示词」打开首页上对应技能的 `SKILL.md` 全文。[查看入门方法](../docs/getting-started.md)。\n\n"
+            text += "\n"
+        selected_ids = {r["id"] for r in selected}
+        choices = [o for o in options if o["source"] in selected_ids or set(skill_names).intersection(o["skills"])]
+        choices.sort(key=lambda o: o["skills"][0] not in skill_names)
+        outside = [rid for rid, (_, names) in EXTERNAL_PROMPTS.items()
+                   if rid in selected_ids or set(skill_names).intersection(names)]
+        if choices or outside:
+            text += "## 提示词选择\n\n" + option_links(choices, "../README.md")
+            text += "".join(f"- {external[rid]}\n" for rid in outside) + "\n"
         suites = [u for u in upstream if any(r["id"] in u["source_ids"] for r in selected)]
         if suites:
             text += "## 现成 Skills 与套件\n\n| 项目 | 下载 | 使用条件 |\n|---|---|---|\n"
@@ -305,21 +343,29 @@ R001—R053 按原表内容顺序编号。`csv_record` 为 CSV 逻辑记录号�
         coverage += f"| {r['id']} | {r['csv_record']} | [{r['title']}](entries/{r['id']}.md) | {GROUPS[r['group']][1]} | {'、'.join(related) or '见资料条目'} |\n"
     write("catalog/coverage.md", coverage)
     prompts = "# 原始提示词与可复制任务说明\n\n原文来自 CSV，保留措辞和占位符。复制后替换自己的材料。整理后的通用技能见 [Skills 列表](../skills/README.md)。\n\n"
-    for n in [1, 2, 10, 13, 14, 25, 26, 31, 33, 35, 36, 38]:
-        r = records[n-1]
-        prompts += f"## {r['id']} · {r['title']}\n\n[完整条目](../catalog/entries/{r['id']}.md)"
-        example_skill = EXAMPLE_SKILL_BY_RECORD.get(r["id"])
-        if example_skill:
-            prompts += f" · [完整技能提示词与使用示例](../README.md#prompt-{example_skill})"
-        prompts += "。\n\n" + fenced(r["original"]["usage"]) + "\n\n"
-    prompts += "外部提示词库的未提供全文不在此转载，请从 [参考资料分类](../catalog/reference.md) 和 [写作分类](../catalog/writing.md)中的原项目入口获取。\n"
+    for r in records:
+        choices = [o for o in options if o["source"] == r["id"]]
+        if not choices:
+            continue
+        prompts += f"## {r['id']} · {r['title']}\n\n[完整条目](../catalog/entries/{r['id']}.md)\n\n"
+        prompts += option_links(choices, "../README.md") + "\n"
+        fields = ["usage"]
+        for o in choices:
+            for field in o.get("additional_source_fields", []):
+                if field not in fields:
+                    fields.append(field)
+        for field in fields:
+            label = {"usage": "原表具体用法", "experience": "原表使用经验", "purpose": "原表用途"}[field]
+            prompts += label + "\n\n" + fenced(r["original"][field]) + "\n\n"
+    prompts += "## 外部提示词库\n\n" + "".join(f"- {link}\n" for link in external.values())
     write("prompts/original-prompts.md", prompts)
     skill_list = "# 本表制作的 10 个 Skills\n\n这是本仓库根据原表制作的技能，与 third_party 中的原项目文件分开保存。每个技能包含 SKILL.md、来源说明及必要参考文件。\n\n[下载与使用](../downloads/README.md) · [原始提示词](../prompts/original-prompts.md)\n\n| 技能 | 适用任务 | 单个包 |\n|---|---|---|\n"
     for slug, title, ids, description in SKILLS:
         skill_list += f"| [{title}]({slug}/SKILL.md) | {description} | [下载](../downloads/individual/{slug}.zip) |\n"
     write("skills/README.md", skill_list)
     write("sources/new-skills.json", json.dumps([{"name": s, "title": t, "source_ids": [f"R{i:03d}" for i in ids], "description": d} for s, t, ids, d in SKILLS], ensure_ascii=False, indent=2))
-    sync_homepage_prompts()
+    render_skill_files(ROOT, options)
+    sync_homepage_prompts(options, external)
     print(f"Generated {len(records)} entries and {len(SKILLS)} skill source references without contributor attribution.")
 
 if __name__ == "__main__":

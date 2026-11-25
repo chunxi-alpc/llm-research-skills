@@ -10,9 +10,12 @@
 
 | 技能 | 能帮你做什么 | 下载与使用 |
 |---|---|---|
-| 中英文学术翻译 | 保留含义、逻辑、数值和固定术语。 | [下载 ZIP](../downloads/individual/academic-translation.zip?raw=true) · [复制完整提示词](../README.md#prompt-academic-translation) · [使用说明](../skills/academic-translation/SKILL.md) |
+| 学术翻译（中译英） | 保留原意和英文术语进行中译英，或生成适合 Word 的英文稿和中文直译。 | [下载 ZIP](../downloads/individual/academic-translation.zip?raw=true) · [选提示词](../README.md#prompt-academic-translation) |
 
-「复制完整提示词」打开首页上对应技能的 `SKILL.md` 全文。[查看入门方法](../docs/getting-started.md)。
+## 提示词选择
+
+- [保留原意和已有英文术语的中译英](../README.md#option-r035-translate)
+- [适合 Word 的英文稿和中文直译](../README.md#option-r036-word)
 
 ## 工具、提示词与原表经验
 

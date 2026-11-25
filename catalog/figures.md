@@ -10,9 +10,12 @@
 
 | 技能 | 能帮你做什么 | 下载与使用 |
 |---|---|---|
-| 论文模型图说明与绘图提示词 | 输出模型结构、VISUAL SCHEMA 与绘图提示词。 | [下载 ZIP](../downloads/individual/paper-figure-brief.zip?raw=true) · [复制完整提示词](../README.md#prompt-paper-figure-brief) · [使用说明](../skills/paper-figure-brief/SKILL.md) |
+| 论文模型图 | 根据论文方法整理 VISUAL SCHEMA，再交给绘图模型生成模型图。 | [下载 ZIP](../downloads/individual/paper-figure-brief.zip?raw=true) · [选提示词](../README.md#prompt-paper-figure-brief) |
 
-「复制完整提示词」打开首页上对应技能的 `SKILL.md` 全文。[查看入门方法](../docs/getting-started.md)。
+## 提示词选择
+
+- [把论文方法整理成 VISUAL SCHEMA，再生成模型图](../README.md#option-r038-visual-schema)
+- Ai-prompt 写作与绘图提示词库 · [查看原文](https://github.com/Zhongxuanx/Ai-prompt)
 
 ## 现成 Skills 与套件
 

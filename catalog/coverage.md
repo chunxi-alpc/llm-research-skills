@@ -4,14 +4,14 @@
 
 | 编号 | CSV 记录 | 资料位置 | 分类 | 对应新技能 |
 |---|---:|---|---|---|
-| R001 | 2 | [NotebookLM：多论文比较](entries/R001.md) | 找论文 | [论文阅读与多论文对比](../skills/research-paper-reading/SKILL.md) |
+| R001 | 2 | [NotebookLM：多论文比较](entries/R001.md) | 找论文 | [文献检索](../skills/research-literature-search/SKILL.md)、[论文阅读与多论文对比](../skills/research-paper-reading/SKILL.md) |
 | R002 | 3 | [Gemini / ChatGPT：按条件找论文](entries/R002.md) | 找论文 | [文献检索](../skills/research-literature-search/SKILL.md) |
 | R003 | 4 | [RefCheck.ai：BibTeX 引文检查](entries/R003.md) | 找论文 | [文献检索](../skills/research-literature-search/SKILL.md) |
 | R004 | 5 | [Wispaper：关键词文献检索](entries/R004.md) | 找论文 | [文献检索](../skills/research-literature-search/SKILL.md) |
 | R005 | 6 | [AMiner：学术检索与研究趋势](entries/R005.md) | 找论文 | [文献检索](../skills/research-literature-search/SKILL.md) |
 | R006 | 7 | [腾讯 ima：论文知识库](entries/R006.md) | 读论文 | [论文阅读与多论文对比](../skills/research-paper-reading/SKILL.md) |
 | R007 | 8 | [智谱清言：论文精读](entries/R007.md) | 读论文 | [论文阅读与多论文对比](../skills/research-paper-reading/SKILL.md) |
-| R008 | 9 | [WorkBuddy：检索并整理论文](entries/R008.md) | 读论文 | [文献检索](../skills/research-literature-search/SKILL.md) |
+| R008 | 9 | [WorkBuddy：检索并整理论文](entries/R008.md) | 读论文 | [文献检索](../skills/research-literature-search/SKILL.md)、[论文阅读与多论文对比](../skills/research-paper-reading/SKILL.md) |
 | R009 | 10 | [DeepSeek / Kimi：论文总结与讨论](entries/R009.md) | 读论文 | [论文阅读与多论文对比](../skills/research-paper-reading/SKILL.md) |
 | R010 | 11 | [Method 逻辑与术语统一提示词](entries/R010.md) | 写作与润色 | [方法逻辑与术语一致性检查](../skills/method-logic-check/SKILL.md) |
 | R011 | 12 | [Ai-prompt：写作与绘图提示词库](entries/R011.md) | 写作与润色 | 见资料条目 |
@@ -38,12 +38,12 @@
 | R032 | 37 | [Grammarly：拼写语法检查](entries/R032.md) | 拼写与语法纠错 | [拼写与语法纠错](../skills/academic-proofreading/SKILL.md) |
 | R033 | 38 | [只改错误的 typo 检查提示词](entries/R033.md) | 拼写与语法纠错 | [拼写与语法纠错](../skills/academic-proofreading/SKILL.md) |
 | R034 | 42 | [Turnitin 相关查重入口（原表）](entries/R034.md) | 查重与 AI 率检测 | 见资料条目 |
-| R035 | 47 | [保留原意的中文转英文提示词](entries/R035.md) | 学术翻译 | [中英文学术翻译](../skills/academic-translation/SKILL.md) |
-| R036 | 48 | [Word 纯文本学术翻译提示词](entries/R036.md) | 学术翻译 | [中英文学术翻译](../skills/academic-translation/SKILL.md) |
+| R035 | 47 | [保留原意的中文转英文提示词](entries/R035.md) | 学术翻译 | [学术翻译（中译英）](../skills/academic-translation/SKILL.md) |
+| R036 | 48 | [Word 纯文本学术翻译提示词](entries/R036.md) | 学术翻译 | [学术翻译（中译英）](../skills/academic-translation/SKILL.md) |
 | R037 | 51 | [Academic AI Prompt：科研提示词集合](entries/R037.md) | 综合参考资料 | 见资料条目 |
-| R038 | 52 | [模型图：先整理结构再生成图像](entries/R038.md) | 论文模型图 | [论文模型图说明与绘图提示词](../skills/paper-figure-brief/SKILL.md) |
+| R038 | 52 | [模型图：先整理结构再生成图像](entries/R038.md) | 论文模型图 | [论文模型图](../skills/paper-figure-brief/SKILL.md) |
 | R039 | 53 | [Nature Skills：科研技能套件](entries/R039.md) | 综合参考资料 | 见资料条目 |
-| R040 | 54 | [Edit Banana：图像转可编辑图形](entries/R040.md) | 论文模型图 | [论文模型图说明与绘图提示词](../skills/paper-figure-brief/SKILL.md) |
+| R040 | 54 | [Edit Banana：图像转可编辑图形](entries/R040.md) | 论文模型图 | [论文模型图](../skills/paper-figure-brief/SKILL.md) |
 | R041 | 55 | [Zotero + zotero-gpt](entries/R041.md) | 读论文 | [论文阅读与多论文对比](../skills/research-paper-reading/SKILL.md) |
 | R042 | 56 | [AI-Scientist：自动化科研项目](entries/R042.md) | 研究想法获取 | 见资料条目 |
 | R043 | 57 | [Scientific Manuscript Editor](entries/R043.md) | 写作与润色 | 见资料条目 |
@@ -53,7 +53,7 @@
 | R047 | 62 | [ML Paper Writing（Orchestra Research）](entries/R047.md) | 写作与润色 | 见资料条目 |
 | R048 | 63 | [Anti-Defensive Writing（Kiterlin）](entries/R048.md) | 写作与润色 | 见资料条目 |
 | R049 | 64 | [论文初稿辅助写作网站（原表）](entries/R049.md) | 写作与润色 | 见资料条目 |
-| R050 | 65 | [Paper Banana：学术图表生成](entries/R050.md) | 论文模型图 | [论文模型图说明与绘图提示词](../skills/paper-figure-brief/SKILL.md) |
+| R050 | 65 | [Paper Banana：学术图表生成](entries/R050.md) | 论文模型图 | [论文模型图](../skills/paper-figure-brief/SKILL.md) |
 | R051 | 66 | [Scribbr：语法检查](entries/R051.md) | 写作与润色 | [拼写与语法纠错](../skills/academic-proofreading/SKILL.md) |
 | R052 | 67 | [Manchester Academic Phrasebank](entries/R052.md) | 写作与润色 | 见资料条目 |
 | R053 | 68 | [Academic Research Skills：学术流程套件](entries/R053.md) | 论文模型图 | 见资料条目 |

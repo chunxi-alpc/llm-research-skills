@@ -10,9 +10,11 @@
 
 | 技能 | 能帮你做什么 | 下载与使用 |
 |---|---|---|
-| 拼写与语法纠错 | 只修正错误，正确表达保持原样。 | [下载 ZIP](../downloads/individual/academic-proofreading.zip?raw=true) · [复制完整提示词](../README.md#prompt-academic-proofreading) · [使用说明](../skills/academic-proofreading/SKILL.md) |
+| 拼写与语法纠错 | 修正论文的拼写、语法、句法、时态和单复数错误，保留其余表达。 | [下载 ZIP](../downloads/individual/academic-proofreading.zip?raw=true) · [选提示词](../README.md#prompt-academic-proofreading) |
 
-「复制完整提示词」打开首页上对应技能的 `SKILL.md` 全文。[查看入门方法](../docs/getting-started.md)。
+## 提示词选择
+
+- [只改拼写和语法错误](../README.md#option-r033-proofread)
 
 ## 工具、提示词与原表经验
 

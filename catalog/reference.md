@@ -6,6 +6,10 @@
 
 原 CSV 类别：**其他**，共 2 条。
 
+## 提示词选择
+
+- Academic AI Prompt 科研提示词库 · [查看原文](https://github.com/bohyy/academic-ai-prompt)
+
 ## 现成 Skills 与套件
 
 | 项目 | 下载 | 使用条件 |

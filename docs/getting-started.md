@@ -62,4 +62,4 @@ Our method use two encoders. It improves accuracy by 2.1 points.
 
 ## 没有技能导入功能
 
-从[首页的完整技能提示词](../README.md#prompts)复制对应技能的全文，附上任务和材料后发给 AI。每份全文下方都可以展开使用示例。需要原表模板时，可从[原始提示词](../prompts/original-prompts.md)复制并替换占位材料。
+在[首页选提示词](../README.md#choose)，展开符合当前任务的选项。按「怎么用」填好条件或附上材料，复制正文发给 AI。要对照整理者的原话，可以查看[原表提示词与出处](../prompts/original-prompts.md)。

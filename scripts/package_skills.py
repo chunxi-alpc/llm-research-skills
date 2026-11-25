@@ -1,4 +1,5 @@
 """Build self-contained skill ZIPs and the Chinese download index."""
+from argparse import ArgumentParser
 from pathlib import Path
 import json
 import zipfile
@@ -55,10 +56,21 @@ def add_tree(archive, source, prefix):
         if file.is_file() and "__pycache__" not in file.parts:
             archive.write(file, f"{prefix}/{file.relative_to(source).as_posix()}")
 
-def main():
+def write_package_index(packages, preserved=()):
+    for package in packages:
+        package["bytes"] = (ROOT / package["path"]).stat().st_size
+    write("downloads/packages.json", json.dumps([*packages, *preserved], ensure_ascii=False, indent=2))
+
+def research_download_table(skills):
+    rows = ["| 技能 | 下载 |", "|---|---|"]
+    for skill in skills:
+        name = skill["name"]
+        rows.append(f"| [{skill['title']}](../skills/{name}/SKILL.md) | [{name}.zip](individual/{name}.zip) |")
+    return "\n".join(rows)
+
+
+def main(research_only=False):
     new = json.loads((ROOT / "sources/new-skills.json").read_text(encoding="utf-8"))
-    upstream = json.loads((ROOT / "sources/upstream.json").read_text(encoding="utf-8"))
-    by_key = {u["key"]: u for u in upstream}
     packages = []
     start = """# 10 个科研 Skills 入门合集
 
@@ -68,9 +80,9 @@ def main():
 本地 Codex 当前项目可使用 .agents/skills/；本地 Claude Code 可使用 .claude/skills/。
 有导入界面的产品按界面要求逐个选择技能，合集 ZIP 不一定能直接导入。
 
-示例：使用 academic-proofreading，只修正下面英文段落的拼写和语法错误，不润色。
+打开所需技能的 SKILL.md，按小标题选择一种用法。把该项代码块里的提示词复制到对话中，照下方“怎么用”的示范附上自己的材料。
 
-没有导入功能时，可以复制 SKILL.md 正文作为任务要求，原始提示词在各技能的 references/source-prompts.md 中。
+已导入技能时，也可以直接说“使用 academic-proofreading 校对下面的英文”，再贴入原文。原表资料收录在各技能的 references/source-prompts.md 中。
 文献检索需要 Agent 自带联网能力；绘图技能默认输出绘图说明与提示词。
 
 官方目录说明：https://learn.chatgpt.com/docs/build-skills
@@ -84,13 +96,24 @@ Claude Code：https://code.claude.com/docs/en/skills
         archive.writestr("research-skills-starter/LICENSE-NOTES.md", license_note)
         for s in new:
             add_tree(archive, ROOT / "skills" / s["name"], "research-skills-starter/skills/" + s["name"])
-    packages.append({"kind": "starter", "path": starter.relative_to(ROOT).as_posix(), "skill_count": 10})
+    packages.append({"kind": "starter", "path": starter.relative_to(ROOT).as_posix(), "skill_count": len(new)})
     for s in new:
         path = ROOT / "downloads/individual" / (s["name"] + ".zip")
         path.parent.mkdir(parents=True, exist_ok=True)
         with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as archive:
             add_tree(archive, ROOT / "skills" / s["name"], s["name"])
         packages.append({"kind": "new-skill", "path": path.relative_to(ROOT).as_posix(), "name": s["name"], "skill_count": 1})
+    if research_only:
+        previous = json.loads((ROOT / "downloads/packages.json").read_text(encoding="utf-8"))
+        third_party = [package for package in previous if package["kind"] not in {"starter", "new-skill"}]
+        write_package_index(packages, third_party)
+        readme = (ROOT / "downloads/README.md").read_text(encoding="utf-8")
+        begin = readme.index("## 单个新技能") + len("## 单个新技能")
+        end = readme.index("## 单个第三方技能", begin)
+        write("downloads/README.md", readme[:begin] + "\n\n" + research_download_table(new) + "\n\n" + readme[end:])
+        return
+    upstream = json.loads((ROOT / "sources/upstream.json").read_text(encoding="utf-8"))
+    by_key = {u["key"]: u for u in upstream}
     single_links = {}
     for key, relative, name, title, whole in SINGLES:
         u = by_key[key]
@@ -114,9 +137,7 @@ Claude Code：https://code.claude.com/docs/en/skills
         single_links.setdefault(key, []).append((title, path.relative_to(ROOT).as_posix()))
     for u in upstream:
         packages.append({"kind": "upstream-suite", "path": u["archive"], "project": u["key"]})
-    for package in packages:
-        package["bytes"] = (ROOT / package["path"]).stat().st_size
-    write("downloads/packages.json", json.dumps(packages, ensure_ascii=False, indent=2))
+    write_package_index(packages)
     doc = "# 现成 Skills：来源、下载与使用条件\n\n[返回首页](../README.md) · [下载总览](../downloads/README.md)\n\n保留 9 个原项目的完整套件 ZIP，以及适合单独使用的技能包。文件获取于 2026-11-05，分支为 main；这是下载时的副本。未运行第三方项目或安装其依赖。\n\n同名技能按来源分开存放，原文件保持原样。套件包包含项目的必要目录和原许可，使用时按上游对应平台的说明安装。\n\n| 项目 | 来源记录 | 许可 | 完整套件 |\n|---|---|---|---|\n"
     for key in INFO:
         u = by_key[key]
@@ -138,9 +159,7 @@ Claude Code：https://code.claude.com/docs/en/skills
         doc += "原表经验：" + "、".join(f"[{i}](../catalog/entries/{i}.md)" for i in u["source_ids"]) + "。\n"
     doc += "\n## 网站、提示词库与其他项目\n\nAi-prompt、Awesome AI Research Writing、Strict & Precise Reviewer、Academic AI Prompt、AI-Scientist、PaperDebugger 等作为网站、项目或参考入口收录，未把未提供的网页全文改造成第三方技能。其操作方法、原表经验及下载入口见 [任务分类](../catalog/README.md)。\n"
     write("docs/third-party-skills.md", doc)
-    doc = "# Skills 下载\n\n[返回首页](../README.md) · [下载后的使用方法](../docs/getting-started.md)\n\n## 新 Skills 入门合集\n\n**[下载 research-skills-starter.zip](research-skills-starter.zip)**：包含本表制作的 10 个新技能、来源和配套参考。解压后从 skills/ 中选择完整技能目录导入。\n\n## 单个新技能\n\n| 技能 | 下载 |\n|---|---|\n"
-    for s in new:
-        doc += f"| [{s['title']}](../skills/{s['name']}/SKILL.md) | [{s['name']}.zip](individual/{s['name']}.zip) |\n"
+    doc = "# Skills 下载\n\n[返回首页](../README.md) · [下载后的使用方法](../docs/getting-started.md)\n\n## 新 Skills 入门合集\n\n**[下载 research-skills-starter.zip](research-skills-starter.zip)**：包含本表制作的 10 个新技能、来源和配套参考。解压后从 skills/ 中选择完整技能目录导入。\n\n## 单个新技能\n\n" + research_download_table(new) + "\n"
     doc += "\n## 单个第三方技能\n\n包名带作者，用于区分来源；内部技能名保持上游原名。两个同名 Anti-Defensive Writing 不要合并安装到一个目录。\n\n| 技能 | 下载 |\n|---|---|\n"
     for p in packages:
         if p["kind"] == "upstream-skill":
@@ -154,4 +173,6 @@ Claude Code：https://code.claude.com/docs/en/skills
     print(f"Prepared {len(packages)} download packages.")
 
 if __name__ == "__main__":
-    main()
+    parser = ArgumentParser(description=__doc__)
+    parser.add_argument("--research-only", action="store_true", help="rebuild the research skills and starter ZIPs")
+    main(research_only=parser.parse_args().research_only)
