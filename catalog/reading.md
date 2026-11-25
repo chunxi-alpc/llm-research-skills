@@ -10,9 +10,9 @@
 
 | 技能 | 能帮你做什么 | 下载与使用 |
 |---|---|---|
-| 论文阅读与多论文对比 | 给出论文与问题，返回方法梳理、原文依据和对比表。 | [下载 ZIP](../downloads/individual/research-paper-reading.zip?raw=true) · [使用说明](../skills/research-paper-reading/SKILL.md) |
+| 论文阅读与多论文对比 | 给出论文与问题，返回方法梳理、原文依据和对比表。 | [下载 ZIP](../downloads/individual/research-paper-reading.zip?raw=true) · [复制提示词](../README.md#prompt-research-paper-reading) · [使用说明](../skills/research-paper-reading/SKILL.md) |
 
-没有技能导入功能时，也可复制技能正文或条目里的原始提示词。[查看入门方法](../docs/getting-started.md)。
+「复制提示词」打开与首页相同的示例，可以直接发给 AI。[查看入门方法](../docs/getting-started.md)。
 
 ## 工具、提示词与原表经验
 

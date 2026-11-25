@@ -10,10 +10,10 @@
 
 | 技能 | 能帮你做什么 | 下载与使用 |
 |---|---|---|
-| 研究思路讨论 | 给出研究问题与资源条件，返回关键假设和验证建议。 | [下载 ZIP](../downloads/individual/research-idea-discussion.zip?raw=true) · [使用说明](../skills/research-idea-discussion/SKILL.md) |
-| 方法逻辑与术语一致性检查 | 给出 Method 和已有定义，返回问题定位与统一建议。 | [下载 ZIP](../downloads/individual/method-logic-check.zip?raw=true) · [使用说明](../skills/method-logic-check/SKILL.md) |
+| 研究思路讨论 | 给出研究问题与资源条件，返回关键假设和验证建议。 | [下载 ZIP](../downloads/individual/research-idea-discussion.zip?raw=true) · [复制提示词](../README.md#prompt-research-idea-discussion) · [使用说明](../skills/research-idea-discussion/SKILL.md) |
+| 方法逻辑与术语一致性检查 | 给出 Method 和已有定义，返回问题定位与统一建议。 | [下载 ZIP](../downloads/individual/method-logic-check.zip?raw=true) · [复制提示词](../README.md#prompt-method-logic-check) · [使用说明](../skills/method-logic-check/SKILL.md) |
 
-没有技能导入功能时，也可复制技能正文或条目里的原始提示词。[查看入门方法](../docs/getting-started.md)。
+「复制提示词」打开与首页相同的示例，可以直接发给 AI。[查看入门方法](../docs/getting-started.md)。
 
 ## 工具、提示词与原表经验
 

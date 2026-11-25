@@ -124,6 +124,22 @@ SKILLS = [
     ("paper-figure-brief", "论文模型图说明与绘图提示词", [38, 40, 50], "输出模型结构、VISUAL SCHEMA 与绘图提示词。"),
 ]
 
+# These records are the sources for the examples on the repository homepage.
+EXAMPLE_SKILL_BY_RECORD = {
+    "R001": "research-paper-reading",
+    "R002": "research-literature-search",
+    "R009": "research-paper-reading",
+    "R010": "method-logic-check",
+    "R013": "academic-language-polish",
+    "R014": "academic-language-polish",
+    "R025": "coding-task-brief",
+    "R026": "research-idea-discussion",
+    "R031": "paper-peer-review",
+    "R033": "academic-proofreading",
+    "R035": "academic-translation",
+    "R038": "paper-figure-brief",
+}
+
 def write(path, text):
     path = ROOT / path
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -193,6 +209,9 @@ R001—R053 按原表内容顺序编号。`csv_record` 为 CSV 逻辑记录号�
         o = item["original"]
         text = f"# {item['id']} · {item['title']}\n\n[返回分类](../{item['group']}.md) · [53 条覆盖清单](../coverage.md)\n\n"
         text += f"原表类别：{o['category']}。CSV 逻辑记录：{item['csv_record']}。\n\n## 使用方法\n\n{item['how_to']}\n\n"
+        example_skill = EXAMPLE_SKILL_BY_RECORD.get(item["id"])
+        if example_skill:
+            text += f"[复制提示词示例](../../README.md#prompt-{example_skill})\n\n"
         found = urls(o["entry"]) + urls(o["usage"])
         if found or item["supplemental_links"]:
             text += "## 入口\n\n"
@@ -232,8 +251,11 @@ R001—R053 按原表内容顺序编号。`csv_record` 为 CSV 逻辑记录号�
             text += "## 可直接使用的 Skills\n\n| 技能 | 能帮你做什么 | 下载与使用 |\n|---|---|---|\n"
             for slug in skill_names:
                 _, name, _, description = skills_by_name[slug]
-                text += f"| {name} | {description} | [下载 ZIP](../downloads/individual/{slug}.zip?raw=true) · [使用说明](../skills/{slug}/SKILL.md) |\n"
-            text += "\n没有技能导入功能时，也可复制技能正文或条目里的原始提示词。[查看入门方法](../docs/getting-started.md)。\n\n"
+                text += (
+                    f"| {name} | {description} | [下载 ZIP](../downloads/individual/{slug}.zip?raw=true) · "
+                    f"[复制提示词](../README.md#prompt-{slug}) · [使用说明](../skills/{slug}/SKILL.md) |\n"
+                )
+            text += "\n「复制提示词」打开与首页相同的示例，可以直接发给 AI。[查看入门方法](../docs/getting-started.md)。\n\n"
         suites = [u for u in upstream if any(r["id"] in u["source_ids"] for r in selected)]
         if suites:
             text += "## 现成 Skills 与套件\n\n| 项目 | 下载 | 使用条件 |\n|---|---|---|\n"
@@ -273,7 +295,11 @@ R001—R053 按原表内容顺序编号。`csv_record` 为 CSV 逻辑记录号�
     prompts = "# 原始提示词与可复制任务说明\n\n原文来自 CSV，保留措辞和占位符。复制后替换自己的材料。整理后的通用技能见 [Skills 列表](../skills/README.md)。\n\n"
     for n in [1, 2, 10, 13, 14, 25, 26, 31, 33, 35, 36, 38]:
         r = records[n-1]
-        prompts += f"## {r['id']} · {r['title']}\n\n[完整条目](../catalog/entries/{r['id']}.md)。\n\n" + fenced(r["original"]["usage"]) + "\n\n"
+        prompts += f"## {r['id']} · {r['title']}\n\n[完整条目](../catalog/entries/{r['id']}.md)"
+        example_skill = EXAMPLE_SKILL_BY_RECORD.get(r["id"])
+        if example_skill:
+            prompts += f" · [复制提示词示例](../README.md#prompt-{example_skill})"
+        prompts += "。\n\n" + fenced(r["original"]["usage"]) + "\n\n"
     prompts += "外部提示词库的未提供全文不在此转载，请从 [参考资料分类](../catalog/reference.md) 和 [写作分类](../catalog/writing.md)中的原项目入口获取。\n"
     write("prompts/original-prompts.md", prompts)
     skill_list = "# 本表制作的 10 个 Skills\n\n这是本仓库根据原表制作的技能，与 third_party 中的原项目文件分开保存。每个技能包含 SKILL.md、来源说明及必要参考文件。\n\n[下载与使用](../downloads/README.md) · [原始提示词](../prompts/original-prompts.md)\n\n| 技能 | 适用任务 | 单个包 |\n|---|---|---|\n"

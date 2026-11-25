@@ -10,9 +10,9 @@
 
 | 技能 | 能帮你做什么 | 下载与使用 |
 |---|---|---|
-| 文献检索 | 给出主题、年份和会议，返回带来源的论文清单。 | [下载 ZIP](../downloads/individual/research-literature-search.zip?raw=true) · [使用说明](../skills/research-literature-search/SKILL.md) |
+| 文献检索 | 给出主题、年份和会议，返回带来源的论文清单。 | [下载 ZIP](../downloads/individual/research-literature-search.zip?raw=true) · [复制提示词](../README.md#prompt-research-literature-search) · [使用说明](../skills/research-literature-search/SKILL.md) |
 
-没有技能导入功能时，也可复制技能正文或条目里的原始提示词。[查看入门方法](../docs/getting-started.md)。
+「复制提示词」打开与首页相同的示例，可以直接发给 AI。[查看入门方法](../docs/getting-started.md)。
 
 ## 工具、提示词与原表经验
 
